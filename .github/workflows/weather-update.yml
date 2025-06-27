@@ -1,0 +1,49 @@
+name: Weather Update
+
+on:
+  schedule:
+    # 每10分钟执行一次 (注意GitHub免费计划有执行时长限制)
+    - cron: '*/10 * * * *'
+  workflow_dispatch:  # 允许手动触发工作流
+
+jobs:
+  update-weather:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # 确保有完整的提交历史
+          
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: 运行天气数据获取脚本
+        run: python get_weather.py
+        
+      - name: 检查文件变更
+        id: check-changes
+        run: |
+          if [[ $(git status --porcelain) ]]; then
+            echo "has_changes=true" >> $GITHUB_ENV
+          else
+            echo "has_changes=false" >> $GITHUB_ENV
+          fi
+          
+      - name: 提交并推送变更
+        if: env.has_changes == 'true'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add tendaysweather.txt
+          git commit -m "自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
