@@ -2,9 +2,8 @@ name: Weather Update
 
 on:
   schedule:
-    # 每10分钟执行一次 (注意GitHub免费计划有执行时长限制)
     - cron: '*/10 * * * *'
-  workflow_dispatch:  # 允许手动触发工作流
+  workflow_dispatch:
 
 jobs:
   update-weather:
@@ -14,8 +13,9 @@ jobs:
       - name: 检出仓库
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  # 确保有完整的提交历史
+          # 使用你创建的 PAT 而不是默认的 GITHUB_TOKEN
+          token: ${{ secrets.PUSH_TOKEN }}
+          fetch-depth: 0
           
       - name: 设置 Python
         uses: actions/setup-python@v5
