@@ -36,11 +36,14 @@ jobs:
       - name: 运行短时天气脚本
         run: python get_short_weather.py  # 新增短时天气脚本（保留原功能）
         
+      - name: 运行回南天预测脚本
+        run: python get_huinan.py  # 新增回南天预测脚本
+        
       - name: 检查文件变更
         id: check-changes
         run: |
-          # 检查所有可能变更的文件（保留原有文件+新增getshortweather.json）
-          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json | xargs)
+          # 检查所有可能变更的文件（保留原有文件+新增huinan.json）
+          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json | xargs)
           if [[ -n "$CHANGED_FILES" ]]; then
             echo "has_changes=true" >> $GITHUB_ENV
             echo "changed_files=$(echo "$CHANGED_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')" >> $GITHUB_ENV
@@ -53,8 +56,8 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          # 添加所有变更的文件（保留原有文件+新增getshortweather.json）
-          git add tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json
+          # 添加所有变更的文件（保留原有文件+新增huinan.json）
+          git add tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json
           # 解析变更文件列表
           CHANGED_FILES=$(echo '${{ env.changed_files }}' | jq -r '.[]' | tr '\n' ' ')
           commit_msg="自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')\n变更文件: $CHANGED_FILES"
