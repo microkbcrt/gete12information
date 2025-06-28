@@ -1,7 +1,7 @@
 name: Weather Update
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # 支持手动触发
 
 jobs:
   update-weather:
@@ -11,28 +11,33 @@ jobs:
       - name: 检出仓库
         uses: actions/checkout@v4
         with:
-          # 使用你创建的 PAT 而不是默认的 GITHUB_TOKEN
-          token: ${{ secrets.PUSH_TOKEN }}
-          fetch-depth: 0
+          token: ${{ secrets.PUSH_TOKEN }}  # 使用PAT令牌（需有repo权限）
+          fetch-depth: 0  # 获取完整历史记录
           
-      - name: 设置 Python
+      - name: 设置Python环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.10'  # 建议使用较新版本Python
           
       - name: 安装依赖
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install requests beautifulsoup4  # 安装两个脚本共用依赖
           
-      - name: 运行天气数据获取脚本
-        run: python get_weather.py
+      - name: 运行十天天气脚本
+        run: python get_weather.py  # 原有十天天气脚本
+          
+      - name: 运行NMC天气脚本
+        run: python getnmcweather.py  # 新增NMC天气脚本
         
       - name: 检查文件变更
         id: check-changes
         run: |
-          if [[ $(git status --porcelain) ]]; then
+          # 检查所有可能变更的文件
+          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json)
+          if [[ $CHANGED_FILES ]]; then
             echo "has_changes=true" >> $GITHUB_ENV
+            echo "changed_files=$CHANGED_FILES" >> $GITHUB_ENV
           else
             echo "has_changes=false" >> $GITHUB_ENV
           fi
@@ -42,6 +47,9 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add tendaysweather.txt
-          git commit -m "自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
+          # 添加所有变更的文件
+          git add tendaysweather.txt nmcweather.js nmcweather.json
+          # 生成包含所有变更文件的提交信息
+          commit_msg="自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')\n变更文件: ${CHANGED_FILES//$'\n'/ }"
+          git commit -m "$commit_msg" || echo "无变更可提交"
+          git push origin main  # 推送到main分支
