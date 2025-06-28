@@ -22,7 +22,7 @@ jobs:
       - name: 安装依赖
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4  # 安装两个脚本共用依赖
+          pip install requests  # 只安装必要依赖
           
       - name: 运行十天天气脚本
         run: python get_weather.py  # 原有十天天气脚本
@@ -33,11 +33,14 @@ jobs:
       - name: 获取通知数据
         run: python fetch_notifications.py  # 新增获取通知数据脚本
         
+      - name: 运行短时天气脚本
+        run: python get_short_weather.py  # 新增短时天气脚本（保留原功能）
+        
       - name: 检查文件变更
         id: check-changes
         run: |
           # 检查所有可能变更的文件
-          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json notifications.json | xargs)
+          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json notifications.json getshortweather.json | xargs)
           if [[ -n "$CHANGED_FILES" ]]; then
             echo "has_changes=true" >> $GITHUB_ENV
             # 使用JSON格式存储变更文件列表，避免特殊字符问题
@@ -52,10 +55,10 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           # 添加所有变更的文件
-          git add tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json
+          git add tendaysweather.txt nmcweather.js nmcweather.json notifications.json getshortweather.json
           # 从JSON解析变更文件列表
           CHANGED_FILES=$(echo '${{ env.changed_files }}' | jq -r '.[]' | tr '\n' ' ')
           # 生成包含所有变更文件的提交信息
           commit_msg="自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')\n变更文件: $CHANGED_FILES"
           git commit -m "$commit_msg" || echo "无变更可提交"
-          git push origin main  # 推送到main分支  
+          git push origin main  # 推送到main分支
