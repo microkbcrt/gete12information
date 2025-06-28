@@ -30,11 +30,14 @@ jobs:
       - name: 运行NMC天气脚本
         run: python getnmcweather.py  # 新增NMC天气脚本
         
+      - name: 获取通知数据
+        run: python fetch_notifications.py  # 新增获取通知数据脚本
+        
       - name: 检查文件变更
         id: check-changes
         run: |
           # 检查所有可能变更的文件
-          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json | xargs)
+          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json notifications.json | xargs)
           if [[ -n "$CHANGED_FILES" ]]; then
             echo "has_changes=true" >> $GITHUB_ENV
             # 使用JSON格式存储变更文件列表，避免特殊字符问题
@@ -49,10 +52,10 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           # 添加所有变更的文件
-          git add tendaysweather.txt nmcweather.js nmcweather.json
+          git add tendaysweather.txt nmcweather.js nmcweather.json notifications.json
           # 从JSON解析变更文件列表
           CHANGED_FILES=$(echo '${{ env.changed_files }}' | jq -r '.[]' | tr '\n' ' ')
           # 生成包含所有变更文件的提交信息
           commit_msg="自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')\n变更文件: $CHANGED_FILES"
           git commit -m "$commit_msg" || echo "无变更可提交"
-          git push origin main  # 推送到main分支
+          git push origin main  # 推送到main分支    
