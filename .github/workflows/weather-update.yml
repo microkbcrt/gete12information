@@ -1,68 +1,26 @@
-name: Weather Update
+name: Daily Weather WhatsApp
 
 on:
-  workflow_dispatch:  # 支持手动触发
+  schedule:
+    - cron: "0 2 * * *"  # Runs every day at 02:00 UTC (adjust as needed)
+  workflow_dispatch:
 
 jobs:
-  update-weather:
+  weather:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: 检出仓库
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PUSH_TOKEN }}  # 使用PAT令牌（需有repo权限）
-          fetch-depth: 0  # 获取完整历史记录
-          
-      - name: 设置Python环境
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'  # 建议使用较新版本Python
-          
-      - name: 安装依赖
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4  # 保留原有依赖，新增requests
-          
-      - name: 运行十天天气脚本
-        run: python get_weather.py  # 原有十天天气脚本
-          
-      - name: 运行NMC天气脚本
-        run: python getnmcweather.py  # 新增NMC天气脚本
-        
-      - name: 获取通知数据
-        run: python fetch_notifications.py  # 新增获取通知数据脚本
-        
-      - name: 运行短时天气脚本
-        run: python get_short_weather.py  # 新增短时天气脚本（保留原功能）
-        
-      - name: 运行回南天预测脚本
-        run: python get_huinan.py  # 新增回南天预测脚本
-        
-      - name: 运行天气预警脚本
-        run: python weather_alarm_parser.py  # 新增天气预警脚本
-        
-      - name: 检查文件变更
-        id: check-changes
-        run: |
-          # 检查所有可能变更的文件（保留原有文件+新增alarmcontent.json）
-          CHANGED_FILES=$(git status --porcelain tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json | xargs)
-          if [[ -n "$CHANGED_FILES" ]]; then
-            echo "has_changes=true" >> $GITHUB_ENV
-            echo "changed_files=$(echo "$CHANGED_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')" >> $GITHUB_ENV
-          else
-            echo "has_changes=false" >> $GITHUB_ENV
-          fi
-          
-      - name: 提交并推送变更
-        if: env.has_changes == 'true'
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          # 添加所有变更的文件（保留原有文件+新增alarmcontent.json）
-          git add tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json
-          # 解析变更文件列表
-          CHANGED_FILES=$(echo '${{ env.changed_files }}' | jq -r '.[]' | tr '\n' ' ')
-          commit_msg="自动更新天气数据: $(date +'%Y-%m-%d %H:%M:%S')\n变更文件: $CHANGED_FILES"
-          git commit -m "$commit_msg" || echo "无变更可提交"
-          git push origin main  # 推送到main分支
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: pip install requests twilio
+    - name: Run the script
+      env:
+        OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+        TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+        TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+        TWILIO_WHATSAPP_NUMBER: ${{ secrets.TWILIO_WHATSAPP_NUMBER }}
+        YOUR_WHATSAPP_NUMBER: ${{ secrets.YOUR_WHATSAPP_NUMBER }}
+      run: python weather_to_whatsapp.py
