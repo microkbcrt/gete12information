@@ -5,7 +5,7 @@ from datetime import datetime
 
 def fetch_and_save_unqualified_data():
     """从指定URL获取JSON数据并保存到本地文件"""
-    url = "https://kbcrt.v6.rocks:55125/unqualified.json"
+    url = "https://kbcrt.gd.work:55125/unqualified.json"
     
     try:
         # 发送HTTP请求获取数据
