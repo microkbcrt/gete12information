@@ -10,8 +10,10 @@
         ]
     },
     "\u51af\u4ebf\u6d0b": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
+        "unqualifiedCount": 1,
+        "unqualifiedReasons": [
+            "\u978b\u672a\u62ff\u8d77"
+        ]
     },
     "\u674e\u5cfb\u5b87": {
         "unqualifiedCount": 2,
@@ -84,9 +86,8 @@
         ]
     },
     "\u9ec4\u653f": {
-        "unqualifiedCount": 3,
+        "unqualifiedCount": 2,
         "unqualifiedReasons": [
-            "\u6c34\u676f\u672a\u62ff\u8d77",
             "\u684c\u9762\u6709\u5783\u573e",
             "\u6c34\u676f\u672a\u62ff\u8d77"
         ]
