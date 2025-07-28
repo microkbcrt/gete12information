@@ -15,6 +15,27 @@
                 "书箱盖未拿起",
                 "书箱上有垃圾"
             ]
+        },
+        "冯亿洋": {
+            "unqualifiedCount": 2,
+            "unqualifiedReasons": [
+                "笔盒未拿起",
+                "书箱上有垃圾"
+            ]
+        },
+        "杨力行": {
+            "unqualifiedCount": 3,
+            "unqualifiedReasons": [
+                "书箱上有垃圾",
+                "书箱上有垃圾",
+                "球拍未拿起"
+            ]
+        },
+        "孙运龙": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "球拍未拿起"
+            ]
         }
     }
 }
