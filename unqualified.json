@@ -37,8 +37,11 @@
         "unqualifiedReasons": []
     },
     "\u5b59\u8fd0\u9f99": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
+        "unqualifiedCount": 2,
+        "unqualifiedReasons": [
+            "\u62bd\u5c49\u6709\u5783\u573e",
+            "\u62bd\u5c49\u6709\u5783\u573e"
+        ]
     },
     "\u5468\u7075": {
         "unqualifiedCount": 0,
@@ -111,5 +114,11 @@
     "\u6bb5\u7693\u5b87": {
         "unqualifiedCount": 0,
         "unqualifiedReasons": []
+    },
+    "\u53f6\u5609\u6167": {
+        "unqualifiedCount": 1,
+        "unqualifiedReasons": [
+            "\u62bd\u5c49\u6709\u5783\u573e"
+        ]
     }
 }
