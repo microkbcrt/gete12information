@@ -1,125 +1,17 @@
 {
-    "\u738b\u5b89\u5b87": {
-        "unqualifiedCount": 1,
-        "unqualifiedReasons": [
-            "\u4e66\u7bb1\u76d6\u672a\u62ff\u8d77"
-        ]
+  "score": 20,
+  "penaltyCoordinates": [
+    "(8,1)", 
+    "(7,1)"
+  ],
+  "unqualified": {
+    "王安宇": {
+      "unqualifiedCount": 1,
+      "unqualifiedReasons": ["书箱盖未拿起"]
     },
-    "\u53f2\u7b71\u5a67": {
-        "unqualifiedCount": 2,
-        "unqualifiedReasons": [
-            "\u4e66\u7bb1\u76d6\u672a\u62ff\u8d77",
-            "\u62bd\u5c49\u6709\u5783\u573e"
-        ]
-    },
-    "\u51af\u4ebf\u6d0b": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u674e\u5cfb\u5b87": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u4f55\u6587\u6cfd": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u5510\u746d": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u5f20\u4e01\u6208": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u6797\u5b50\u58a8": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u5b59\u8fd0\u9f99": {
-        "unqualifiedCount": 3,
-        "unqualifiedReasons": [
-            "\u62bd\u5c49\u6709\u5783\u573e",
-            "\u62bd\u5c49\u6709\u5783\u573e",
-            "\u62bd\u5c49\u6709\u5783\u573e"
-        ]
-    },
-    "\u5468\u7075": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u7b26\u8000\u5b87": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u961a\u542f\u745e": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u83ab\u67fd\u8d85": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u9ec4\u653f": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u5b54\u777f\u54f2": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u6768\u529b\u884c": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u4f55\u6b23\u60a6": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u9648\u777f\u7af9": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u9ece\u6653\u96ea": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u5f20\u5bb6\u777f": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u9ec4\u9526\u8335": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u90b1\u6d77\u84dd": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u5f20\u695a\u5029": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u9648\u601d\u5f64": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u66f9\u5929\u8d50": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u7f57\u598d\u831c": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u6bb5\u7693\u5b87": {
-        "unqualifiedCount": 0,
-        "unqualifiedReasons": []
-    },
-    "\u53f6\u5609\u6167": {
-        "unqualifiedCount": 1,
-        "unqualifiedReasons": [
-            "\u62bd\u5c49\u6709\u5783\u573e"
-        ]
+    "史筱婧": {
+      "unqualifiedCount": 2,
+      "unqualifiedReasons": ["书箱盖未拿起", "抽屉有垃圾"]
     }
+  }
 }
