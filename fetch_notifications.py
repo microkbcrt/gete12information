@@ -47,7 +47,7 @@ def fetch_and_save_notifications(url, output_file):
         return False
 
 if __name__ == "__main__":
-    NOTIFICATIONS_URL = "https://kbcrt.work.gd:55125/notifications.json"
+    NOTIFICATIONS_URL = "https://kbcrt.v6.rocks:55125/notifications.json"
     OUTPUT_FILE = "notifications.json"
     
     # 执行获取和保存操作
