@@ -1,41 +1,26 @@
 {
     "score": 20,
-    "penaltyCoordinates": [
-        "(8,1)",
-        "(7,1)"
-    ],
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 0,
             "unqualifiedReasons": []
         },
         "史筱婧": {
-            "unqualifiedCount": 2,
-            "unqualifiedReasons": [
-                "书箱盖未拿起",
-                "书箱上有垃圾"
-            ]
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         },
         "冯亿洋": {
-            "unqualifiedCount": 2,
-            "unqualifiedReasons": [
-                "笔盒未拿起",
-                "书箱上有垃圾"
-            ]
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         },
         "杨力行": {
-            "unqualifiedCount": 3,
-            "unqualifiedReasons": [
-                "书箱上有垃圾",
-                "书箱上有垃圾",
-                "球拍未拿起"
-            ]
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         },
         "孙运龙": {
-            "unqualifiedCount": 1,
-            "unqualifiedReasons": [
-                "球拍未拿起"
-            ]
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         }
     }
 }
