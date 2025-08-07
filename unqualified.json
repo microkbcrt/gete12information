@@ -1,6 +1,9 @@
 {
     "score": 20,
-    "penaltyCoordinates": [],
+    "penaltyCoordinates": [
+        "(4,1)",
+        "(6,1)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 0,
@@ -21,8 +24,22 @@
             "unqualifiedReasons": []
         },
         "孙运龙": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "书未拿起"
+            ]
+        },
+        "段皓宇": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "书未拿起"
+            ]
+        },
+        "何欣悦": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "窗台有垃圾"
+            ]
         }
     }
 }
