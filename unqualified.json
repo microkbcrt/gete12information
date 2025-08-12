@@ -14,8 +14,9 @@
             "unqualifiedReasons": []
         },
         "冯亿洋": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
+                "书包未拿起",
                 "书包未拿起",
                 "书包未拿起"
             ]
@@ -25,8 +26,9 @@
             "unqualifiedReasons": []
         },
         "孙运龙": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
+                "书未拿起",
                 "书未拿起"
             ]
         },
@@ -40,6 +42,18 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "窗台有垃圾"
+            ]
+        },
+        "何文泽": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "笔盒未拿起"
+            ]
+        },
+        "陈睿竹": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "水杯未拿起"
             ]
         }
     }
