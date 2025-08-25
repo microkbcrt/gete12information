@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # --- 配置区 ---
-HOST_MID = "1636034895"
+HOST_MID = "414149787"
 OUTPUT_FILENAME = 'latest_bili_phigros_post_details.json'
 SESSDATA = os.environ.get('BILI_SESSDATA')
 
