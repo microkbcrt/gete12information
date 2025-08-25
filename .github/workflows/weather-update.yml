@@ -1,4 +1,4 @@
-0name: Data Update Workflow # 给工作流起一个更通用的名字
+name: Data Update Workflow # 给工作流起一个更通用的名字
 
 on:
   workflow_dispatch:  # 支持手动触发
