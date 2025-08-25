@@ -2,30 +2,49 @@ import requests
 import json
 from datetime import datetime
 from bs4 import BeautifulSoup
-import os  # 导入os库来读取环境变量
+import os
 
 # --- 配置区 ---
 HOST_MID = "1636034895"
-OUTPUT_FILENAME = 'latest_bili_phigros_post.json' # 修改了输出文件名以区分
-
-# 从环境变量中读取SESSDATA，这是在GitHub Actions中使用的最佳实践
-# os.environ.get('BILI_SESSDATA') 会尝试读取名为 BILI_SESSDATA 的环境变量
-# 如果在本地测试，你可以手动设置这个环境变量，或者临时在这里赋值
+OUTPUT_FILENAME = 'latest_bili_post.json'
 SESSDATA = os.environ.get('BILI_SESSDATA')
 
 def scrape_opus_page_content(opus_url, headers):
-    # ... (这部分函数和之前完全一样，无需修改) ...
+    """
+    增强版抓取函数：如果找不到目标容器，则输出整个HTML页面用于调试。
+    """
     print(f"正在抓取动态详情页: {opus_url}")
     try:
         response = requests.get(opus_url, headers=headers, timeout=15)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'lxml')
+        
+        # 获取响应的文本内容
+        html_content = response.text
+
+        soup = BeautifulSoup(html_content, 'lxml')
         content_div = soup.find('div', class_='opus-module-content')
+
         if content_div:
+            # 找到了，正常返回文本
+            print("成功找到 'opus-module-content' 容器。")
             full_text = content_div.get_text(separator='\n', strip=True)
             return full_text
         else:
-            return "[抓取错误] 在页面中未能找到 'opus-module-content' 容器。"
+            # --- 关键的诊断代码 ---
+            # 没找到，打印整个HTML页面到日志中
+            print("\n" + "="*50)
+            print("【诊断信息】未能在页面中找到 'opus-module-content' 容器。")
+            print("这很可能是因为B站返回了一个登录页、验证页或错误页。")
+            print("以下是GitHub Actions实际抓取到的完整HTML页面内容：")
+            print("="*50 + "\n")
+            print(html_content) # 打印完整HTML
+            print("\n" + "="*50)
+            print("【诊断信息结束】请检查上面的HTML内容以确定问题原因。")
+            print("="*50 + "\n")
+            
+            # 仍然返回一个明确的错误信息写入JSON
+            return "[抓取错误] 未能找到目标内容容器。请查看Actions日志中的诊断信息。"
+
     except requests.exceptions.RequestException as e:
         print(f"抓取详情页失败: {e}")
         return f"[网络错误] 无法访问动态详情页: {opus_url}"
@@ -34,18 +53,22 @@ def scrape_opus_page_content(opus_url, headers):
         return "[解析错误] 解析详情页HTML时出错。"
 
 def fetch_and_process_dynamics():
+    # ... (这部分主函数和之前完全一样，无需修改) ...
     api_url = f"https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/space?host_mid={HOST_MID}"
 
-    # 在脚本开始时就检查SESSDATA是否存在
     if not SESSDATA:
-        print("错误：环境变量 BILI_SESSDATA 未设置！请在GitHub Secrets中添加它。")
-        # 使用 exit(1) 来使工作流步骤失败，这样更容易发现问题
+        print("错误：环境变量 BILI_SESSDATA 未设置！")
         exit(1)
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
         'Cookie': f'SESSDATA={SESSDATA}',
-        'Referer': f'https://space.bilibili.com/{HOST_MID}/dynamic'
+        'Referer': f'https://space.bilibili.com/{HOST_MID}/dynamic',
+        # 尝试添加更多请求头，让请求看起来更像真实浏览器
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'Connection': 'keep-alive',
     }
 
     print(f"第一步：正在通过API获取用户(UID: {HOST_MID})的动态列表...")
@@ -57,7 +80,7 @@ def fetch_and_process_dynamics():
         
         if data.get('code') != 0:
             print(f"API返回错误！ 代码: {data.get('code')}, 信息: {data.get('message', '无')}")
-            exit(1) # API出错也直接让工作流失败
+            exit(1)
 
         items_list = data.get('data', {}).get('items')
         if not items_list:
