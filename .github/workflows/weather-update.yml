@@ -49,7 +49,7 @@ jobs:
         env:
           # 将我们设置的GitHub Secret传递给脚本作为环境变量
           BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
-        run: python get_bili_post.py # 假设您的脚本名为 get_bili_post.py
+        run: python get_bili_phigros_post.py # 假设您的脚本名为 get_bili_post.py
         
       - name: 检查文件变更
         id: git-check
