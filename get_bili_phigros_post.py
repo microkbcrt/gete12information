@@ -5,14 +5,13 @@ import os
 
 # --- 配置区 ---
 HOST_MID = "414149787"
-OUTPUT_FILENAME = 'latest_bili_phigros_post_details.json'
+OUTPUT_FILENAME = 'latest_bili_phigros_post_details.json' # 文件名保持不变
 SESSDATA = os.environ.get('BILI_SESSDATA')
 
 def get_content_from_detail_api(dynamic_id, headers):
     """
-    使用您找到的最终版详情API (api.vc.bilibili.com) 来获取内容。
+    从详情API获取内容。如果找不到关键文本字段，则返回 None。
     """
-    # 使用您找到的更优的API端点
     detail_api_url = "https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/get_dynamic_detail"
     
     params = {
@@ -28,35 +27,38 @@ def get_content_from_detail_api(dynamic_id, headers):
 
         if data.get('code') == 0 and data.get('data', {}).get('card'):
             card_str = data['data']['card'].get('card')
-            
-            # 核心逻辑：对作为字符串的card内容进行二次解析
             card_data = json.loads(card_str)
             
-            # 从二次解析后的数据中提取文本
+            # --- 【逻辑修改 1】 ---
+            # 优先尝试 'item.description'
             description = card_data.get('item', {}).get('description')
-            if description is None:
-                description = card_data.get('dynamic', '[未能找到 description 或 dynamic 字段]') # 备用字段
+            if description is not None:
+                print("成功从 'item.description' 字段获取到文本内容。")
+                return description.strip()
             
-            print("成功从详情API获取到文本内容。")
-            return description.strip()
+            # 如果上面找不到，再尝试 'dynamic' (适用于视频等)
+            dynamic_text = card_data.get('dynamic')
+            if dynamic_text is not None:
+                 print("成功从 'dynamic' 字段获取到文本内容。")
+                 return dynamic_text.strip()
+
+            # 如果两者都找不到，说明是无意义动态，返回 None
+            print("警告：在详情API响应中未能找到 'description' 或 'dynamic' 字段。此动态被视为无文本内容，将跳过更新。")
+            return None
         else:
             error_msg = f"[详情API错误] Code: {data.get('code')}, Message: {data.get('message', '无')}"
             print(error_msg)
-            return error_msg
+            return None # API出错也返回None，以防止更新
             
-    except requests.exceptions.RequestException as e:
-        error_msg = f"[网络错误] 请求详情API失败: {e}"
-        print(error_msg)
-        return error_msg
     except Exception as e:
-        error_msg = f"[解析错误] 处理详情API响应时出错: {e}"
+        error_msg = f"[严重错误] 处理详情API时发生异常: {e}"
         print(error_msg)
-        return error_msg
+        return None # 任何异常都返回None，确保不执行更新
 
 
 def fetch_and_process_dynamics():
     """
-    主函数：获取动态ID，再调用详情API，最后保存结果。
+    主函数：获取动态ID，调用详情API，检查内容后才保存结果。
     """
     list_api_url = f"https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/space?host_mid={HOST_MID}"
 
@@ -97,6 +99,13 @@ def fetch_and_process_dynamics():
         
         final_content = get_content_from_detail_api(dynamic_id, headers)
         
+        # --- 【逻辑修改 2】 ---
+        # 如果 final_content 是 None，说明获取失败或内容无意义，则直接退出
+        if final_content is None:
+            print("\n因为未能获取到有效的动态文本内容，本次将不更新JSON文件。脚本正常结束。")
+            return # 正常退出函数，不执行后续写入操作
+
+        # 只有在获取到有效内容时，才继续执行下面的代码
         publish_timestamp = latest_post.get('modules', {}).get('module_author', {}).get('pub_ts', 0)
         publish_time_str = datetime.fromtimestamp(publish_timestamp).strftime('%Y-%m-%d %H:%M:%S')
         dynamic_url = f"https://www.bilibili.com/opus/{dynamic_id}"
@@ -116,11 +125,8 @@ def fetch_and_process_dynamics():
         print(f"动态链接: {final_data['dynamic_url']}")
         print(f"动态内容:\n{final_data['content']}")
 
-    except requests.exceptions.RequestException as e:
-        print(f"列表API请求失败: {e}")
-        exit(1)
     except Exception as e:
-        print(f"发生未知错误: {e}")
+        print(f"主函数发生未知错误: {e}")
         exit(1)
 
 if __name__ == "__main__":
