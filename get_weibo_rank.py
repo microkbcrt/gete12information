@@ -6,7 +6,7 @@ def fetch_and_save_bilibili_rank():
     """
     从API获取B站热搜数据并保存到bilibilirank.json文件中。
     """
-    api_url = "https://api.pearktrue.cn/api/dailyhot/?title=微博"
+    api_url = "https://v2.xxapi.cn/api/weibohot"
     file_path = "weiborank.json"
 
     try:
