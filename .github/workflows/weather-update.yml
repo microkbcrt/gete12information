@@ -57,13 +57,27 @@ jobs:
           # 将我们设置的GitHub Secret传递给脚本作为环境变量
           BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
         run: python get_bili_phigros_post.py # 假设您的脚本名为 get_bili_post.py
+
+      - name: 运行B站动态获取脚本星铁
+        # 这里是新增的步骤
+        env:
+          # 将我们设置的GitHub Secret传递给脚本作为环境变量
+          BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
+        run: python get_bili_honkai_post.py # 假设您的脚本名为 get_bili_post.py
+
+      - name: 运行B站动态获取脚本原神
+        # 这里是新增的步骤
+        env:
+          # 将我们设置的GitHub Secret传递给脚本作为环境变量
+          BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
+        run: python get_bili_genshin_post.py # 假设您的脚本名为 get_bili_post.py
         
       - name: 检查文件变更
         id: git-check
         run: |
           # 检查所有可能被脚本修改或创建的文件
           # 在列表的最后加上我们新脚本的输出文件 latest_bili_post.json
-          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json latest_bili_phigros_post.json latest_bili_zzz_post.json; then
+          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json latest_bili_phigros_post.json latest_bili_zzz_post.json latest_bili_genshin_post.json latest_bili_honkai_post.json latest_bili_ruixue_post.json; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
