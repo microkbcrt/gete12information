@@ -10,13 +10,12 @@ SESSDATA = os.environ.get('BILI_SESSDATA')
 
 def get_content_from_detail_api(dynamic_id, headers):
     """
-    从详情API获取内容。如果找不到关键文本字段，则返回 None。
+    一个更强大的函数，用于从详情API中深度提取和组合文本内容，
+    能够兼容图文、纯文本、视频等多种动态类型。
     """
     detail_api_url = "https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/get_dynamic_detail"
     
-    params = {
-        "dynamic_id": dynamic_id
-    }
+    params = {"dynamic_id": dynamic_id}
     
     print(f"正在请求最终版详情API以获取动态({dynamic_id})的完整内容...")
     
@@ -29,31 +28,47 @@ def get_content_from_detail_api(dynamic_id, headers):
             card_str = data['data']['card'].get('card')
             card_data = json.loads(card_str)
             
-            # --- 关键修改点 1：检查文本内容 ---
-            # 优先尝试 'item.description'
+            # --- 【全新、更强大的解析逻辑】 ---
+            
+            # 1. 尝试图文动态的 'item.description'
             description = card_data.get('item', {}).get('description')
-            if description is not None:
-                print("成功从 'item.description' 字段获取到文本内容。")
+            if description: # 不再检查 is not None，直接检查真值
+                print("成功从 'item.description' 字段获取到图文内容。")
                 return description.strip()
             
-            # 如果上面找不到，再尝试 'dynamic' (适用于视频等)
-            dynamic_text = card_data.get('dynamic')
-            if dynamic_text is not None:
+            # 2. 尝试纯文本或带文字转发的 'item.content'
+            content = card_data.get('item', {}).get('content')
+            if content:
+                print("成功从 'item.content' 字段获取到纯文本内容。")
+                return content.strip()
+            
+            # 3. 尝试视频动态的 'title' 和 'desc'
+            title = card_data.get('title')
+            video_desc = card_data.get('desc')
+            dynamic_text = card_data.get('dynamic') # 视频动态的附加文字
+            if title and video_desc is not None:
+                # 组合成更有意义的文本
+                final_text = f"投稿了视频：【{title}】\n\n{dynamic_text}\n\n视频简介：\n{video_desc}"
+                print("成功从 'title', 'desc', 'dynamic' 字段获取到视频动态内容。")
+                return final_text.strip()
+
+            # 4. 最后的备用检查 (兼容旧逻辑)
+            if dynamic_text:
                  print("成功从 'dynamic' 字段获取到文本内容。")
                  return dynamic_text.strip()
 
-            # 如果两者都找不到，说明是无意义动态，返回 None
-            print("警告：在详情API响应中未能找到 'description' 或 'dynamic' 字段。此动态被视为无文本内容，将跳过更新。")
+            # 如果以上全都不满足，判定为无内容
+            print("警告：在详情API响应中未能找到任何有效的文本字段。此动态被视为无文本内容，将跳过更新。")
             return None
         else:
             error_msg = f"[详情API错误] Code: {data.get('code')}, Message: {data.get('message', '无')}"
             print(error_msg)
-            return None # API出错也返回None，以防止更新
+            return None
             
     except Exception as e:
         error_msg = f"[严重错误] 处理详情API时发生异常: {e}"
         print(error_msg)
-        return None # 任何异常都返回None，确保不执行更新
+        return None
 
 def fetch_and_process_dynamics():
     """
