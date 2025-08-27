@@ -1,8 +1,7 @@
 {
     "score": 20,
     "penaltyCoordinates": [
-        "(4,1)",
-        "(6,1)"
+        "(3,6)"
     ],
     "unqualified": {
         "王安宇": {
@@ -70,6 +69,12 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "书箱旁有垃圾"
+            ]
+        },
+        "黄政": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "书箱未放好"
             ]
         }
     }
