@@ -31,6 +31,9 @@ jobs:
           
       - name: 运行NMC天气脚本
         run: python getnmcweather.py
+
+      - name: 运行icon天气脚本
+        run: python get_icon_weather.py
         
       - name: 获取通知数据
         run: python fetch_notifications.py
@@ -108,7 +111,7 @@ jobs:
         run: |
           # 检查所有可能被脚本修改或创建的文件
           # 在列表的最后加上我们新脚本的输出文件 latest_bili_post.json
-          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json latest_bili_phigros_post.json latest_bili_zzz_post.json latest_bili_genshin_post.json latest_bili_honkai_post.json latest_bili_ruixue_post.json bilibilirank.json weiborank.json latest_bili_F1_post_details.json latest_bili_tastecar_post_details.json; then
+          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json latest_bili_phigros_post.json latest_bili_zzz_post.json latest_bili_genshin_post.json latest_bili_honkai_post.json latest_bili_ruixue_post.json bilibilirank.json weiborank.json latest_bili_F1_post_details.json latest_bili_tastecar_post_details.json iconweather.json; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
