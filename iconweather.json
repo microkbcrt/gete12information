@@ -1,7 +1,7 @@
 {
     "latitude": 23.125,
     "longitude": 113.25,
-    "generationtime_ms": 0.06794929504394531,
+    "generationtime_ms": 0.10263919830322266,
     "utc_offset_seconds": 28800,
     "timezone": "Asia/Shanghai",
     "timezone_abbreviation": "GMT+8",
@@ -41,7 +41,7 @@
             27.6
         ],
         "weather_code": [
-            2,
+            80,
             3,
             3,
             80,
