@@ -1,7 +1,8 @@
 {
-    "score": 20,
+    "score": 19,
     "penaltyCoordinates": [
-        "(3,6)"
+        "(5,1)",
+        "(6,1)"
     ],
     "unqualified": {
         "王安宇": {
@@ -29,9 +30,10 @@
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "书箱上有垃圾"
+                "书箱上有垃圾",
+                "地上隐蔽处有垃圾"
             ]
         },
         "孙运龙": {
@@ -75,6 +77,12 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "书箱未放好"
+            ]
+        },
+        "何睿政": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "地上隐蔽处有垃圾"
             ]
         }
     }
