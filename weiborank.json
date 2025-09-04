@@ -1,6 +1,313 @@
 {
-    "code": -1,
-    "msg": "网关通信故障，请联系管理员。",
-    "data": "",
-    "request_id": "5d579221e176e43db3daaf91"
+    "code": 200,
+    "msg": "数据请求成功",
+    "data": [
+        {
+            "hot": "150万",
+            "index": 1,
+            "title": "和平鸽工资15元",
+            "url": "https://s.weibo.com/weibo?q=和平鸽工资15元"
+        },
+        {
+            "hot": "65万",
+            "index": 2,
+            "title": "新华社认证的帅兵哥已婚",
+            "url": "https://s.weibo.com/weibo?q=新华社认证的帅兵哥已婚"
+        },
+        {
+            "hot": "61万",
+            "index": 3,
+            "title": "中国排面360度无死角整齐",
+            "url": "https://s.weibo.com/weibo?q=中国排面360度无死角整齐"
+        },
+        {
+            "hot": "61万",
+            "index": 4,
+            "title": "京东买药国药正当红",
+            "url": "https://s.weibo.com/weibo?q=京东买药国药正当红"
+        },
+        {
+            "hot": "60万",
+            "index": 5,
+            "title": "102岁老兵看完阅兵当晚安详离世",
+            "url": "https://s.weibo.com/weibo?q=102岁老兵看完阅兵当晚安详离世"
+        },
+        {
+            "hot": "59万",
+            "index": 6,
+            "title": "官方回应102岁老兵看完阅兵后去世",
+            "url": "https://s.weibo.com/weibo?q=官方回应102岁老兵看完阅兵后去世"
+        },
+        {
+            "hot": "55万",
+            "index": 7,
+            "title": "阅兵现场妻子把王伟照片举向天空",
+            "url": "https://s.weibo.com/weibo?q=阅兵现场妻子把王伟照片举向天空"
+        },
+        {
+            "hot": "45万",
+            "index": 8,
+            "title": "中朝两党两国领导人将会谈",
+            "url": "https://s.weibo.com/weibo?q=中朝两党两国领导人将会谈"
+        },
+        {
+            "hot": "38万",
+            "index": 9,
+            "title": "九三阅兵的覆盖全球实锤了",
+            "url": "https://s.weibo.com/weibo?q=九三阅兵的覆盖全球实锤了"
+        },
+        {
+            "hot": "33万",
+            "index": 10,
+            "title": "外交部回应特朗普涉华指责",
+            "url": "https://s.weibo.com/weibo?q=外交部回应特朗普涉华指责"
+        },
+        {
+            "hot": "33万",
+            "index": 11,
+            "title": "台湾青年说祖国强盛是最大的底气",
+            "url": "https://s.weibo.com/weibo?q=台湾青年说祖国强盛是最大的底气"
+        },
+        {
+            "hot": "33万",
+            "index": 12,
+            "title": "特朗普承认观看中国阅兵",
+            "url": "https://s.weibo.com/weibo?q=特朗普承认观看中国阅兵"
+        },
+        {
+            "hot": "33万",
+            "index": 13,
+            "title": "全韩国都在报道中国阅兵",
+            "url": "https://s.weibo.com/weibo?q=全韩国都在报道中国阅兵"
+        },
+        {
+            "hot": "33万",
+            "index": 14,
+            "title": "北京杜莎夫人蜡像馆将永久关停",
+            "url": "https://s.weibo.com/weibo?q=北京杜莎夫人蜡像馆将永久关停"
+        },
+        {
+            "hot": "32万",
+            "index": 15,
+            "title": "新华社 必出神图的决心",
+            "url": "https://s.weibo.com/weibo?q=新华社 必出神图的决心"
+        },
+        {
+            "hot": "27万",
+            "index": 16,
+            "title": "鸠山由纪夫说怀着反省谢罪心情赴华",
+            "url": "https://s.weibo.com/weibo?q=鸠山由纪夫说怀着反省谢罪心情赴华"
+        },
+        {
+            "hot": "25万",
+            "index": 17,
+            "title": "美联社直播中国阅兵评论区亮了",
+            "url": "https://s.weibo.com/weibo?q=美联社直播中国阅兵评论区亮了"
+        },
+        {
+            "hot": "23万",
+            "index": 18,
+            "title": "麒麟9020",
+            "url": "https://s.weibo.com/weibo?q=麒麟9020"
+        },
+        {
+            "hot": "22万",
+            "index": 19,
+            "title": "华为小平板超强超Mini",
+            "url": "https://s.weibo.com/weibo?q=华为小平板超强超Mini"
+        },
+        {
+            "hot": "22万",
+            "index": 20,
+            "title": "浙工大回应2新生为校长撑伞全淋湿",
+            "url": "https://s.weibo.com/weibo?q=浙工大回应2新生为校长撑伞全淋湿"
+        },
+        {
+            "hot": "20万",
+            "index": 21,
+            "title": "母女三人机场偷土特产",
+            "url": "https://s.weibo.com/weibo?q=母女三人机场偷土特产"
+        },
+        {
+            "hot": "18万",
+            "index": 22,
+            "title": "芒果音乐节阵容",
+            "url": "https://s.weibo.com/weibo?q=芒果音乐节阵容"
+        },
+        {
+            "hot": "17万",
+            "index": 23,
+            "title": "长期焦虑过度的表现",
+            "url": "https://s.weibo.com/weibo?q=长期焦虑过度的表现"
+        },
+        {
+            "hot": "16万",
+            "index": 24,
+            "title": "梓渝加盟芒果音乐节",
+            "url": "https://s.weibo.com/weibo?q=梓渝加盟芒果音乐节"
+        },
+        {
+            "hot": "15万",
+            "index": 25,
+            "title": "台媒称台军难以望到解放军尾灯",
+            "url": "https://s.weibo.com/weibo?q=台媒称台军难以望到解放军尾灯"
+        },
+        {
+            "hot": "14万",
+            "index": 26,
+            "title": "华为发布首款8.8英寸OLED平板",
+            "url": "https://s.weibo.com/weibo?q=华为发布首款8.8英寸OLED平板"
+        },
+        {
+            "hot": "14万",
+            "index": 27,
+            "title": "守陵大爷借电视机想让烈士们看阅兵",
+            "url": "https://s.weibo.com/weibo?q=守陵大爷借电视机想让烈士们看阅兵"
+        },
+        {
+            "hot": "14万",
+            "index": 28,
+            "title": "金铲铲官宣9月25日正式登陆鸿蒙5",
+            "url": "https://s.weibo.com/weibo?q=金铲铲官宣9月25日正式登陆鸿蒙5"
+        },
+        {
+            "hot": "13万",
+            "index": 29,
+            "title": "不能让英雄们找不到自己的部队",
+            "url": "https://s.weibo.com/weibo?q=不能让英雄们找不到自己的部队"
+        },
+        {
+            "hot": "12万",
+            "index": 30,
+            "title": "电动化时代还需要内燃机吗",
+            "url": "https://s.weibo.com/weibo?q=电动化时代还需要内燃机吗"
+        },
+        {
+            "hot": "12万",
+            "index": 31,
+            "title": "一代人有一代人的电子萌宠",
+            "url": "https://s.weibo.com/weibo?q=一代人有一代人的电子萌宠"
+        },
+        {
+            "hot": "12万",
+            "index": 32,
+            "title": "老师下学期你还教我吗",
+            "url": "https://s.weibo.com/weibo?q=老师下学期你还教我吗"
+        },
+        {
+            "hot": "12万",
+            "index": 33,
+            "title": "一年不吃晚饭身体的变化",
+            "url": "https://s.weibo.com/weibo?q=一年不吃晚饭身体的变化"
+        },
+        {
+            "hot": "11万",
+            "index": 34,
+            "title": "美防长谈九三阅兵",
+            "url": "https://s.weibo.com/weibo?q=美防长谈九三阅兵"
+        },
+        {
+            "hot": "11万",
+            "index": 35,
+            "title": "周翊然郑合惠子演父女",
+            "url": "https://s.weibo.com/weibo?q=周翊然郑合惠子演父女"
+        },
+        {
+            "hot": "11万",
+            "index": 36,
+            "title": "鹿晗北京站嘉宾",
+            "url": "https://s.weibo.com/weibo?q=鹿晗北京站嘉宾"
+        },
+        {
+            "hot": "10万",
+            "index": 37,
+            "title": "谁家七十多岁了做几十个人的饭啊",
+            "url": "https://s.weibo.com/weibo?q=谁家七十多岁了做几十个人的饭啊"
+        },
+        {
+            "hot": "10万",
+            "index": 38,
+            "title": "一抬头发现中国留学生都在看阅兵",
+            "url": "https://s.weibo.com/weibo?q=一抬头发现中国留学生都在看阅兵"
+        },
+        {
+            "hot": "9万",
+            "index": 39,
+            "title": "宋仲基新剧发布会状态",
+            "url": "https://s.weibo.com/weibo?q=宋仲基新剧发布会状态"
+        },
+        {
+            "hot": "9万",
+            "index": 40,
+            "title": "李艺彤把自己的牙套抵押了",
+            "url": "https://s.weibo.com/weibo?q=李艺彤把自己的牙套抵押了"
+        },
+        {
+            "hot": "9万",
+            "index": 41,
+            "title": "电瓶车通勤 自动驾驶",
+            "url": "https://s.weibo.com/weibo?q=电瓶车通勤 自动驾驶"
+        },
+        {
+            "hot": "9万",
+            "index": 42,
+            "title": "祝绪丹 换了个别的男朋友",
+            "url": "https://s.weibo.com/weibo?q=祝绪丹 换了个别的男朋友"
+        },
+        {
+            "hot": "9万",
+            "index": 43,
+            "title": "华为发布会",
+            "url": "https://s.weibo.com/weibo?q=华为发布会"
+        },
+        {
+            "hot": "9万",
+            "index": 44,
+            "title": "当小狗发现主人在监控里偷看它",
+            "url": "https://s.weibo.com/weibo?q=当小狗发现主人在监控里偷看它"
+        },
+        {
+            "hot": "9万",
+            "index": 45,
+            "title": "美国男孩狂按邻居门铃被枪杀",
+            "url": "https://s.weibo.com/weibo?q=美国男孩狂按邻居门铃被枪杀"
+        },
+        {
+            "hot": "9万",
+            "index": 46,
+            "title": "九三盛大阅兵",
+            "url": "https://s.weibo.com/weibo?q=九三盛大阅兵"
+        },
+        {
+            "hot": "9万",
+            "index": 47,
+            "title": "2025KPL夏决节目单",
+            "url": "https://s.weibo.com/weibo?q=2025KPL夏决节目单"
+        },
+        {
+            "hot": "9万",
+            "index": 48,
+            "title": "已单方面退出军迷圈",
+            "url": "https://s.weibo.com/weibo?q=已单方面退出军迷圈"
+        },
+        {
+            "hot": "9万",
+            "index": 49,
+            "title": "装备方队配上解说词看燃了",
+            "url": "https://s.weibo.com/weibo?q=装备方队配上解说词看燃了"
+        },
+        {
+            "hot": "9万",
+            "index": 50,
+            "title": "期待下次阅兵了",
+            "url": "https://s.weibo.com/weibo?q=期待下次阅兵了"
+        },
+        {
+            "hot": "9万",
+            "index": 51,
+            "title": "华为首次官宣非凡大师品牌LOGO",
+            "url": "https://s.weibo.com/weibo?q=华为首次官宣非凡大师品牌LOGO"
+        }
+    ],
+    "request_id": "89fbe7fe43c0624104c4d3a6"
 }
