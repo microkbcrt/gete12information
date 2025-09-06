@@ -8,7 +8,7 @@ def get_weather_data():
     从 Open-Meteo API 获取天气数据并保存到 iconweather.json 文件中。
     """
     # API URL
-    url = "https://api.open-meteo.com/v1/forecast?latitude=23.13&longitude=113.26&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Asia/Shanghai&models=ecmwf_ifs025"
+    url = "https://api.open-meteo.com/v1/forecast?latitude=23.13&longitude=113.26&hourly=precipitation,wind_speed_10m,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Shanghai&models=ecmwf_ifs025,gfs_global,icon_global"
     
     try:
         # 发送 GET 请求
