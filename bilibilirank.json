@@ -26,8 +26,8 @@
     },
     "link": "https://www.bilibili.com/v/popular/rank/all",
     "total": 100,
-    "fromCache": true,
-    "updateTime": "2025-09-07T19:41:51.324Z",
+    "fromCache": false,
+    "updateTime": "2025-09-07T20:42:26.528Z",
     "data": [
         {
             "id": "BV1D2agzCETf",
@@ -36,7 +36,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/983867eeb6b0b518b70d71dc0f067edfb0364468.jpg",
             "author": "江汤锅底呀",
             "timestamp": 1756878360000,
-            "hot": 7352592,
+            "hot": 7353710,
             "url": "https://b23.tv/BV1D2agzCETf",
             "mobileUrl": "https://m.bilibili.com/video/BV1D2agzCETf"
         },
@@ -47,7 +47,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/90aa2fb1a20f53fb8d5616e6e2d51898d54f1167.jpg",
             "author": "DECO27_Official",
             "timestamp": 1757066400000,
-            "hot": 2023773,
+            "hot": 2026857,
             "url": "https://b23.tv/BV1JThqzwEGq",
             "mobileUrl": "https://m.bilibili.com/video/BV1JThqzwEGq"
         },
@@ -58,7 +58,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/d03719bb04de4022120c10653bbef248a29a138b.jpg",
             "author": "麻薯波比呀",
             "timestamp": 1757152613000,
-            "hot": 4087634,
+            "hot": 4098957,
             "url": "https://b23.tv/BV1WJYTzbEiL",
             "mobileUrl": "https://m.bilibili.com/video/BV1WJYTzbEiL"
         },
@@ -69,7 +69,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/930c00c2790163fce01f5d96b0759158947cc3ed.jpg",
             "author": "小潮院长",
             "timestamp": 1757056388000,
-            "hot": 4778007,
+            "hot": 4779972,
             "url": "https://b23.tv/BV1VLa8zqEt5",
             "mobileUrl": "https://m.bilibili.com/video/BV1VLa8zqEt5"
         },
@@ -80,7 +80,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/0ab795a6e9f523a93d61cc192ffb36496438a6ac.jpg",
             "author": "名字君Montage",
             "timestamp": 1756956600000,
-            "hot": 4755125,
+            "hot": 4759210,
             "url": "https://b23.tv/BV1E3a1zsEGJ",
             "mobileUrl": "https://m.bilibili.com/video/BV1E3a1zsEGJ"
         },
@@ -91,7 +91,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/981450b374999452b103fbe5e1de8e45ae54504b.jpg",
             "author": "小王Albert",
             "timestamp": 1756867695000,
-            "hot": 15048313,
+            "hot": 15052748,
             "url": "https://b23.tv/BV1nwauzREuU",
             "mobileUrl": "https://m.bilibili.com/video/BV1nwauzREuU"
         },
@@ -102,20 +102,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/3f199e29b04b2a4c7a71b8a8ce00e0d17382d4ad.jpg",
             "author": "国家建筑师Cthuwork",
             "timestamp": 1757069998000,
-            "hot": 2107530,
+            "hot": 2110179,
             "url": "https://b23.tv/BV1CRahzZE99",
             "mobileUrl": "https://m.bilibili.com/video/BV1CRahzZE99"
-        },
-        {
-            "id": "BV1wCa1zYEzo",
-            "title": "“荣耀向我俯首”【镜头美学|胜利日】",
-            "desc": "纪念中国人民抗日战争暨世界反法西斯战争胜利80周年\n调色不喜请点左上角\n标题取自歌词\nbgm：荣耀向我俯首（La gloire à mes genoux）\n有点奇怪 好像剪yb没流l（?）发下看看是否如此",
-            "cover": "https://i2.hdslb.com/bfs/archive/8b88cf8c5b37ecb2b9fde841a4e9a553ce37e8ae.jpg",
-            "author": "一归啾啾",
-            "timestamp": 1756964654000,
-            "hot": 1719916,
-            "url": "https://b23.tv/BV1wCa1zYEzo",
-            "mobileUrl": "https://m.bilibili.com/video/BV1wCa1zYEzo"
         },
         {
             "id": "BV1Uda2zVEx3",
@@ -124,9 +113,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/d9b26940b8d10cb5ec0b71540baf7549171c9e2d.jpg",
             "author": "我是九日儿",
             "timestamp": 1756957319000,
-            "hot": 2314052,
+            "hot": 2315189,
             "url": "https://b23.tv/BV1Uda2zVEx3",
             "mobileUrl": "https://m.bilibili.com/video/BV1Uda2zVEx3"
+        },
+        {
+            "id": "BV1wCa1zYEzo",
+            "title": "“荣耀向我俯首”【镜头美学|胜利日】",
+            "desc": "纪念中国人民抗日战争暨世界反法西斯战争胜利80周年\n调色不喜请点左上角\n标题取自歌词\nbgm：荣耀向我俯首（La gloire à mes genoux）\n有点奇怪 好像剪yb没流l（?）发下看看是否如此",
+            "cover": "https://i2.hdslb.com/bfs/archive/8b88cf8c5b37ecb2b9fde841a4e9a553ce37e8ae.jpg",
+            "author": "一归啾啾",
+            "timestamp": 1756964654000,
+            "hot": 1721878,
+            "url": "https://b23.tv/BV1wCa1zYEzo",
+            "mobileUrl": "https://m.bilibili.com/video/BV1wCa1zYEzo"
         },
         {
             "id": "BV1yUa6z9EUR",
@@ -135,7 +135,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/3fd22039ce47bdb43f866583a91a8b25c307d17f.jpg",
             "author": "无处可去的愚者",
             "timestamp": 1757068200000,
-            "hot": 2135123,
+            "hot": 2137285,
             "url": "https://b23.tv/BV1yUa6z9EUR",
             "mobileUrl": "https://m.bilibili.com/video/BV1yUa6z9EUR"
         },
@@ -146,7 +146,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/8cad03c03879f14cc4e17185d865eac6492be91d.jpg",
             "author": "蔚蓝边际",
             "timestamp": 1757069857000,
-            "hot": 2373700,
+            "hot": 2377025,
             "url": "https://b23.tv/BV1CRahzZEmy",
             "mobileUrl": "https://m.bilibili.com/video/BV1CRahzZEmy"
         },
@@ -157,7 +157,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/bfd8605c105622db606c64877afa78c2fddcb924.jpg",
             "author": "凌殷不会画",
             "timestamp": 1756871669000,
-            "hot": 2898742,
+            "hot": 2899799,
             "url": "https://b23.tv/BV1hraMzuEuq",
             "mobileUrl": "https://m.bilibili.com/video/BV1hraMzuEuq"
         },
@@ -168,7 +168,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/424d49a6bc629638f2e16c0f6fa8191a503a4a83.jpg",
             "author": "ToSun记者团",
             "timestamp": 1757055763000,
-            "hot": 5265181,
+            "hot": 5268854,
             "url": "https://b23.tv/BV1pea8zWEuH",
             "mobileUrl": "https://m.bilibili.com/video/BV1pea8zWEuH"
         },
@@ -179,20 +179,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/1ad448019c3361e2ccd8aff8e53d8ff2ecfcbe52.jpg",
             "author": "天琦动漫",
             "timestamp": 1756951200000,
-            "hot": 4991585,
+            "hot": 4991697,
             "url": "https://b23.tv/BV1Nbarz4E6f",
             "mobileUrl": "https://m.bilibili.com/video/BV1Nbarz4E6f"
-        },
-        {
-            "id": "BV1SLaUzEEdB",
-            "title": "亲身实测！熬夜48小时，我的身体出现了变化……",
-            "desc": "你最长一次熬夜是多久？熬夜对身体的危害究竟有多大？这一次，我将挑战连续 48 小时不睡觉，全程保持清醒，并用专业仪器记录身体的变化，带你一起来看看，熬夜到底会对身体造成怎样的影响。如果你喜欢这期节目，请多多支持我们，并把视频发给你的朋友们一起看看～",
-            "cover": "https://i1.hdslb.com/bfs/archive/ffcd3e00162b4278cbad9c46ceec3f944e3578b9.jpg",
-            "author": "亿点点不一样",
-            "timestamp": 1756976400000,
-            "hot": 4133696,
-            "url": "https://b23.tv/BV1SLaUzEEdB",
-            "mobileUrl": "https://m.bilibili.com/video/BV1SLaUzEEdB"
         },
         {
             "id": "BV1zTYKzmEsf",
@@ -201,9 +190,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/a91607e0a9d7f2fe587c76e1d560ecc6b3a2bdd1.jpg",
             "author": "牙牙的包裹",
             "timestamp": 1757164784000,
-            "hot": 1420333,
+            "hot": 1427271,
             "url": "https://b23.tv/BV1zTYKzmEsf",
             "mobileUrl": "https://m.bilibili.com/video/BV1zTYKzmEsf"
+        },
+        {
+            "id": "BV1SLaUzEEdB",
+            "title": "亲身实测！熬夜48小时，我的身体出现了变化……",
+            "desc": "你最长一次熬夜是多久？熬夜对身体的危害究竟有多大？这一次，我将挑战连续 48 小时不睡觉，全程保持清醒，并用专业仪器记录身体的变化，带你一起来看看，熬夜到底会对身体造成怎样的影响。如果你喜欢这期节目，请多多支持我们，并把视频发给你的朋友们一起看看～",
+            "cover": "https://i1.hdslb.com/bfs/archive/ffcd3e00162b4278cbad9c46ceec3f944e3578b9.jpg",
+            "author": "亿点点不一样",
+            "timestamp": 1756976400000,
+            "hot": 4135227,
+            "url": "https://b23.tv/BV1SLaUzEEdB",
+            "mobileUrl": "https://m.bilibili.com/video/BV1SLaUzEEdB"
         },
         {
             "id": "BV1Mza4zWE6e",
@@ -212,7 +212,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/7ef83a8915e568afb8df4308d05edf9648e2f3e5.jpg",
             "author": "马俐管家",
             "timestamp": 1757064600000,
-            "hot": 3978673,
+            "hot": 3982312,
             "url": "https://b23.tv/BV1Mza4zWE6e",
             "mobileUrl": "https://m.bilibili.com/video/BV1Mza4zWE6e"
         },
@@ -223,20 +223,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/9f500b72f498b00c5f84c4564020de7fc9e56559.jpg",
             "author": "美国曹操来了",
             "timestamp": 1757072029000,
-            "hot": 2016941,
+            "hot": 2020084,
             "url": "https://b23.tv/BV1vGaazjEKu",
             "mobileUrl": "https://m.bilibili.com/video/BV1vGaazjEKu"
-        },
-        {
-            "id": "BV1uparzhEjs",
-            "title": "我是第一个上岛的中国人？在世界上最孤独的房子里过一夜！",
-            "desc": "等待三年后，我们终于得到了一个机会，去世界上最孤独的房子里过夜一晚。\n\n特别鸣谢@巡天者叶梓颐  、Halldor Kvaran、Aki。\n\n感谢安克能量舱对本期节目的大力支持，165W Max多口快充，25000mAh超大容量，超级适合外出旅行。",
-            "cover": "https://i2.hdslb.com/bfs/archive/4b40a4c3f58eccddc10a892ba823b35304eb7d9a.jpg",
-            "author": "Linksphotograph",
-            "timestamp": 1756958400000,
-            "hot": 4980758,
-            "url": "https://b23.tv/BV1uparzhEjs",
-            "mobileUrl": "https://m.bilibili.com/video/BV1uparzhEjs"
         },
         {
             "id": "BV1QzabzcENF",
@@ -245,9 +234,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/3370adaa182c74cbb72c1012d4410fe4d911fc23.jpg",
             "author": "是许木木啊",
             "timestamp": 1757064899000,
-            "hot": 2903456,
+            "hot": 2907193,
             "url": "https://b23.tv/BV1QzabzcENF",
             "mobileUrl": "https://m.bilibili.com/video/BV1QzabzcENF"
+        },
+        {
+            "id": "BV1uparzhEjs",
+            "title": "我是第一个上岛的中国人？在世界上最孤独的房子里过一夜！",
+            "desc": "等待三年后，我们终于得到了一个机会，去世界上最孤独的房子里过夜一晚。\n\n特别鸣谢@巡天者叶梓颐  、Halldor Kvaran、Aki。\n\n感谢安克能量舱对本期节目的大力支持，165W Max多口快充，25000mAh超大容量，超级适合外出旅行。",
+            "cover": "https://i2.hdslb.com/bfs/archive/4b40a4c3f58eccddc10a892ba823b35304eb7d9a.jpg",
+            "author": "Linksphotograph",
+            "timestamp": 1756958400000,
+            "hot": 4985939,
+            "url": "https://b23.tv/BV1uparzhEjs",
+            "mobileUrl": "https://m.bilibili.com/video/BV1uparzhEjs"
         },
         {
             "id": "BV1X6ahzMENo",
@@ -256,7 +256,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/76e1061e2ba73e874abbf2596ef9b0c7b8cf4041.jpg",
             "author": "Thirtyseven-37",
             "timestamp": 1757077573000,
-            "hot": 3012023,
+            "hot": 3015331,
             "url": "https://b23.tv/BV1X6ahzMENo",
             "mobileUrl": "https://m.bilibili.com/video/BV1X6ahzMENo"
         },
@@ -267,7 +267,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/4ffbbc191c739069bd9d90931e8a75293a6864f9.jpg",
             "author": "-维C动物园-",
             "timestamp": 1756959804000,
-            "hot": 3577625,
+            "hot": 3578479,
             "url": "https://b23.tv/BV1e6a2zWE1b",
             "mobileUrl": "https://m.bilibili.com/video/BV1e6a2zWE1b"
         },
@@ -278,7 +278,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/0a800d3e8d2f4961b0d770de11b221d626711ab7.jpg",
             "author": "快乐的台长",
             "timestamp": 1757131500000,
-            "hot": 2134083,
+            "hot": 2136959,
             "url": "https://b23.tv/BV13caYzCEDh",
             "mobileUrl": "https://m.bilibili.com/video/BV13caYzCEDh"
         },
@@ -289,7 +289,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/228eb28b21c432d3ec37840c36da48ea7987646b.jpg",
             "author": "李英俊帅气",
             "timestamp": 1756980000000,
-            "hot": 1146593,
+            "hot": 1147009,
             "url": "https://b23.tv/BV1M8a3z5EMF",
             "mobileUrl": "https://m.bilibili.com/video/BV1M8a3z5EMF"
         },
@@ -300,7 +300,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/d410b600d7413b7c496a29c601a94ffddacdd473.jpg",
             "author": "摩斯神探",
             "timestamp": 1757060920000,
-            "hot": 5120923,
+            "hot": 5123713,
             "url": "https://b23.tv/BV1iKa8zkEuL",
             "mobileUrl": "https://m.bilibili.com/video/BV1iKa8zkEuL"
         },
@@ -311,7 +311,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/0ef9dafa88ed10360d89e6d4dc39966f654bd13b.jpg",
             "author": "伤心欲茄222",
             "timestamp": 1757051858000,
-            "hot": 2994582,
+            "hot": 2996601,
             "url": "https://b23.tv/BV1mza4zpEr9",
             "mobileUrl": "https://m.bilibili.com/video/BV1mza4zpEr9"
         },
@@ -322,7 +322,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/a55a2014f2d0666719a136c40bfd21e9b2264a05.jpg",
             "author": "高司令-速凌电竞",
             "timestamp": 1757136209000,
-            "hot": 2429618,
+            "hot": 2432642,
             "url": "https://b23.tv/BV1iWaBzAEeH",
             "mobileUrl": "https://m.bilibili.com/video/BV1iWaBzAEeH"
         },
@@ -333,7 +333,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/1006386263d5a1c0e6430815c07b396c7d8c5599.jpg",
             "author": "海风质检员",
             "timestamp": 1757080929000,
-            "hot": 1580500,
+            "hot": 1584375,
             "url": "https://b23.tv/BV1fsahzEEM3",
             "mobileUrl": "https://m.bilibili.com/video/BV1fsahzEEM3"
         },
@@ -344,7 +344,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/899b90b59a990f81103e158af4cb5ba862b4ae50.jpg",
             "author": "dry向阳而生",
             "timestamp": 1756985764000,
-            "hot": 1114987,
+            "hot": 1115953,
             "url": "https://b23.tv/BV1zLamz8EtE",
             "mobileUrl": "https://m.bilibili.com/video/BV1zLamz8EtE"
         },
@@ -355,7 +355,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/9f20aadb766c4849dce96f59bd6976f70a2a38a5.jpg",
             "author": "可悲鸡翅",
             "timestamp": 1757154343000,
-            "hot": 1122821,
+            "hot": 1125584,
             "url": "https://b23.tv/BV1zbYTzpEuS",
             "mobileUrl": "https://m.bilibili.com/video/BV1zbYTzpEuS"
         },
@@ -366,7 +366,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/0f125fda3eb3f200752cf29e03a068b3ab6fc861.jpg",
             "author": "要掉小珍珠了oo",
             "timestamp": 1756900096000,
-            "hot": 877124,
+            "hot": 878199,
             "url": "https://b23.tv/BV1GVazzfEEQ",
             "mobileUrl": "https://m.bilibili.com/video/BV1GVazzfEEQ"
         },
@@ -377,7 +377,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/c2d3b7497a2f11a7d8386c6825e4ac4a3d954e51.jpg",
             "author": "谭井同学",
             "timestamp": 1757062800000,
-            "hot": 5007955,
+            "hot": 5008200,
             "url": "https://b23.tv/BV1WKamziEFS",
             "mobileUrl": "https://m.bilibili.com/video/BV1WKamziEFS"
         },
@@ -388,7 +388,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/689b79dc2289fdc434d8dea6bbe5dd94b8ed2ab4.jpg",
             "author": "花岗岩工作室",
             "timestamp": 1756906027000,
-            "hot": 7451960,
+            "hot": 7453084,
             "url": "https://b23.tv/BV1EfaBzuETw",
             "mobileUrl": "https://m.bilibili.com/video/BV1EfaBzuETw"
         },
@@ -399,7 +399,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/6be605649fbf5eb67874bc1296cee061121fa252.jpg",
             "author": "进击的金厂长",
             "timestamp": 1757064399000,
-            "hot": 2686997,
+            "hot": 2688426,
             "url": "https://b23.tv/BV1DiabzAEbb",
             "mobileUrl": "https://m.bilibili.com/video/BV1DiabzAEbb"
         },
@@ -410,7 +410,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/af635a64413450e3040862fbf79bc7873cceccf9.jpg",
             "author": "新华社",
             "timestamp": 1756981081000,
-            "hot": 1602339,
+            "hot": 1603556,
             "url": "https://b23.tv/BV1VsamzWELp",
             "mobileUrl": "https://m.bilibili.com/video/BV1VsamzWELp"
         },
@@ -421,7 +421,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/290b23ac7ef20abcd1a49b324e97f39e31fb4f2d.jpg",
             "author": "世界见闻录",
             "timestamp": 1756975472000,
-            "hot": 3857015,
+            "hot": 3859286,
             "url": "https://b23.tv/BV1CxaUzrEmF",
             "mobileUrl": "https://m.bilibili.com/video/BV1CxaUzrEmF"
         },
@@ -432,7 +432,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/bc8c478435c7419fb976b0138e28fb2937bc7c99.jpg",
             "author": "科普会上头",
             "timestamp": 1757061625000,
-            "hot": 5886301,
+            "hot": 5886343,
             "url": "https://b23.tv/BV1LtabzzEqb",
             "mobileUrl": "https://m.bilibili.com/video/BV1LtabzzEqb"
         },
@@ -443,20 +443,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/fa62a8da6a208b9da855510e6312e906849d04a1.jpg",
             "author": "记者方浩明",
             "timestamp": 1757031988000,
-            "hot": 1572998,
+            "hot": 1573746,
             "url": "https://b23.tv/BV14Jaxz7E1o",
             "mobileUrl": "https://m.bilibili.com/video/BV14Jaxz7E1o"
-        },
-        {
-            "id": "BV15MazzAE2r",
-            "title": "命很苦的样子",
-            "desc": "希望你喜欢这次的视频，这次玩的游戏是《亡命派对》\n游戏的规则很简单：\n轮到你时，翻开桌上两张牌\n如果翻到两张酒牌，无事发生\n如果翻到有枪牌，最先拍到枪牌并手指一个人\n最先拍到枪牌的人手指的那个人要受到惩罚喝小饮料\n如果是两张枪牌，那么两个人受惩罚\n受到惩罚的人选择桌上一张酒牌喝掉对应的惩罚\n每人十滴血，黑色的枪扣一滴，红色的枪扣投出骰子点数的血量\n扣完就淘汰了，活到最后的玩家获胜\n \n记得三连！！！！！！！！",
-            "cover": "https://i1.hdslb.com/bfs/archive/82831bc2b0fa5b2baa5472c522cd797fdc14bbf6.jpg",
-            "author": "高斯Goh",
-            "timestamp": 1756958400000,
-            "hot": 2674429,
-            "url": "https://b23.tv/BV15MazzAE2r",
-            "mobileUrl": "https://m.bilibili.com/video/BV15MazzAE2r"
         },
         {
             "id": "BV1SzabzcENM",
@@ -465,7 +454,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/b1a4c67191d78295e3677c8fa3fbc8a095644019.jpg",
             "author": "脱缰凯Kk",
             "timestamp": 1757065963000,
-            "hot": 1678564,
+            "hot": 1679991,
             "url": "https://b23.tv/BV1SzabzcENM",
             "mobileUrl": "https://m.bilibili.com/video/BV1SzabzcENM"
         },
@@ -476,9 +465,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/51ea55ef0617840fa90ad1db5002a76b36696561.jpg",
             "author": "央视新闻",
             "timestamp": 1756872509000,
-            "hot": 17570814,
+            "hot": 17572074,
             "url": "https://b23.tv/BV1YiaMzkEGz",
             "mobileUrl": "https://m.bilibili.com/video/BV1YiaMzkEGz"
+        },
+        {
+            "id": "BV15MazzAE2r",
+            "title": "命很苦的样子",
+            "desc": "希望你喜欢这次的视频，这次玩的游戏是《亡命派对》\n游戏的规则很简单：\n轮到你时，翻开桌上两张牌\n如果翻到两张酒牌，无事发生\n如果翻到有枪牌，最先拍到枪牌并手指一个人\n最先拍到枪牌的人手指的那个人要受到惩罚喝小饮料\n如果是两张枪牌，那么两个人受惩罚\n受到惩罚的人选择桌上一张酒牌喝掉对应的惩罚\n每人十滴血，黑色的枪扣一滴，红色的枪扣投出骰子点数的血量\n扣完就淘汰了，活到最后的玩家获胜\n \n记得三连！！！！！！！！",
+            "cover": "https://i1.hdslb.com/bfs/archive/82831bc2b0fa5b2baa5472c522cd797fdc14bbf6.jpg",
+            "author": "高斯Goh",
+            "timestamp": 1756958400000,
+            "hot": 2675454,
+            "url": "https://b23.tv/BV15MazzAE2r",
+            "mobileUrl": "https://m.bilibili.com/video/BV15MazzAE2r"
         },
         {
             "id": "BV1F1YKzXE74",
@@ -487,7 +487,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/7ad3ed63047e1e3733425b34e0d9046641d33d46.jpg",
             "author": "泛式",
             "timestamp": 1757156888000,
-            "hot": 1248801,
+            "hot": 1250840,
             "url": "https://b23.tv/BV1F1YKzXE74",
             "mobileUrl": "https://m.bilibili.com/video/BV1F1YKzXE74"
         },
@@ -498,7 +498,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/798fc526f76fa74a21b5b67cd5d6487084b87dad.jpg",
             "author": "蛋某人音乐",
             "timestamp": 1757030400000,
-            "hot": 2095202,
+            "hot": 2095467,
             "url": "https://b23.tv/BV1AbaUz6ESh",
             "mobileUrl": "https://m.bilibili.com/video/BV1AbaUz6ESh"
         },
@@ -509,20 +509,9 @@
             "cover": "https://i2.hdslb.com/bfs/archive/687c5c89e77a675666d2a7542b1beb97a4c0af1e.jpg",
             "author": "_张天琪",
             "timestamp": 1757071443000,
-            "hot": 2997745,
+            "hot": 2999039,
             "url": "https://b23.tv/BV11XahzFELq",
             "mobileUrl": "https://m.bilibili.com/video/BV11XahzFELq"
-        },
-        {
-            "id": "BV1Dua2zyE4G",
-            "title": "基米说完整版",
-            "desc": "翻唱：刘\n后期：饭団子\n原作者：BV1sdaHzTEe7\n——————————————————\n哈哈哈真考验神人技术。。。",
-            "cover": "https://i2.hdslb.com/bfs/archive/cd266a692f5efcceb79ada623dab417ee4cc4aaa.jpg",
-            "author": "劉俊朗",
-            "timestamp": 1756960147000,
-            "hot": 2194570,
-            "url": "https://b23.tv/BV1Dua2zyE4G",
-            "mobileUrl": "https://m.bilibili.com/video/BV1Dua2zyE4G"
         },
         {
             "id": "BV1UAabzdEYJ",
@@ -531,7 +520,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/83d045ddcc9d025320b0aeeef12efefb8e72a653.jpg",
             "author": "一只黑Q",
             "timestamp": 1757065547000,
-            "hot": 3777873,
+            "hot": 3778195,
             "url": "https://b23.tv/BV1UAabzdEYJ",
             "mobileUrl": "https://m.bilibili.com/video/BV1UAabzdEYJ"
         },
@@ -542,31 +531,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/e36495b1ea33d4753278f04803e219f89ec9d089.jpg",
             "author": "小何动漫i",
             "timestamp": 1757063064000,
-            "hot": 3404466,
+            "hot": 3404701,
             "url": "https://b23.tv/BV1L4abzgEKS",
             "mobileUrl": "https://m.bilibili.com/video/BV1L4abzgEKS"
         },
         {
-            "id": "BV1nBe9zdESU",
-            "title": "他为50万粉丝 将地球最璀璨的文明刻入MC！",
-            "desc": "参入制作：@绿柱石Berylite  （地图制作）\n@Racpast  （网站搭建）\n-纯为爱发电，网站服务器可能不是特别好，若大量访问可能会导致网站卡顿\n-需要存档情私信up主：珠峰存档",
-            "cover": "https://i2.hdslb.com/bfs/archive/bc68fb06504a099b13ef02442125ce8a41c2a1a1.jpg",
-            "author": "Apple苹果酱喔",
-            "timestamp": 1756971000000,
-            "hot": 688745,
-            "url": "https://b23.tv/BV1nBe9zdESU",
-            "mobileUrl": "https://m.bilibili.com/video/BV1nBe9zdESU"
-        },
-        {
-            "id": "BV1rMawzqEGC",
-            "title": "向前，向前，向前啊！钢铁洪流进行曲（唢呐）",
-            "desc": "该视频暂无简介",
-            "cover": "https://i1.hdslb.com/bfs/archive/541dadd5a3b32b0e90c3a3b3cbb4df6d401b4953.jpg",
-            "author": "浑元Rysn",
-            "timestamp": 1756863000000,
-            "hot": 3139522,
-            "url": "https://b23.tv/BV1rMawzqEGC",
-            "mobileUrl": "https://m.bilibili.com/video/BV1rMawzqEGC"
+            "id": "BV1Dua2zyE4G",
+            "title": "基米说完整版",
+            "desc": "翻唱：刘\n后期：饭団子\n原作者：BV1sdaHzTEe7\n——————————————————\n哈哈哈真考验神人技术。。。",
+            "cover": "https://i2.hdslb.com/bfs/archive/cd266a692f5efcceb79ada623dab417ee4cc4aaa.jpg",
+            "author": "劉俊朗",
+            "timestamp": 1756960147000,
+            "hot": 2198275,
+            "url": "https://b23.tv/BV1Dua2zyE4G",
+            "mobileUrl": "https://m.bilibili.com/video/BV1Dua2zyE4G"
         },
         {
             "id": "BV1cxavzNEzr",
@@ -575,9 +553,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/43379fe8e7666837ee852708f1765dd9ea1e851f.jpg",
             "author": "雨哥到处跑",
             "timestamp": 1757127900000,
-            "hot": 1225202,
+            "hot": 1226537,
             "url": "https://b23.tv/BV1cxavzNEzr",
             "mobileUrl": "https://m.bilibili.com/video/BV1cxavzNEzr"
+        },
+        {
+            "id": "BV1nBe9zdESU",
+            "title": "他为50万粉丝 将地球最璀璨的文明刻入MC！",
+            "desc": "参入制作：@绿柱石Berylite  （地图制作）\n@Racpast  （网站搭建）\n-纯为爱发电，网站服务器可能不是特别好，若大量访问可能会导致网站卡顿\n-需要存档情私信up主：珠峰存档",
+            "cover": "https://i2.hdslb.com/bfs/archive/bc68fb06504a099b13ef02442125ce8a41c2a1a1.jpg",
+            "author": "Apple苹果酱喔",
+            "timestamp": 1756971000000,
+            "hot": 689155,
+            "url": "https://b23.tv/BV1nBe9zdESU",
+            "mobileUrl": "https://m.bilibili.com/video/BV1nBe9zdESU"
         },
         {
             "id": "BV1o9a1zREUj",
@@ -586,7 +575,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/5568f9d0b24d9043549e1dec882c38b9a382f831.jpg",
             "author": "三点半官方",
             "timestamp": 1756978200000,
-            "hot": 5351572,
+            "hot": 5352956,
             "url": "https://b23.tv/BV1o9a1zREUj",
             "mobileUrl": "https://m.bilibili.com/video/BV1o9a1zREUj"
         },
@@ -597,7 +586,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/a5d716e483d0b74ec6967182116cce83fc4bfb2d.jpg",
             "author": "顾我电影",
             "timestamp": 1757077500000,
-            "hot": 2627661,
+            "hot": 2630199,
             "url": "https://b23.tv/BV1QdazzFEYL",
             "mobileUrl": "https://m.bilibili.com/video/BV1QdazzFEYL"
         },
@@ -608,9 +597,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/332bdf4e3ac2ab1647cbcf8e844c0d2962877882.jpg",
             "author": "难言言x",
             "timestamp": 1757154412000,
-            "hot": 3465313,
+            "hot": 3465480,
             "url": "https://b23.tv/BV1AWYTzdEF4",
             "mobileUrl": "https://m.bilibili.com/video/BV1AWYTzdEF4"
+        },
+        {
+            "id": "BV1rMawzqEGC",
+            "title": "向前，向前，向前啊！钢铁洪流进行曲（唢呐）",
+            "desc": "该视频暂无简介",
+            "cover": "https://i1.hdslb.com/bfs/archive/541dadd5a3b32b0e90c3a3b3cbb4df6d401b4953.jpg",
+            "author": "浑元Rysn",
+            "timestamp": 1756863000000,
+            "hot": 3141464,
+            "url": "https://b23.tv/BV1rMawzqEGC",
+            "mobileUrl": "https://m.bilibili.com/video/BV1rMawzqEGC"
         },
         {
             "id": "BV1kbaUzzEtM",
@@ -619,7 +619,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/23fc8bd4144de34c31f9313b4501047d078ff4c8.jpg",
             "author": "客阙",
             "timestamp": 1756973443000,
-            "hot": 4368238,
+            "hot": 4368491,
             "url": "https://b23.tv/BV1kbaUzzEtM",
             "mobileUrl": "https://m.bilibili.com/video/BV1kbaUzzEtM"
         },
@@ -630,7 +630,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/375fc695450bf455e2bd12514cfdd7d80f26359a.jpg",
             "author": "SMTOWN",
             "timestamp": 1757044800000,
-            "hot": 1566758,
+            "hot": 1567835,
             "url": "https://b23.tv/BV17FaUz8EVC",
             "mobileUrl": "https://m.bilibili.com/video/BV17FaUz8EVC"
         },
@@ -641,7 +641,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/1f02456df4492820fb225bfd3d316bc92e16272c.jpg",
             "author": "晚秋动漫丶",
             "timestamp": 1757069071000,
-            "hot": 3640214,
+            "hot": 3640393,
             "url": "https://b23.tv/BV1c5abzEES4",
             "mobileUrl": "https://m.bilibili.com/video/BV1c5abzEES4"
         },
@@ -652,7 +652,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/cfcaf41c88be5a710d88eb65f2975a0e44fc8bfa.jpg",
             "author": "杨叔洞察",
             "timestamp": 1757143527000,
-            "hot": 3603192,
+            "hot": 3608129,
             "url": "https://b23.tv/BV1j6aqzYErr",
             "mobileUrl": "https://m.bilibili.com/video/BV1j6aqzYErr"
         },
@@ -663,7 +663,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/3b3eb7b65eae861c1f950139714978c84daef862.jpg",
             "author": "守拙君",
             "timestamp": 1757138087000,
-            "hot": 4391311,
+            "hot": 4393311,
             "url": "https://b23.tv/BV1xCaBzJEV3",
             "mobileUrl": "https://m.bilibili.com/video/BV1xCaBzJEV3"
         },
@@ -674,7 +674,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/6b3dfbde718c16104bbfcf211a60b3fa7a9486cb.jpg",
             "author": "七颗猩猩QKXX",
             "timestamp": 1757068007000,
-            "hot": 4471320,
+            "hot": 4472723,
             "url": "https://b23.tv/BV1FLabzmEUm",
             "mobileUrl": "https://m.bilibili.com/video/BV1FLabzmEUm"
         },
@@ -685,7 +685,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/81df56c259aef99897ab03ffa8fca141171947ab.jpg",
             "author": "三角洲-安澜",
             "timestamp": 1757039771000,
-            "hot": 1254502,
+            "hot": 1258912,
             "url": "https://b23.tv/BV1L2atzqEZc",
             "mobileUrl": "https://m.bilibili.com/video/BV1L2atzqEZc"
         },
@@ -696,7 +696,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/a3a6b467bd1554233f6881d9c68da9b78dd03a5b.jpg",
             "author": "画久久99",
             "timestamp": 1757063663000,
-            "hot": 3012345,
+            "hot": 3013826,
             "url": "https://b23.tv/BV186abzhEYy",
             "mobileUrl": "https://m.bilibili.com/video/BV186abzhEYy"
         },
@@ -707,7 +707,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/75915e89a523f4599c5ce5017f167ef20ee43665.jpg",
             "author": "保镖的车库",
             "timestamp": 1757078061000,
-            "hot": 788534,
+            "hot": 789224,
             "url": "https://b23.tv/BV1ohahz5EsE",
             "mobileUrl": "https://m.bilibili.com/video/BV1ohahz5EsE"
         },
@@ -718,7 +718,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/d1453bf9b70e95a388a00c24edebd73229a1e649.jpg",
             "author": "芮予猪猪",
             "timestamp": 1757151000000,
-            "hot": 1492788,
+            "hot": 1495632,
             "url": "https://b23.tv/BV1moaqzDE8R",
             "mobileUrl": "https://m.bilibili.com/video/BV1moaqzDE8R"
         },
@@ -729,7 +729,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/6372beb671d01d34d1e6485d307d0676c64492ea.jpg",
             "author": "Mara_然",
             "timestamp": 1757062389000,
-            "hot": 559404,
+            "hot": 559961,
             "url": "https://b23.tv/BV1oWabz3EGQ",
             "mobileUrl": "https://m.bilibili.com/video/BV1oWabz3EGQ"
         },
@@ -740,20 +740,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/cdc79e1ee04717dc55f0bd39bc436a87b4ab2fed.jpg",
             "author": "L另唐",
             "timestamp": 1757068200000,
-            "hot": 1725018,
+            "hot": 1726021,
             "url": "https://b23.tv/BV1JXamzNExC",
             "mobileUrl": "https://m.bilibili.com/video/BV1JXamzNExC"
-        },
-        {
-            "id": "BV1ebaKzzEek",
-            "title": "在西藏差点损失3W换来的星空",
-            "desc": "该视频暂无简介",
-            "cover": "https://i0.hdslb.com/bfs/archive/eb82fdedd52bed6f9908a87e2b6c3c9dfd59b8fd.jpg",
-            "author": "源Dream",
-            "timestamp": 1756827170000,
-            "hot": 7555507,
-            "url": "https://b23.tv/BV1ebaKzzEek",
-            "mobileUrl": "https://m.bilibili.com/video/BV1ebaKzzEek"
         },
         {
             "id": "BV1LUatzKEbK",
@@ -762,7 +751,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/51277619bf4c0763ac54c59abd7d7279a25fee76.jpg",
             "author": "万能的洪师傅",
             "timestamp": 1757040465000,
-            "hot": 2087019,
+            "hot": 2090663,
             "url": "https://b23.tv/BV1LUatzKEbK",
             "mobileUrl": "https://m.bilibili.com/video/BV1LUatzKEbK"
         },
@@ -773,7 +762,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/bb78ba9d37ab52db494e6197ebeefb7db7f99598.jpg",
             "author": "千秋动漫丶",
             "timestamp": 1757064900000,
-            "hot": 1773470,
+            "hot": 1773601,
             "url": "https://b23.tv/BV1MRaxzWEdK",
             "mobileUrl": "https://m.bilibili.com/video/BV1MRaxzWEdK"
         },
@@ -784,9 +773,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/edd5e01614a9cc8a7dbdbbb47fd15a58df3e4c83.jpg",
             "author": "央视农业",
             "timestamp": 1756997767000,
-            "hot": 1304923,
+            "hot": 1305388,
             "url": "https://b23.tv/BV1EJaSzvEf4",
             "mobileUrl": "https://m.bilibili.com/video/BV1EJaSzvEf4"
+        },
+        {
+            "id": "BV1ebaKzzEek",
+            "title": "在西藏差点损失3W换来的星空",
+            "desc": "该视频暂无简介",
+            "cover": "https://i0.hdslb.com/bfs/archive/eb82fdedd52bed6f9908a87e2b6c3c9dfd59b8fd.jpg",
+            "author": "源Dream",
+            "timestamp": 1756827170000,
+            "hot": 7557636,
+            "url": "https://b23.tv/BV1ebaKzzEek",
+            "mobileUrl": "https://m.bilibili.com/video/BV1ebaKzzEek"
         },
         {
             "id": "BV14CaBzJE7o",
@@ -795,7 +795,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/16d8bb961f09617378b09b83516fdd608203b88d.jpg",
             "author": "Minecraft辰天",
             "timestamp": 1757138174000,
-            "hot": 2050783,
+            "hot": 2050838,
             "url": "https://b23.tv/BV14CaBzJE7o",
             "mobileUrl": "https://m.bilibili.com/video/BV14CaBzJE7o"
         },
@@ -806,7 +806,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/6f48de2b6ac05421ef4394c473d2be6a46ef3691.jpg",
             "author": "小傲想睡觉",
             "timestamp": 1757147978000,
-            "hot": 1103732,
+            "hot": 1104892,
             "url": "https://b23.tv/BV1e3a8zuENx",
             "mobileUrl": "https://m.bilibili.com/video/BV1e3a8zuENx"
         },
@@ -817,7 +817,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/843116847a5f1711fdf307e5d743967311fd373e.jpg",
             "author": "GNwork团队",
             "timestamp": 1757062800000,
-            "hot": 758176,
+            "hot": 758673,
             "url": "https://b23.tv/BV1Sia4zsEzw",
             "mobileUrl": "https://m.bilibili.com/video/BV1Sia4zsEzw"
         },
@@ -828,7 +828,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/b0b9535c11f24054df31262284bc986074456c86.jpg",
             "author": "自动鬼畜中的WZ",
             "timestamp": 1756807200000,
-            "hot": 3588914,
+            "hot": 3590197,
             "url": "https://b23.tv/BV1eHawzZEt6",
             "mobileUrl": "https://m.bilibili.com/video/BV1eHawzZEt6"
         },
@@ -839,20 +839,9 @@
             "cover": "https://i2.hdslb.com/bfs/archive/672a42d55363900d3e1544803e23bc6bedcf194c.jpg",
             "author": "方远大叔",
             "timestamp": 1756787481000,
-            "hot": 8910109,
+            "hot": 8912827,
             "url": "https://b23.tv/BV1eJaFzHEEs",
             "mobileUrl": "https://m.bilibili.com/video/BV1eJaFzHEEs"
-        },
-        {
-            "id": "BV1Q2aczXEtv",
-            "title": "他的身体像失控一样，在半梦半醒间自由地跳舞！",
-            "desc": "马特·麦克雷里（Matt McCreary）融合跑酷和现代舞，创造出一种实验性身体艺术。",
-            "cover": "https://i1.hdslb.com/bfs/archive/da72cd0d86ae35cd3bc6109beb25020e190a0f05.jpg",
-            "author": "艺术有毒",
-            "timestamp": 1756944000000,
-            "hot": 5340334,
-            "url": "https://b23.tv/BV1Q2aczXEtv",
-            "mobileUrl": "https://m.bilibili.com/video/BV1Q2aczXEtv"
         },
         {
             "id": "BV1QeabzeEUP",
@@ -861,20 +850,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/7b8cbff5b06a9f0b42b6efbd67a4a3331b6a6ffc.jpg",
             "author": "食贫道",
             "timestamp": 1757067676000,
-            "hot": 1779619,
+            "hot": 1782177,
             "url": "https://b23.tv/BV1QeabzeEUP",
             "mobileUrl": "https://m.bilibili.com/video/BV1QeabzeEUP"
-        },
-        {
-            "id": "BV1VbaSzbEA1",
-            "title": "开局就是10亿分豆？",
-            "desc": "-",
-            "cover": "https://i1.hdslb.com/bfs/archive/554af91799150fa99d18aa351aa2ac2348d634d1.jpg",
-            "author": "蛋仔小六呀",
-            "timestamp": 1756993238000,
-            "hot": 1134608,
-            "url": "https://b23.tv/BV1VbaSzbEA1",
-            "mobileUrl": "https://m.bilibili.com/video/BV1VbaSzbEA1"
         },
         {
             "id": "BV1Z4aYzREZg",
@@ -883,9 +861,31 @@
             "cover": "https://i1.hdslb.com/bfs/archive/49799097118ced01bf8fad27451e725ce50bbe99.jpg",
             "author": "Aria-莉娜",
             "timestamp": 1757087352000,
-            "hot": 2189286,
+            "hot": 2196996,
             "url": "https://b23.tv/BV1Z4aYzREZg",
             "mobileUrl": "https://m.bilibili.com/video/BV1Z4aYzREZg"
+        },
+        {
+            "id": "BV1VbaSzbEA1",
+            "title": "开局就是10亿分豆？",
+            "desc": "-",
+            "cover": "https://i1.hdslb.com/bfs/archive/554af91799150fa99d18aa351aa2ac2348d634d1.jpg",
+            "author": "蛋仔小六呀",
+            "timestamp": 1756993238000,
+            "hot": 1134617,
+            "url": "https://b23.tv/BV1VbaSzbEA1",
+            "mobileUrl": "https://m.bilibili.com/video/BV1VbaSzbEA1"
+        },
+        {
+            "id": "BV1Q2aczXEtv",
+            "title": "他的身体像失控一样，在半梦半醒间自由地跳舞！",
+            "desc": "马特·麦克雷里（Matt McCreary）融合跑酷和现代舞，创造出一种实验性身体艺术。",
+            "cover": "https://i1.hdslb.com/bfs/archive/da72cd0d86ae35cd3bc6109beb25020e190a0f05.jpg",
+            "author": "艺术有毒",
+            "timestamp": 1756944000000,
+            "hot": 5343248,
+            "url": "https://b23.tv/BV1Q2aczXEtv",
+            "mobileUrl": "https://m.bilibili.com/video/BV1Q2aczXEtv"
         },
         {
             "id": "BV11AamzBEg7",
@@ -894,20 +894,9 @@
             "cover": "https://i2.hdslb.com/bfs/archive/1796d09086f328170878cabf0d7e31a03cd1e035.jpg",
             "author": "李如儒也是李蠕蠕",
             "timestamp": 1756983961000,
-            "hot": 2990841,
+            "hot": 2991812,
             "url": "https://b23.tv/BV11AamzBEg7",
             "mobileUrl": "https://m.bilibili.com/video/BV11AamzBEg7"
-        },
-        {
-            "id": "BV1xea3zrEWm",
-            "title": "请选择是否回忆2025暑假歌单！",
-            "desc": "-",
-            "cover": "https://i0.hdslb.com/bfs/archive/33c92a68c45ea7ba6528486731606b9c78241f96.jpg",
-            "author": "Alarav",
-            "timestamp": 1756875344000,
-            "hot": 895052,
-            "url": "https://b23.tv/BV1xea3zrEWm",
-            "mobileUrl": "https://m.bilibili.com/video/BV1xea3zrEWm"
         },
         {
             "id": "BV1qRYKz1Ep7",
@@ -916,9 +905,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/c03bb9e39fba03ffb225642671a91e8dcf18a6e5.jpg",
             "author": "小果动漫x",
             "timestamp": 1757156346000,
-            "hot": 2569809,
+            "hot": 2570200,
             "url": "https://b23.tv/BV1qRYKz1Ep7",
             "mobileUrl": "https://m.bilibili.com/video/BV1qRYKz1Ep7"
+        },
+        {
+            "id": "BV1xea3zrEWm",
+            "title": "请选择是否回忆2025暑假歌单！",
+            "desc": "-",
+            "cover": "https://i0.hdslb.com/bfs/archive/33c92a68c45ea7ba6528486731606b9c78241f96.jpg",
+            "author": "Alarav",
+            "timestamp": 1756875344000,
+            "hot": 895326,
+            "url": "https://b23.tv/BV1xea3zrEWm",
+            "mobileUrl": "https://m.bilibili.com/video/BV1xea3zrEWm"
         },
         {
             "id": "BV1PxaUzkEHo",
@@ -927,7 +927,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/da70b7e6fa7e650c0589f05025e4f22958d7a4d2.jpg",
             "author": "音乐老友",
             "timestamp": 1756975336000,
-            "hot": 991362,
+            "hot": 991434,
             "url": "https://b23.tv/BV1PxaUzkEHo",
             "mobileUrl": "https://m.bilibili.com/video/BV1PxaUzkEHo"
         },
@@ -938,42 +938,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/e0211aae7a5f8251ec4afd3e8aa82d09d709907e.jpg",
             "author": "小雪人z",
             "timestamp": 1756873572000,
-            "hot": 2136089,
+            "hot": 2138183,
             "url": "https://b23.tv/BV1GHa3zSExk",
             "mobileUrl": "https://m.bilibili.com/video/BV1GHa3zSExk"
-        },
-        {
-            "id": "BV13Ma2zjEMA",
-            "title": "《明日方舟》EP - in your blue eyes",
-            "desc": "9月4日 in your blue eyes 正式上架\n\n作词：Diggy-MO’\n作曲：Diggy-MO’、松坂康司 (SUPA LOVE)\n编曲：Diggy-MO’、松坂康司 (SUPA LOVE)\n\n【专辑介绍】\n溺于苍白的月光，抑或猩红的梦境？\n醒来吧，她轻声呼唤，携着青蓝色的爱与叹息。\n苏醒的人偶拾起乐器，奏响重塑世界的乐声。\n直至人偶走下舞台，而戏剧仍在继续。\n\n【歌曲列表】\nin your blue eyes",
-            "cover": "https://i1.hdslb.com/bfs/archive/545829b034104b0d6ed9c40ea23bf35aae40332d.jpg",
-            "author": "明日方舟",
-            "timestamp": 1756983600000,
-            "hot": 2306840,
-            "url": "https://b23.tv/BV13Ma2zjEMA",
-            "mobileUrl": "https://m.bilibili.com/video/BV13Ma2zjEMA"
-        },
-        {
-            "id": "BV1KZaczLExn",
-            "title": "如何在家制造自热米饭",
-            "desc": "该视频暂无简介",
-            "cover": "https://i2.hdslb.com/bfs/archive/ebd5077200cf71979ca63dde4bdd992631d07806.jpg",
-            "author": "嘤武罗",
-            "timestamp": 1756803841000,
-            "hot": 6087225,
-            "url": "https://b23.tv/BV1KZaczLExn",
-            "mobileUrl": "https://m.bilibili.com/video/BV1KZaczLExn"
-        },
-        {
-            "id": "BV14Ya1zgERM",
-            "title": "女法医读恶评",
-            "desc": "恶评快走开！",
-            "cover": "https://i2.hdslb.com/bfs/archive/f4deb8a115e73b271af9144eb0b85ecb22952a81.jpg",
-            "author": "我是向琴琴呀",
-            "timestamp": 1756970437000,
-            "hot": 932618,
-            "url": "https://b23.tv/BV14Ya1zgERM",
-            "mobileUrl": "https://m.bilibili.com/video/BV14Ya1zgERM"
         },
         {
             "id": "BV1KVaYzvEKn",
@@ -982,9 +949,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/27e52cd6223901940f24e7284fcbcf2d7ea2fdef.jpg",
             "author": "蛋仔派对熊二",
             "timestamp": 1757116800000,
-            "hot": 700040,
+            "hot": 700058,
             "url": "https://b23.tv/BV1KVaYzvEKn",
             "mobileUrl": "https://m.bilibili.com/video/BV1KVaYzvEKn"
+        },
+        {
+            "id": "BV13Ma2zjEMA",
+            "title": "《明日方舟》EP - in your blue eyes",
+            "desc": "9月4日 in your blue eyes 正式上架\n\n作词：Diggy-MO’\n作曲：Diggy-MO’、松坂康司 (SUPA LOVE)\n编曲：Diggy-MO’、松坂康司 (SUPA LOVE)\n\n【专辑介绍】\n溺于苍白的月光，抑或猩红的梦境？\n醒来吧，她轻声呼唤，携着青蓝色的爱与叹息。\n苏醒的人偶拾起乐器，奏响重塑世界的乐声。\n直至人偶走下舞台，而戏剧仍在继续。\n\n【歌曲列表】\nin your blue eyes",
+            "cover": "https://i1.hdslb.com/bfs/archive/545829b034104b0d6ed9c40ea23bf35aae40332d.jpg",
+            "author": "明日方舟",
+            "timestamp": 1756983600000,
+            "hot": 2308198,
+            "url": "https://b23.tv/BV13Ma2zjEMA",
+            "mobileUrl": "https://m.bilibili.com/video/BV13Ma2zjEMA"
         },
         {
             "id": "BV1gzabzwErE",
@@ -993,7 +971,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/156cfa3395a9038254815b75fc895c22de9e1915.jpg",
             "author": "吟游诗人AT",
             "timestamp": 1757065491000,
-            "hot": 923169,
+            "hot": 924426,
             "url": "https://b23.tv/BV1gzabzwErE",
             "mobileUrl": "https://m.bilibili.com/video/BV1gzabzwErE"
         },
@@ -1004,42 +982,31 @@
             "cover": "https://i0.hdslb.com/bfs/archive/5f0ba8d12e258a357b2af15451e0770142440c62.jpg",
             "author": "努力的橙子薄肌",
             "timestamp": 1757063878000,
-            "hot": 1468609,
+            "hot": 1470040,
             "url": "https://b23.tv/BV1UrabzfESt",
             "mobileUrl": "https://m.bilibili.com/video/BV1UrabzfESt"
         },
         {
-            "id": "BV1EYaczaETP",
-            "title": "宁采臣：加班加到见鬼了！",
+            "id": "BV14Ya1zgERM",
+            "title": "女法医读恶评",
+            "desc": "恶评快走开！",
+            "cover": "https://i2.hdslb.com/bfs/archive/f4deb8a115e73b271af9144eb0b85ecb22952a81.jpg",
+            "author": "我是向琴琴呀",
+            "timestamp": 1756970437000,
+            "hot": 933342,
+            "url": "https://b23.tv/BV14Ya1zgERM",
+            "mobileUrl": "https://m.bilibili.com/video/BV14Ya1zgERM"
+        },
+        {
+            "id": "BV1KZaczLExn",
+            "title": "如何在家制造自热米饭",
             "desc": "该视频暂无简介",
-            "cover": "https://i1.hdslb.com/bfs/archive/9ff9f620d88b374478ce3f5f3d6270a604bdbff7.jpg",
-            "author": "有点神动漫",
-            "timestamp": 1756868400000,
-            "hot": 4026346,
-            "url": "https://b23.tv/BV1EYaczaETP",
-            "mobileUrl": "https://m.bilibili.com/video/BV1EYaczaETP"
-        },
-        {
-            "id": "BV1Ayamz6EY2",
-            "title": "阅兵后懂王酸酸发言：都没有提美国",
-            "desc": "-",
-            "cover": "https://i2.hdslb.com/bfs/archive/b2795b0a50c9cb5660ba66bc9fcf00ca07f16775.jpg",
-            "author": "波士顿圆脸",
-            "timestamp": 1756982145000,
-            "hot": 3838819,
-            "url": "https://b23.tv/BV1Ayamz6EY2",
-            "mobileUrl": "https://m.bilibili.com/video/BV1Ayamz6EY2"
-        },
-        {
-            "id": "BV1ooamzhE97",
-            "title": "如果未来是你的，那就证明给我看吧",
-            "desc": "特别鸣谢：\n@尖脸嘲讽子  \n@格斗废物-小派xiaopai  \n@嘻啊哔哔  \n以及站内各位提供的各路素材\n故事感肯定比不上去年，但是内容管饱\n比起单纯的个人记录，我更想让大家完整看到格斗电竞当前的生态",
-            "cover": "https://i2.hdslb.com/bfs/archive/22e72007193a58b4aa414afe1d581c212166746f.jpg",
-            "author": "玩主小小虫",
-            "timestamp": 1756975984000,
-            "hot": 1777043,
-            "url": "https://b23.tv/BV1ooamzhE97",
-            "mobileUrl": "https://m.bilibili.com/video/BV1ooamzhE97"
+            "cover": "https://i2.hdslb.com/bfs/archive/ebd5077200cf71979ca63dde4bdd992631d07806.jpg",
+            "author": "嘤武罗",
+            "timestamp": 1756803841000,
+            "hot": 6088053,
+            "url": "https://b23.tv/BV1KZaczLExn",
+            "mobileUrl": "https://m.bilibili.com/video/BV1KZaczLExn"
         },
         {
             "id": "BV1YTaxzxEAA",
@@ -1048,7 +1015,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/65ea235dfe886600d5b4e249222d0b5e6fe0c098.jpg",
             "author": "特厨隋坡",
             "timestamp": 1757043000000,
-            "hot": 1507924,
+            "hot": 1509037,
             "url": "https://b23.tv/BV1YTaxzxEAA",
             "mobileUrl": "https://m.bilibili.com/video/BV1YTaxzxEAA"
         },
@@ -1059,9 +1026,42 @@
             "cover": "https://i2.hdslb.com/bfs/archive/73f2a8af86a380f54c03c57a45987297917570bf.jpg",
             "author": "周可乐1",
             "timestamp": 1757142134000,
-            "hot": 2983499,
+            "hot": 2994566,
             "url": "https://b23.tv/BV1onaBzNEBv",
             "mobileUrl": "https://m.bilibili.com/video/BV1onaBzNEBv"
+        },
+        {
+            "id": "BV1Ayamz6EY2",
+            "title": "阅兵后懂王酸酸发言：都没有提美国",
+            "desc": "-",
+            "cover": "https://i2.hdslb.com/bfs/archive/b2795b0a50c9cb5660ba66bc9fcf00ca07f16775.jpg",
+            "author": "波士顿圆脸",
+            "timestamp": 1756982145000,
+            "hot": 3840049,
+            "url": "https://b23.tv/BV1Ayamz6EY2",
+            "mobileUrl": "https://m.bilibili.com/video/BV1Ayamz6EY2"
+        },
+        {
+            "id": "BV1ooamzhE97",
+            "title": "如果未来是你的，那就证明给我看吧",
+            "desc": "特别鸣谢：\n@尖脸嘲讽子  \n@格斗废物-小派xiaopai  \n@嘻啊哔哔  \n以及站内各位提供的各路素材\n故事感肯定比不上去年，但是内容管饱\n比起单纯的个人记录，我更想让大家完整看到格斗电竞当前的生态",
+            "cover": "https://i2.hdslb.com/bfs/archive/22e72007193a58b4aa414afe1d581c212166746f.jpg",
+            "author": "玩主小小虫",
+            "timestamp": 1756975984000,
+            "hot": 1779603,
+            "url": "https://b23.tv/BV1ooamzhE97",
+            "mobileUrl": "https://m.bilibili.com/video/BV1ooamzhE97"
+        },
+        {
+            "id": "BV1EYaczaETP",
+            "title": "宁采臣：加班加到见鬼了！",
+            "desc": "该视频暂无简介",
+            "cover": "https://i1.hdslb.com/bfs/archive/9ff9f620d88b374478ce3f5f3d6270a604bdbff7.jpg",
+            "author": "有点神动漫",
+            "timestamp": 1756868400000,
+            "hot": 4026558,
+            "url": "https://b23.tv/BV1EYaczaETP",
+            "mobileUrl": "https://m.bilibili.com/video/BV1EYaczaETP"
         },
         {
             "id": "BV1sdagzqEUN",
@@ -1070,7 +1070,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/c4b8fb76ebf25be0211eabe41c436094344f68a4.jpg",
             "author": "老番茄",
             "timestamp": 1757129700000,
-            "hot": 1306169,
+            "hot": 1308364,
             "url": "https://b23.tv/BV1sdagzqEUN",
             "mobileUrl": "https://m.bilibili.com/video/BV1sdagzqEUN"
         },
@@ -1081,20 +1081,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/4da4dea2b6db0f3256b2abdae6022cb72a30f3e6.jpg",
             "author": "莉可Kurisu",
             "timestamp": 1757039400000,
-            "hot": 763067,
+            "hot": 763885,
             "url": "https://b23.tv/BV1SWanzuEJf",
             "mobileUrl": "https://m.bilibili.com/video/BV1SWanzuEJf"
-        },
-        {
-            "id": "BV139aUzWEv2",
-            "title": "细思极恐！校园暗访纪实：为什么人人都在Dazhou？",
-            "desc": "近期，一种名为“Dazhou”的活动正在各大高校间传播，具有传播速度快，范围广，影响深远的特点，其表现出的精神状态令人费解。\n基于此，记者季提艾将明察暗访，深入调查“Dazhou”这一现象。",
-            "cover": "https://i0.hdslb.com/bfs/archive/46f220611fe286fab780a4703cbcfeec7ca8fb4a.jpg",
-            "author": "三角洲行动",
-            "timestamp": 1757044800000,
-            "hot": 1687775,
-            "url": "https://b23.tv/BV139aUzWEv2",
-            "mobileUrl": "https://m.bilibili.com/video/BV139aUzWEv2"
         },
         {
             "id": "BV1diavz4E2J",
@@ -1103,9 +1092,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/31030fb10085d6274e7f7a6233223a24ec4f34f5.jpg",
             "author": "燃茶哥哥在此",
             "timestamp": 1757131527000,
-            "hot": 2500410,
+            "hot": 2505915,
             "url": "https://b23.tv/BV1diavz4E2J",
             "mobileUrl": "https://m.bilibili.com/video/BV1diavz4E2J"
+        },
+        {
+            "id": "BV139aUzWEv2",
+            "title": "细思极恐！校园暗访纪实：为什么人人都在Dazhou？",
+            "desc": "近期，一种名为“Dazhou”的活动正在各大高校间传播，具有传播速度快，范围广，影响深远的特点，其表现出的精神状态令人费解。\n基于此，记者季提艾将明察暗访，深入调查“Dazhou”这一现象。",
+            "cover": "https://i0.hdslb.com/bfs/archive/46f220611fe286fab780a4703cbcfeec7ca8fb4a.jpg",
+            "author": "三角洲行动",
+            "timestamp": 1757044800000,
+            "hot": 1687841,
+            "url": "https://b23.tv/BV139aUzWEv2",
+            "mobileUrl": "https://m.bilibili.com/video/BV139aUzWEv2"
         },
         {
             "id": "BV1ApYTz4E2k",
@@ -1114,20 +1114,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/cc36792382a8498ccce40b4a19794fef113abf67.jpg",
             "author": "呱唧菌",
             "timestamp": 1757154783000,
-            "hot": 1136185,
+            "hot": 1136443,
             "url": "https://b23.tv/BV1ApYTz4E2k",
             "mobileUrl": "https://m.bilibili.com/video/BV1ApYTz4E2k"
         },
         {
-            "id": "BV1LNazzNEpg",
-            "title": "阅兵徒步方阵撤场",
+            "id": "BV16bYTzpEmY",
+            "title": "希望你下一次流泪是因为幸福!！",
             "desc": "-",
-            "cover": "https://i2.hdslb.com/bfs/archive/91b8e2874fe0e188068a7b0f20e839cdd089f955.jpg",
-            "author": "Mrgreen1997",
-            "timestamp": 1756906822000,
-            "hot": 2479422,
-            "url": "https://b23.tv/BV1LNazzNEpg",
-            "mobileUrl": "https://m.bilibili.com/video/BV1LNazzNEpg"
+            "cover": "https://i0.hdslb.com/bfs/archive/705d8b1030aa7abf830c66b5b2d1910674df7db7.jpg",
+            "author": "-七啊-",
+            "timestamp": 1757153637000,
+            "hot": 453418,
+            "url": "https://b23.tv/BV16bYTzpEmY",
+            "mobileUrl": "https://m.bilibili.com/video/BV16bYTzpEmY"
         }
     ],
     "api_source": "官方API网:https://api.pearktrue.cn/"
