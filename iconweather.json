@@ -2,7 +2,7 @@
     "center": {
         "latitude": 23.25,
         "longitude": 113.25,
-        "generationtime_ms": 0.1882314682006836,
+        "generationtime_ms": 0.5381107330322266,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -1749,7 +1749,7 @@
                 80,
                 80,
                 51,
-                2,
+                1,
                 51
             ],
             "temperature_2m_max_ecmwf_ifs025": [
@@ -1829,7 +1829,7 @@
     "north": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.3083944320678711,
+        "generationtime_ms": 0.24044513702392578,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -3576,7 +3576,7 @@
                 80,
                 55,
                 51,
-                2,
+                1,
                 51
             ],
             "temperature_2m_max_ecmwf_ifs025": [
@@ -3656,7 +3656,7 @@
     "south": {
         "latitude": 22.75,
         "longitude": 113.5,
-        "generationtime_ms": 0.5317926406860352,
+        "generationtime_ms": 0.21970272064208984,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -5483,7 +5483,7 @@
     "east": {
         "latitude": 23.25,
         "longitude": 113.75,
-        "generationtime_ms": 0.3886222839355469,
+        "generationtime_ms": 0.2884864807128906,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -7310,7 +7310,7 @@
     "west": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.24509429931640625,
+        "generationtime_ms": 0.22876262664794922,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -9057,7 +9057,7 @@
                 80,
                 55,
                 51,
-                2,
+                1,
                 51
             ],
             "temperature_2m_max_ecmwf_ifs025": [
