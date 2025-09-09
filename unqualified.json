@@ -1,8 +1,15 @@
 {
     "score": 19,
     "penaltyCoordinates": [
-        "(5,1)",
-        "(6,1)"
+        "(7,4)",
+        "(2,1)",
+        "(4,5)",
+        "(3,6)",
+        "(2,2)",
+        "(4,4)",
+        "(4,6)",
+        "(4,1)",
+        "(1,2)"
     ],
     "unqualified": {
         "王安宇": {
@@ -14,7 +21,7 @@
             "unqualifiedReasons": []
         },
         "冯亿洋": {
-            "unqualifiedCount": 16,
+            "unqualifiedCount": 17,
             "unqualifiedReasons": [
                 "书包未拿起",
                 "书包未拿起",
@@ -31,7 +38,8 @@
                 "书包未拿起",
                 "书包未拿起",
                 "书包未拿起",
-                "书包未拿起"
+                "书包未拿起",
+                "书箱上有垃圾"
             ]
         },
         "杨力行": {
@@ -43,8 +51,9 @@
             ]
         },
         "孙运龙": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
+                "书未拿起",
                 "书未拿起",
                 "书未拿起"
             ]
@@ -62,9 +71,10 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "笔盒未拿起"
+                "笔盒未拿起",
+                "笔袋、书未拿起"
             ]
         },
         "陈睿竹": {
@@ -80,12 +90,49 @@
             ]
         },
         "黄政": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "书箱未放好"
+                "书箱未放好",
+                "桌面有垃圾"
             ]
         },
         "何睿政": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "地上隐蔽处有垃圾"
+            ]
+        },
+        "刘宝琳": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "窗台有东西"
+            ]
+        },
+        "莫柽超": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "水杯未拿起"
+            ]
+        },
+        "李峻宇": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "桌面有垃圾"
+            ]
+        },
+        "黎晓雪": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "夹缝有杂物"
+            ]
+        },
+        "黄锦茵": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "夹缝有杂物"
+            ]
+        },
+        "张家睿": {
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "地上隐蔽处有垃圾"
