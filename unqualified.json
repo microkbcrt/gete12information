@@ -9,7 +9,9 @@
         "(4,4)",
         "(4,6)",
         "(4,1)",
-        "(1,2)"
+        "(1,2)",
+        "(2,4)",
+        "(3,4)"
     ],
     "unqualified": {
         "王安宇": {
@@ -136,6 +138,18 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "地上隐蔽处有垃圾"
+            ]
+        },
+        "孔睿哲": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "桌面有垃圾"
+            ]
+        },
+        "陈思彤": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "桌面有垃圾"
             ]
         }
     }
