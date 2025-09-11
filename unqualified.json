@@ -2,7 +2,6 @@
     "score": 19,
     "penaltyCoordinates": [
         "(4,6)",
-        "(4,5)",
         "(5,1)"
     ],
     "unqualified": {
@@ -15,7 +14,7 @@
             "unqualifiedReasons": []
         },
         "冯亿洋": {
-            "unqualifiedCount": 23,
+            "unqualifiedCount": 24,
             "unqualifiedReasons": [
                 "书包未拿起",
                 "书包未拿起",
@@ -39,14 +38,16 @@
                 "书包未拿起",
                 "书包未拿起",
                 "书包未拿起",
-                "书包未拿起"
+                "书包未拿起",
+                "水杯未拿起"
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 4,
+            "unqualifiedCount": 5,
             "unqualifiedReasons": [
                 "书箱上有垃圾",
                 "地上隐蔽处有垃圾",
+                "书箱上有垃圾",
                 "书箱上有垃圾",
                 "书箱上有垃圾"
             ]
