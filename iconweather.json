@@ -2,7 +2,7 @@
     "center": {
         "latitude": 23.25,
         "longitude": 113.25,
-        "generationtime_ms": 3.712892532348633,
+        "generationtime_ms": 1.9826889038085938,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -1829,7 +1829,7 @@
     "north": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.2498626708984375,
+        "generationtime_ms": 0.523686408996582,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -3656,7 +3656,7 @@
     "south": {
         "latitude": 22.75,
         "longitude": 113.5,
-        "generationtime_ms": 0.2658367156982422,
+        "generationtime_ms": 1.008152961730957,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -5483,7 +5483,7 @@
     "east": {
         "latitude": 23.25,
         "longitude": 113.75,
-        "generationtime_ms": 0.2980232238769531,
+        "generationtime_ms": 0.7181167602539062,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -7310,7 +7310,7 @@
     "west": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.2504587173461914,
+        "generationtime_ms": 0.2607107162475586,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
