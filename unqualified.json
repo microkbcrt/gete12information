@@ -1,9 +1,6 @@
 {
     "score": 19,
-    "penaltyCoordinates": [
-        "(4,6)",
-        "(5,1)"
-    ],
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 0,
@@ -53,8 +50,9 @@
             ]
         },
         "孙运龙": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
+                "书未拿起",
                 "书未拿起",
                 "书未拿起",
                 "书未拿起"
