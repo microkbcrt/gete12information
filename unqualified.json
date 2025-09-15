@@ -1,6 +1,8 @@
 {
-    "score": 19,
-    "penaltyCoordinates": [],
+    "score": 18,
+    "penaltyCoordinates": [
+        "(2,1)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 0,
@@ -110,9 +112,10 @@
             ]
         },
         "莫柽超": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "水杯未拿起"
+                "水杯未拿起",
+                "书箱盖未拿起"
             ]
         },
         "李峻宇": {
