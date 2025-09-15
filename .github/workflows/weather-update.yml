@@ -36,7 +36,9 @@ jobs:
         run: python get_icon_weather.py
         
       - name: 获取通知数据
+        continue-on-error: true
         run: python fetch_notifications.py
+        
         
       - name: 运行短时天气脚本
         run: python get_short_weather.py
