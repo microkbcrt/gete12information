@@ -1,6 +1,319 @@
 {
-    "code": -1,
-    "msg": "网关通信故障，请联系管理员。",
-    "data": "",
-    "request_id": "9762eaddc89cb3ca706303c5"
+    "code": 200,
+    "msg": "数据请求成功",
+    "data": [
+        {
+            "hot": "145万",
+            "index": 1,
+            "title": "孙颖莎清华读研",
+            "url": "https://s.weibo.com/weibo?q=孙颖莎清华读研"
+        },
+        {
+            "hot": "121万",
+            "index": 2,
+            "title": "12306抢票",
+            "url": "https://s.weibo.com/weibo?q=12306抢票"
+        },
+        {
+            "hot": "110万",
+            "index": 3,
+            "title": "新疆70年",
+            "url": "https://s.weibo.com/weibo?q=新疆70年"
+        },
+        {
+            "hot": "110万",
+            "index": 4,
+            "title": "美团买药家庭药品安全存储行动",
+            "url": "https://s.weibo.com/weibo?q=美团买药家庭药品安全存储行动"
+        },
+        {
+            "hot": "108万",
+            "index": 5,
+            "title": "陈晓直播好几次叹气",
+            "url": "https://s.weibo.com/weibo?q=陈晓直播好几次叹气"
+        },
+        {
+            "hot": "104万",
+            "index": 6,
+            "title": "赴山海洞洞鞋穿帮",
+            "url": "https://s.weibo.com/weibo?q=赴山海洞洞鞋穿帮"
+        },
+        {
+            "hot": "91万",
+            "index": 7,
+            "title": "成都通报一女子公园自缢",
+            "url": "https://s.weibo.com/weibo?q=成都通报一女子公园自缢"
+        },
+        {
+            "hot": "91万",
+            "index": 8,
+            "title": "淘宝学生福利首发官沈佳润",
+            "url": "https://s.weibo.com/weibo?q=淘宝学生福利首发官沈佳润"
+        },
+        {
+            "hot": "90万",
+            "index": 9,
+            "title": "姜潮录节目情绪崩溃到发飙",
+            "url": "https://s.weibo.com/weibo?q=姜潮录节目情绪崩溃到发飙"
+        },
+        {
+            "hot": "78万",
+            "index": 10,
+            "title": "小米17背屏",
+            "url": "https://s.weibo.com/weibo?q=小米17背屏"
+        },
+        {
+            "hot": "75万",
+            "index": 11,
+            "title": "有网店已售超4000件氢氟酸",
+            "url": "https://s.weibo.com/weibo?q=有网店已售超4000件氢氟酸"
+        },
+        {
+            "hot": "75万",
+            "index": 12,
+            "title": "孙颖莎小时候就是学霸",
+            "url": "https://s.weibo.com/weibo?q=孙颖莎小时候就是学霸"
+        },
+        {
+            "hot": "75万",
+            "index": 13,
+            "title": "以色列威胁不到中国手机",
+            "url": "https://s.weibo.com/weibo?q=以色列威胁不到中国手机"
+        },
+        {
+            "hot": "75万",
+            "index": 14,
+            "title": "黄晓明 baby我们的感情好像跳楼机",
+            "url": "https://s.weibo.com/weibo?q=黄晓明 baby我们的感情好像跳楼机"
+        },
+        {
+            "hot": "73万",
+            "index": 15,
+            "title": "卢远王乐晨爆灯",
+            "url": "https://s.weibo.com/weibo?q=卢远王乐晨爆灯"
+        },
+        {
+            "hot": "73万",
+            "index": 16,
+            "title": "iOS26 丑",
+            "url": "https://s.weibo.com/weibo?q=iOS26 丑"
+        },
+        {
+            "hot": "66万",
+            "index": 17,
+            "title": "上海网红面包店将未售面包直接丢弃",
+            "url": "https://s.weibo.com/weibo?q=上海网红面包店将未售面包直接丢弃"
+        },
+        {
+            "hot": "55万",
+            "index": 18,
+            "title": "陈乔恩晒粉红云海悼念乔任梁",
+            "url": "https://s.weibo.com/weibo?q=陈乔恩晒粉红云海悼念乔任梁"
+        },
+        {
+            "hot": "53万",
+            "index": 19,
+            "title": "纯电续航350公里智能超混MPV",
+            "url": "https://s.weibo.com/weibo?q=纯电续航350公里智能超混MPV"
+        },
+        {
+            "hot": "53万",
+            "index": 20,
+            "title": "肖战粉丝是真的吃得好",
+            "url": "https://s.weibo.com/weibo?q=肖战粉丝是真的吃得好"
+        },
+        {
+            "hot": "53万",
+            "index": 21,
+            "title": "心动的信号 时尚芭莎",
+            "url": "https://s.weibo.com/weibo?q=心动的信号 时尚芭莎"
+        },
+        {
+            "hot": "49万",
+            "index": 22,
+            "title": "王楚钦北大",
+            "url": "https://s.weibo.com/weibo?q=王楚钦北大"
+        },
+        {
+            "hot": "49万",
+            "index": 23,
+            "title": "金价",
+            "url": "https://s.weibo.com/weibo?q=金价"
+        },
+        {
+            "hot": "48万",
+            "index": 24,
+            "title": "成毅回应赴山海台词含糊",
+            "url": "https://s.weibo.com/weibo?q=成毅回应赴山海台词含糊"
+        },
+        {
+            "hot": "47万",
+            "index": 25,
+            "title": "涉毒艺人苏永康将在温州办演唱会",
+            "url": "https://s.weibo.com/weibo?q=涉毒艺人苏永康将在温州办演唱会"
+        },
+        {
+            "hot": "44万",
+            "index": 26,
+            "title": "理想i6新形态五座SUV",
+            "url": "https://s.weibo.com/weibo?q=理想i6新形态五座SUV"
+        },
+        {
+            "hot": "43万",
+            "index": 27,
+            "title": "太二酸菜鱼下单到上鱼仅6分钟",
+            "url": "https://s.weibo.com/weibo?q=太二酸菜鱼下单到上鱼仅6分钟"
+        },
+        {
+            "hot": "30万",
+            "index": 28,
+            "title": "水贝料商卷走胖东来金店90万元黄金",
+            "url": "https://s.weibo.com/weibo?q=水贝料商卷走胖东来金店90万元黄金"
+        },
+        {
+            "hot": "28万",
+            "index": 29,
+            "title": "肖战 美团团购",
+            "url": "https://s.weibo.com/weibo?q=肖战 美团团购"
+        },
+        {
+            "hot": "27万",
+            "index": 30,
+            "title": "王一博仪态",
+            "url": "https://s.weibo.com/weibo?q=王一博仪态"
+        },
+        {
+            "hot": "26万",
+            "index": 31,
+            "title": "李晟李佳航的求婚日期是201314",
+            "url": "https://s.weibo.com/weibo?q=李晟李佳航的求婚日期是201314"
+        },
+        {
+            "hot": "26万",
+            "index": 32,
+            "title": "中国海警对菲船采取水炮喷射等措施",
+            "url": "https://s.weibo.com/weibo?q=中国海警对菲船采取水炮喷射等措施"
+        },
+        {
+            "hot": "26万",
+            "index": 33,
+            "title": "成毅方全网取证绝不姑息",
+            "url": "https://s.weibo.com/weibo?q=成毅方全网取证绝不姑息"
+        },
+        {
+            "hot": "26万",
+            "index": 34,
+            "title": "老太太赶集时金镯被剪断手臂流血",
+            "url": "https://s.weibo.com/weibo?q=老太太赶集时金镯被剪断手臂流血"
+        },
+        {
+            "hot": "26万",
+            "index": 35,
+            "title": "从发工资时间看公司实力",
+            "url": "https://s.weibo.com/weibo?q=从发工资时间看公司实力"
+        },
+        {
+            "hot": "26万",
+            "index": 36,
+            "title": "建议大家下班回家立刻洗澡",
+            "url": "https://s.weibo.com/weibo?q=建议大家下班回家立刻洗澡"
+        },
+        {
+            "hot": "23万",
+            "index": 37,
+            "title": "这下谁敢去负二层停车",
+            "url": "https://s.weibo.com/weibo?q=这下谁敢去负二层停车"
+        },
+        {
+            "hot": "22万",
+            "index": 38,
+            "title": "氢氟酸",
+            "url": "https://s.weibo.com/weibo?q=氢氟酸"
+        },
+        {
+            "hot": "20万",
+            "index": 39,
+            "title": "乐远cp",
+            "url": "https://s.weibo.com/weibo?q=乐远cp"
+        },
+        {
+            "hot": "19万",
+            "index": 40,
+            "title": "李在明下令严查海警殉职事件",
+            "url": "https://s.weibo.com/weibo?q=李在明下令严查海警殉职事件"
+        },
+        {
+            "hot": "19万",
+            "index": 41,
+            "title": "铁路取消纸质票后脱网人群怎么办",
+            "url": "https://s.weibo.com/weibo?q=铁路取消纸质票后脱网人群怎么办"
+        },
+        {
+            "hot": "19万",
+            "index": 42,
+            "title": "红旗22导弹亮相塞尔维亚阅兵彩排",
+            "url": "https://s.weibo.com/weibo?q=红旗22导弹亮相塞尔维亚阅兵彩排"
+        },
+        {
+            "hot": "19万",
+            "index": 43,
+            "title": "王琳 血淋淋的大女主真人秀",
+            "url": "https://s.weibo.com/weibo?q=王琳 血淋淋的大女主真人秀"
+        },
+        {
+            "hot": "17万",
+            "index": 44,
+            "title": "孙颖莎从小就有清北梦",
+            "url": "https://s.weibo.com/weibo?q=孙颖莎从小就有清北梦"
+        },
+        {
+            "hot": "17万",
+            "index": 45,
+            "title": "沈佳润第一支美美桑内MV",
+            "url": "https://s.weibo.com/weibo?q=沈佳润第一支美美桑内MV"
+        },
+        {
+            "hot": "16万",
+            "index": 46,
+            "title": "辛芷蕾 梁婷",
+            "url": "https://s.weibo.com/weibo?q=辛芷蕾 梁婷"
+        },
+        {
+            "hot": "15万",
+            "index": 47,
+            "title": "以色列坦克已入城",
+            "url": "https://s.weibo.com/weibo?q=以色列坦克已入城"
+        },
+        {
+            "hot": "15万",
+            "index": 48,
+            "title": "王曼昱清华读研",
+            "url": "https://s.weibo.com/weibo?q=王曼昱清华读研"
+        },
+        {
+            "hot": "15万",
+            "index": 49,
+            "title": "和迪丽热巴对视",
+            "url": "https://s.weibo.com/weibo?q=和迪丽热巴对视"
+        },
+        {
+            "hot": "15万",
+            "index": 50,
+            "title": "刘涛 利他即利己",
+            "url": "https://s.weibo.com/weibo?q=刘涛 利他即利己"
+        },
+        {
+            "hot": "15万",
+            "index": 51,
+            "title": "柯淳撒娇抱抱哄宁静",
+            "url": "https://s.weibo.com/weibo?q=柯淳撒娇抱抱哄宁静"
+        },
+        {
+            "hot": "14万",
+            "index": 52,
+            "title": "她们的鞋没有足弓支撑",
+            "url": "https://s.weibo.com/weibo?q=她们的鞋没有足弓支撑"
+        }
+    ],
+    "request_id": "49c4cbc41c83747bcd8f0383"
 }
