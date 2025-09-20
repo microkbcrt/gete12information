@@ -35,8 +35,8 @@ jobs:
       - name: 运行icon天气脚本
         run: python get_icon_weather.py
         
-      - name: 获取通知数据        
-        run: python fetch_notifications.py
+      #- name: 获取通知数据        
+      #  run: python fetch_notifications.py
         
         
       - name: 运行短时天气脚本
