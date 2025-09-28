@@ -2,7 +2,7 @@
     "center": {
         "latitude": 23.25,
         "longitude": 113.25,
-        "generationtime_ms": 0.2633333206176758,
+        "generationtime_ms": 2.1082162857055664,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -1781,21 +1781,21 @@
             ],
             "temperature_2m_max_gfs_global": [
                 33.2,
-                33.9,
-                35.3,
-                35.4,
-                34.9,
+                34.6,
+                34.8,
+                35.0,
+                34.1,
                 35.5,
-                36.0
+                36.3
             ],
             "temperature_2m_min_gfs_global": [
                 27.3,
-                27.0,
+                26.8,
+                27.1,
+                27.7,
                 26.9,
-                27.9,
-                26.7,
-                27.0,
-                28.0
+                26.9,
+                28.2
             ],
             "weather_code_icon_global": [
                 80,
@@ -1829,7 +1829,7 @@
     "north": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.3668069839477539,
+        "generationtime_ms": 0.3364086151123047,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -3611,18 +3611,18 @@
                 32.9,
                 34.8,
                 34.9,
-                35.0,
-                35.5,
-                35.5
+                35.2,
+                35.3,
+                36.1
             ],
             "temperature_2m_min_gfs_global": [
                 26.5,
                 25.5,
                 27.0,
                 26.3,
-                26.2,
-                27.0,
-                27.4
+                26.7,
+                27.1,
+                27.5
             ],
             "weather_code_icon_global": [
                 80,
@@ -3656,7 +3656,7 @@
     "south": {
         "latitude": 22.75,
         "longitude": 113.5,
-        "generationtime_ms": 1.0881423950195312,
+        "generationtime_ms": 0.9077787399291992,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -5438,18 +5438,18 @@
                 32.5,
                 32.3,
                 32.3,
-                32.6,
+                32.5,
                 33.0,
-                34.5
+                35.8
             ],
             "temperature_2m_min_gfs_global": [
                 27.5,
                 27.2,
                 26.6,
                 27.4,
-                26.6,
-                26.5,
-                27.6
+                26.9,
+                26.8,
+                28.6
             ],
             "weather_code_icon_global": [
                 3,
@@ -5483,7 +5483,7 @@
     "east": {
         "latitude": 23.25,
         "longitude": 113.75,
-        "generationtime_ms": 0.255584716796875,
+        "generationtime_ms": 0.24461746215820312,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -7264,19 +7264,19 @@
                 32.1,
                 32.3,
                 32.0,
-                32.6,
+                32.7,
                 32.0,
-                32.1,
-                33.9
+                32.3,
+                34.5
             ],
             "temperature_2m_min_gfs_global": [
                 24.7,
                 24.3,
                 24.6,
                 24.4,
-                23.5,
+                23.6,
                 24.1,
-                24.7
+                25.1
             ],
             "weather_code_icon_global": [
                 80,
@@ -7310,7 +7310,7 @@
     "west": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.2040863037109375,
+        "generationtime_ms": 0.20432472229003906,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -9092,18 +9092,18 @@
                 34.2,
                 34.3,
                 34.8,
-                34.0,
-                34.4,
-                34.6
+                32.9,
+                34.9,
+                35.0
             ],
             "temperature_2m_min_gfs_global": [
                 26.4,
                 26.0,
                 25.5,
                 26.0,
-                25.1,
-                25.3,
-                26.0
+                25.5,
+                25.2,
+                26.7
             ],
             "weather_code_icon_global": [
                 80,
