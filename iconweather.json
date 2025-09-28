@@ -2,7 +2,7 @@
     "center": {
         "latitude": 23.25,
         "longitude": 113.25,
-        "generationtime_ms": 1.8160343170166016,
+        "generationtime_ms": 0.3018379211425781,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -866,9 +866,9 @@
                 0.0,
                 0.0,
                 0.0,
-                0.1,
-                0.1,
-                0.1
+                0.0,
+                0.0,
+                0.0
             ],
             "wind_gusts_10m_gfs_global": [
                 8.6,
@@ -1777,7 +1777,7 @@
                 3,
                 3,
                 2,
-                51
+                1
             ],
             "temperature_2m_max_gfs_global": [
                 33.2,
@@ -1829,7 +1829,7 @@
     "north": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 2.0018815994262695,
+        "generationtime_ms": 0.20313262939453125,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -2618,7 +2618,6 @@
                 0.0,
                 0.0,
                 0.0,
-                0.1,
                 0.0,
                 0.0,
                 0.0,
@@ -2693,9 +2692,10 @@
                 0.0,
                 0.0,
                 0.0,
-                0.1,
-                0.1,
-                0.1
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "wind_gusts_10m_gfs_global": [
                 2.9,
@@ -3604,7 +3604,7 @@
                 61,
                 3,
                 3,
-                51
+                2
             ],
             "temperature_2m_max_gfs_global": [
                 33.0,
@@ -3656,7 +3656,7 @@
     "south": {
         "latitude": 22.75,
         "longitude": 113.5,
-        "generationtime_ms": 6.853699684143066,
+        "generationtime_ms": 0.32401084899902344,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -4520,9 +4520,9 @@
                 0.0,
                 0.0,
                 0.0,
-                0.1,
-                0.1,
-                0.1
+                0.0,
+                0.0,
+                0.0
             ],
             "wind_gusts_10m_gfs_global": [
                 35.6,
@@ -5431,7 +5431,7 @@
                 3,
                 3,
                 0,
-                51
+                2
             ],
             "temperature_2m_max_gfs_global": [
                 32.5,
@@ -5483,7 +5483,7 @@
     "east": {
         "latitude": 23.25,
         "longitude": 113.75,
-        "generationtime_ms": 0.27763843536376953,
+        "generationtime_ms": 0.6469488143920898,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -6270,6 +6270,8 @@
                 0.1,
                 0.0,
                 0.0,
+                0.0,
+                0.0,
                 0.2,
                 0.0,
                 0.0,
@@ -6347,9 +6349,7 @@
                 0.0,
                 0.0,
                 0.0,
-                0.2,
-                0.2,
-                0.2
+                0.0
             ],
             "wind_gusts_10m_gfs_global": [
                 5.4,
@@ -7258,7 +7258,7 @@
                 53,
                 3,
                 1,
-                51
+                2
             ],
             "temperature_2m_max_gfs_global": [
                 32.1,
@@ -7310,7 +7310,7 @@
     "west": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.21755695343017578,
+        "generationtime_ms": 2.670168876647949,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -8100,7 +8100,6 @@
                 0.0,
                 0.0,
                 0.0,
-                0.2,
                 0.0,
                 0.0,
                 0.0,
@@ -8174,9 +8173,10 @@
                 0.0,
                 0.0,
                 0.0,
-                0.2,
-                0.2,
-                0.2
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "wind_gusts_10m_gfs_global": [
                 5.8,
@@ -9082,10 +9082,10 @@
                 55,
                 51,
                 3,
-                51,
+                3,
                 3,
                 2,
-                51
+                1
             ],
             "temperature_2m_max_gfs_global": [
                 32.8,
