@@ -23,7 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           # 将所有Python脚本的依赖都放在这里
-          pip install requests beautifulsoup4 lxml
+          pip install requests beautifulsoup4 lxml pillow
           
       # --- 执行所有数据获取脚本 ---
       - name: 运行十天天气脚本
