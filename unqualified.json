@@ -1,9 +1,6 @@
 {
     "score": 18,
-    "penaltyCoordinates": [
-        "(1,1)",
-        "(5,1)"
-    ],
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 0,
@@ -16,7 +13,7 @@
             ]
         },
         "冯亿洋": {
-            "unqualifiedCount": 24,
+            "unqualifiedCount": 25,
             "unqualifiedReasons": [
                 "书包未拿起",
                 "书包未拿起",
@@ -41,7 +38,8 @@
                 "书包未拿起",
                 "书包未拿起",
                 "书包未拿起",
-                "水杯未拿起"
+                "水杯未拿起",
+                "地上隐蔽处有垃圾"
             ]
         },
         "杨力行": {
@@ -117,10 +115,11 @@
             ]
         },
         "莫柽超": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "水杯未拿起",
-                "书箱盖未拿起"
+                "书箱盖未拿起",
+                "水杯未拿起"
             ]
         },
         "李峻宇": {
@@ -164,6 +163,16 @@
             "unqualifiedReasons": [
                 "桌面有垃圾"
             ]
+        },
+        "唐瑭": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "球拍未拿起"
+            ]
+        },
+        "林子墨": {
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         }
     }
 }
