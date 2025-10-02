@@ -1,4 +1,4 @@
-{
+var iconWeatherData = {
     "daily": [
         {
             "time": "2025-10-02",
@@ -64,4 +64,4 @@
             "weather_code": 95
         }
     ]
-}
+};
