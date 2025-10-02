@@ -1,8 +1,8 @@
 # ==========================================================
-# 气象数据获取与智能分析一体化脚本 (v6.0)
+# 气象数据获取与智能分析一体化脚本 (v6.1 - 移除GFS源)
 #
 # 功能:
-# 1. 从API获取多个网格点的原始天气数据。
+# 1. 从API获取多个网格点的原始天气数据 (ECMWF, ICON模型)。
 # 2. 将原始数据保存到 iconrawweather.json。
 # 3. 对原始数据进行智能分析，生成每日摘要。
 # 4. 将分析结果保存到 iconweather.json 和 iconweather.js。
@@ -31,11 +31,12 @@ def get_weather_data():
     }
     
     base_url = "https://api.open-meteo.com/v1/forecast"
-    common_params = "&hourly=precipitation,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Shanghai&models=ecmwf_ifs025,gfs_global,icon_global"
+    # 【修改点 1】: 从 models 参数中移除 gfs_global
+    common_params = "&hourly=precipitation,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Shanghai&models=ecmwf_ifs025,icon_global"
     
     all_grid_data = {}
     
-    print("--- 阶段 1: 开始获取区域网格天气数据 ---")
+    print("--- 阶段 1: 开始获取区域网格天气数据 (模型: ECMWF, ICON) ---")
 
     for name, coords in grid_points.items():
         url = f"{base_url}?latitude={coords['lat']}&longitude={coords['lon']}{common_params}"
@@ -67,7 +68,7 @@ def get_weather_data():
         return None
 
 # ==========================================================
-# 阶段二: 数据分析模块
+# 阶段二: 数据分析模块 (这部分逻辑不变, 仅在调用处修改模型列表)
 # ==========================================================
 
 def get_precip_level(mm):
@@ -166,7 +167,8 @@ def analyze_area_weather_data(all_points_data):
     first_point_key = list(all_points_data.keys())[0]
     days_count = len(all_points_data[first_point_key]['daily']['time'])
     analyzed_results = []
-    models = ['ecmwf_ifs025', 'gfs_global', 'icon_global']
+    # 【修改点 2】: 从分析用的模型列表中移除 gfs_global
+    models = ['ecmwf_ifs025', 'icon_global']
 
     for i in range(days_count):
         date = all_points_data[first_point_key]['daily']['time'][i]
