@@ -1,10 +1,10 @@
 # ==========================================================
-# 气象数据获取与智能分析一体化脚本 (v6.1 - 移除GFS源)
+# 气象数据获取与智能分析一体化脚本 (v6.2 - 引入有效降水阈值)
 #
 # 功能:
 # 1. 从API获取多个网格点的原始天气数据 (ECMWF, ICON模型)。
 # 2. 将原始数据保存到 iconrawweather.json。
-# 3. 对原始数据进行智能分析，生成每日摘要。
+# 3. 对原始数据进行智能分析，生成每日摘要 (过滤微量降水)。
 # 4. 将分析结果保存到 iconweather.json 和 iconweather.js。
 # ==========================================================
 
@@ -15,7 +15,7 @@ import sys
 from collections import Counter
 
 # ==========================================================
-# 阶段一: 数据获取模块
+# 阶段一: 数据获取模块 (无变化)
 # ==========================================================
 def get_weather_data():
     """
@@ -31,7 +31,6 @@ def get_weather_data():
     }
     
     base_url = "https://api.open-meteo.com/v1/forecast"
-    # 【修改点 1】: 从 models 参数中移除 gfs_global
     common_params = "&hourly=precipitation,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Shanghai&models=ecmwf_ifs025,icon_global"
     
     all_grid_data = {}
@@ -51,7 +50,7 @@ def get_weather_data():
                 print(f"成功获取点 '{name}' 的数据。")
         except requests.exceptions.RequestException as e:
             print(f"错误: 请求点 '{name}' 的 API 时发生网络错误: {e}")
-            return None # 返回 None 表示失败
+            return None
         except json.JSONDecodeError:
             print(f"错误: 解析点 '{name}' 返回的 JSON 数据时发生错误。")
             return None
@@ -62,13 +61,13 @@ def get_weather_data():
         with open("iconrawweather.json", "w", encoding="utf-8") as f:
             json.dump(all_grid_data, f, ensure_ascii=False, indent=4)
         print("\n所有网格点的原始天气数据已成功保存到 iconrawweather.json")
-        return all_grid_data # 返回获取到的数据以供下一步分析
+        return all_grid_data
     except IOError as e:
         print(f"\n错误: 写入原始数据文件 iconrawweather.json 时发生错误: {e}")
         return None
 
 # ==========================================================
-# 阶段二: 数据分析模块 (这部分逻辑不变, 仅在调用处修改模型列表)
+# 阶段二: 数据分析模块
 # ==========================================================
 
 def get_precip_level(mm):
@@ -117,16 +116,28 @@ def generate_area_conclusion(agg_data):
             elif coverage_percent < 20: base_sky_condition = "多云间晴"
 
     precip_phrase = ""
-    if coverage_percent > 15 and main_level['level'] > 0:
-        scope_word = "有分散" if coverage_percent < 40 else "有"
-        main_precip_name = main_level['name']
-        if is_thunderstorm and main_level['level'] <= 1:
-            precip_phrase = scope_word + "雷阵雨"
-            if max_level['level'] > main_level['level'] + 1: precip_phrase += "局部" + max_level['name']
-        else:
-            if max_level['level'] <= main_level['level']: precip_phrase = scope_word + main_precip_name
-            elif max_level['level'] == main_level['level'] + 1: precip_phrase = scope_word + main_precip_name + "到" + max_level['name']
-            else: precip_phrase = scope_word + main_precip_name + "局部" + max_level['name']
+    
+    # 【修改点 2】: 引入有效降水判断逻辑
+    # 检查是否有任何一个网格点的日总降水量 >= 2mm
+    has_significant_daily_rain = any(p >= 2 for p in precipitations)
+    # 检查是否有任何一个网格点的小时降水量 >= 1mm
+    has_significant_hourly_rain = any(h >= 1 for h in agg_data.get('max_hourly_precips', []))
+    
+    is_meaningful_precip = has_significant_daily_rain or has_significant_hourly_rain
+
+    # 只有当降水被认为是“有效”的时候，才生成降水短语
+    if is_meaningful_precip:
+        # 内部的范围和强度判断逻辑保持不变，确保了描述的准确性
+        if coverage_percent > 15 and main_level['level'] > 0:
+            scope_word = "有分散" if coverage_percent < 40 else "有"
+            main_precip_name = main_level['name']
+            if is_thunderstorm and main_level['level'] <= 1:
+                precip_phrase = scope_word + "雷阵雨"
+                if max_level['level'] > main_level['level'] + 1: precip_phrase += "局部" + max_level['name']
+            else:
+                if max_level['level'] <= main_level['level']: precip_phrase = scope_word + main_precip_name
+                elif max_level['level'] == main_level['level'] + 1: precip_phrase = scope_word + main_precip_name + "到" + max_level['name']
+                else: precip_phrase = scope_word + main_precip_name + "局部" + max_level['name']
 
     final_desc = base_sky_condition
     if precip_phrase:
@@ -167,14 +178,16 @@ def analyze_area_weather_data(all_points_data):
     first_point_key = list(all_points_data.keys())[0]
     days_count = len(all_points_data[first_point_key]['daily']['time'])
     analyzed_results = []
-    # 【修改点 2】: 从分析用的模型列表中移除 gfs_global
     models = ['ecmwf_ifs025', 'icon_global']
 
     for i in range(days_count):
         date = all_points_data[first_point_key]['daily']['time'][i]
+        
+        # 【修改点 1】: 新增 max_hourly_precips 来存储日最大小时降水
         daily_aggregated_data = {
             'precipitations': [], 'max_gusts': [], 'max_capes': [],
-            'wmo_codes': [], 'max_temps': [], 'min_temps': []
+            'wmo_codes': [], 'max_temps': [], 'min_temps': [],
+            'max_hourly_precips': [] 
         }
 
         for point_data in all_points_data.values():
@@ -189,8 +202,16 @@ def analyze_area_weather_data(all_points_data):
                 daily_aggregated_data['min_temps'].append(avg_min_temp_point / model_count)
 
             for model in models:
+                # 【修改点 1】: 同时计算日总降水和日最大小时降水
                 if f"precipitation_{model}" in point_data.get('hourly', {}):
-                    daily_aggregated_data['precipitations'].append(sum(point_data['hourly'][f"precipitation_{model}"][i*24:(i+1)*24]))
+                    hourly_slice = point_data['hourly'][f"precipitation_{model}"][i*24:(i+1)*24]
+                    if hourly_slice:
+                        daily_aggregated_data['precipitations'].append(sum(hourly_slice))
+                        daily_aggregated_data['max_hourly_precips'].append(max(hourly_slice))
+                    else: # 以防万一数据不完整
+                        daily_aggregated_data['precipitations'].append(0)
+                        daily_aggregated_data['max_hourly_precips'].append(0)
+
                 if f"wind_gusts_10m_{model}" in point_data.get('hourly', {}):
                     gusts = point_data['hourly'][f"wind_gusts_10m_{model}"][i*24:(i+1)*24]
                     if gusts: daily_aggregated_data['max_gusts'].append(max(gusts))
@@ -217,17 +238,15 @@ def analyze_area_weather_data(all_points_data):
     return {'daily': analyzed_results}
 
 # ==========================================================
-# 主执行流程
+# 主执行流程 (无变化)
 # ==========================================================
 if __name__ == "__main__":
-    # 步骤 1: 获取原始数据
     raw_weather_data = get_weather_data()
     
     if not raw_weather_data:
         print("\n获取原始数据失败，脚本终止。")
-        sys.exit(1) # 使用非零退出码，以便 GitHub Actions 识别失败
+        sys.exit(1)
 
-    # 步骤 2: 分析数据并保存结果
     try:
         analyzed_data = analyze_area_weather_data(raw_weather_data)
         
