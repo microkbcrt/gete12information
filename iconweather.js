@@ -13,14 +13,14 @@ var iconWeatherData = {
             "time": "2025-10-04",
             "temperature_2m_max": 34,
             "temperature_2m_min": 24,
-            "weather_desc": "多云，有分散雷阵雨",
-            "weather_icon": "03.png",
-            "warning_text": "提醒: 可能伴有雷电",
-            "weather_code": 95
+            "weather_desc": "多云",
+            "weather_icon": "01.png",
+            "warning_text": "",
+            "weather_code": 1
         },
         {
             "time": "2025-10-05",
-            "temperature_2m_max": 31,
+            "temperature_2m_max": 32,
             "temperature_2m_min": 26,
             "weather_desc": "多云，有雷阵雨",
             "weather_icon": "04.png",
