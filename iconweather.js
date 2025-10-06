@@ -30,7 +30,7 @@ var iconWeatherData = {
         {
             "time": "2025-10-10",
             "temperature_2m_max": 33,
-            "temperature_2m_min": 26,
+            "temperature_2m_min": 25,
             "weather_desc": "多云",
             "weather_icon": "01.png",
             "warning_text": "",
