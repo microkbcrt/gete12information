@@ -3,8 +3,10 @@
     "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "书包未拿起"
+            ]
         },
         "史筱婧": {
             "unqualifiedCount": 1,
@@ -13,7 +15,7 @@
             ]
         },
         "冯亿洋": {
-            "unqualifiedCount": 25,
+            "unqualifiedCount": 9,
             "unqualifiedReasons": [
                 "书包未拿起",
                 "书包未拿起",
@@ -23,40 +25,21 @@
                 "书包未拿起",
                 "书包未拿起",
                 "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书箱上有垃圾",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "书包未拿起",
-                "水杯未拿起",
-                "地上隐蔽处有垃圾"
+                "书包未拿起"
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 6,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "书箱上有垃圾",
                 "地上隐蔽处有垃圾",
                 "书箱上有垃圾",
-                "书箱上有垃圾",
-                "书箱上有垃圾",
-                "大扫除未起凳"
+                "书箱上有垃圾"
             ]
         },
         "孙运龙": {
-            "unqualifiedCount": 4,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
-                "书未拿起",
                 "书未拿起",
                 "书未拿起",
                 "书未拿起"
@@ -76,11 +59,10 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
                 "笔盒未拿起",
-                "笔袋、书未拿起",
-                "水杯未拿起"
+                "笔袋、书未拿起"
             ]
         },
         "陈睿竹": {
@@ -115,11 +97,10 @@
             ]
         },
         "莫柽超": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
                 "水杯未拿起",
-                "书箱盖未拿起",
-                "水杯未拿起"
+                "书箱盖未拿起"
             ]
         },
         "李峻宇": {
