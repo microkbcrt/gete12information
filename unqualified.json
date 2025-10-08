@@ -3,19 +3,21 @@
     "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "书包未拿起"
+                "书包未拿起",
+                "水杯未拿起"
             ]
         },
         "史筱婧": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
+                "桌面有垃圾",
                 "桌面有垃圾"
             ]
         },
         "冯亿洋": {
-            "unqualifiedCount": 9,
+            "unqualifiedCount": 10,
             "unqualifiedReasons": [
                 "书包未拿起",
                 "书包未拿起",
@@ -25,14 +27,16 @@
                 "书包未拿起",
                 "书包未拿起",
                 "书包未拿起",
-                "书包未拿起"
+                "书包未拿起",
+                "衣服凌乱"
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 4,
+            "unqualifiedCount": 5,
             "unqualifiedReasons": [
                 "书箱上有垃圾",
                 "地上隐蔽处有垃圾",
+                "书箱上有垃圾",
                 "书箱上有垃圾",
                 "书箱上有垃圾"
             ]
@@ -134,8 +138,9 @@
             ]
         },
         "陈思彤": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
+                "桌面有垃圾",
                 "桌面有垃圾"
             ]
         },
@@ -152,8 +157,29 @@
             ]
         },
         "林子墨": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 2,
+            "unqualifiedReasons": [
+                "箱子未推进去",
+                "地上物品未拿起"
+            ]
+        },
+        "张楚倩": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "书箱盖未拿起"
+            ]
+        },
+        "邱海蓝": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "书箱盖未拿起"
+            ]
+        },
+        "尹雯馨": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "水杯未拿起"
+            ]
         }
     }
 }
