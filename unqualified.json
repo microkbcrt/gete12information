@@ -1,5 +1,5 @@
 {
-    "score": 18,
+    "score": null,
     "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
@@ -81,10 +81,11 @@
             ]
         },
         "黄政": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "书箱未放好",
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "垃圾"
             ]
         },
         "何睿政": {
@@ -150,16 +151,18 @@
             ]
         },
         "唐瑭": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
+                "球拍未拿起",
                 "球拍未拿起"
             ]
         },
         "林子墨": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "箱子未推进去",
-                "地上物品未拿起"
+                "地上物品未拿起",
+                "地上药袋未拿起"
             ]
         },
         "张楚倩": {
