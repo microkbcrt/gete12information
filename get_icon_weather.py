@@ -1,11 +1,17 @@
 # ==========================================================
-# 气象数据获取与智能分析一体化脚本 (v6.2 - 引入有效降水阈值)
+# 气象数据获取与智能分析一体化脚本 (v6.3 - 最终修复版)
 #
 # 功能:
 # 1. 从API获取多个网格点的原始天气数据 (ECMWF, ICON模型)。
 # 2. 将原始数据保存到 iconrawweather.json。
 # 3. 对原始数据进行智能分析，生成每日摘要 (过滤微量降水)。
 # 4. 将分析结果保存到 iconweather.json 和 iconweather.js。
+#
+# v6.3 更新日志:
+# - [修复] 全面处理API返回数据中的 None (null) 值，解决了在处理小时数据
+#   (如风速、CAPE)时可能发生的 TypeError 错误。
+# - [修改] 温度计算逻辑变更：不再混合使用ECMWF和ICON模型，现在只精确提取
+#   ECMWF 模型的温度数据，以提高预报准确性。
 # ==========================================================
 
 import requests
@@ -67,7 +73,7 @@ def get_weather_data():
         return None
 
 # ==========================================================
-# 阶段二: 数据分析模块
+# 阶段二: 数据分析模块 (已应用修复和修改)
 # ==========================================================
 
 def get_precip_level(mm):
@@ -86,7 +92,7 @@ def generate_area_conclusion(agg_data):
         return {'description': '数据不足', 'icon': 'unknown.png', 'warning': '', 'wmo_code': 0}
     
     precipitations = sorted(agg_data['precipitations'])
-    max_precip = precipitations[-1]
+    max_precip = precipitations[-1] if precipitations else 0
     max_level = get_precip_level(max_precip)
     max_gust_kmh = max(agg_data['max_gusts']) if agg_data.get('max_gusts') else 0
     max_cape = max(agg_data['max_capes']) if agg_data.get('max_capes') else 0
@@ -117,17 +123,11 @@ def generate_area_conclusion(agg_data):
 
     precip_phrase = ""
     
-    # 【修改点 2】: 引入有效降水判断逻辑
-    # 检查是否有任何一个网格点的日总降水量 >= 2mm
     has_significant_daily_rain = any(p >= 2 for p in precipitations)
-    # 检查是否有任何一个网格点的小时降水量 >= 1mm
     has_significant_hourly_rain = any(h >= 1 for h in agg_data.get('max_hourly_precips', []))
-    
     is_meaningful_precip = has_significant_daily_rain or has_significant_hourly_rain
 
-    # 只有当降水被认为是“有效”的时候，才生成降水短语
     if is_meaningful_precip:
-        # 内部的范围和强度判断逻辑保持不变，确保了描述的准确性
         if coverage_percent > 15 and main_level['level'] > 0:
             scope_word = "有分散" if coverage_percent < 40 else "有"
             main_precip_name = main_level['name']
@@ -168,7 +168,6 @@ def generate_area_conclusion(agg_data):
 
     return {'description': final_desc, 'icon': icon, 'warning': warning, 'wmo_code': wmo_code}
 
-
 def analyze_area_weather_data(all_points_data):
     """分析所有网格点的天气数据。"""
     print("\n--- 阶段 2: 开始分析聚合后的天气数据 ---")
@@ -178,7 +177,7 @@ def analyze_area_weather_data(all_points_data):
     first_point_key = list(all_points_data.keys())[0]
     days_count = len(all_points_data[first_point_key]['daily']['time'])
     analyzed_results = []
-    models = ['ecmwf_ifs025', 'icon_global']
+    models_for_aggregation = ['ecmwf_ifs025', 'icon_global']
 
     for i in range(days_count):
         date = all_points_data[first_point_key]['daily']['time'][i]
@@ -190,33 +189,25 @@ def analyze_area_weather_data(all_points_data):
         }
 
         for point_data in all_points_data.values():
-            avg_max_temp_point, avg_min_temp_point, model_count = 0, 0, 0
-            # --- 处理每日数据 (已修复) ---
-            for model in models:
-                # 检查数据是否存在且未超出索引
-                if f"temperature_2m_max_{model}" in point_data['daily'] and i < len(point_data['daily'][f"temperature_2m_max_{model}"]):
-                    max_temp = point_data['daily'][f"temperature_2m_max_{model}"][i]
-                    min_temp = point_data['daily'][f"temperature_2m_min_{model}"][i]
-                    
-                    if max_temp is not None and min_temp is not None:
-                        avg_max_temp_point += max_temp
-                        avg_min_temp_point += min_temp
-                        model_count += 1
+            
+            # 【修改点 1】: 只获取 ECMWF 模型的温度
+            temp_model = 'ecmwf_ifs025'
+            if f"temperature_2m_max_{temp_model}" in point_data['daily'] and i < len(point_data['daily'][f"temperature_2m_max_{temp_model}"]):
+                max_temp = point_data['daily'][f"temperature_2m_max_{temp_model}"][i]
+                min_temp = point_data['daily'][f"temperature_2m_min_{temp_model}"][i]
+                
+                if max_temp is not None:
+                    daily_aggregated_data['max_temps'].append(max_temp)
+                if min_temp is not None:
+                    daily_aggregated_data['min_temps'].append(min_temp)
 
-            if model_count > 0:
-                daily_aggregated_data['max_temps'].append(avg_max_temp_point / model_count)
-                daily_aggregated_data['min_temps'].append(avg_min_temp_point / model_count)
-
-            # --- 处理小时数据 (新增修复点) ---
-            for model in models:
-                # 【修复点 2】: 对所有小时数据进行None值过滤
+            # 【修复点】: 聚合其他数据时，全面过滤 None 值
+            for model in models_for_aggregation:
                 
                 # 处理降水
                 if f"precipitation_{model}" in point_data.get('hourly', {}):
                     hourly_slice_raw = point_data['hourly'][f"precipitation_{model}"][i*24:(i+1)*24]
-                    # 过滤掉None值
-                    hourly_slice = [p for p in hourly_slice_raw if p is not None]
-                    
+                    hourly_slice = [p for p in hourly_slice_raw if p is not None] # 过滤None
                     if hourly_slice:
                         daily_aggregated_data['precipitations'].append(sum(hourly_slice))
                         daily_aggregated_data['max_hourly_precips'].append(max(hourly_slice))
@@ -227,26 +218,26 @@ def analyze_area_weather_data(all_points_data):
                 # 处理阵风
                 if f"wind_gusts_10m_{model}" in point_data.get('hourly', {}):
                     gusts_raw = point_data['hourly'][f"wind_gusts_10m_{model}"][i*24:(i+1)*24]
-                    # 过滤掉None值
-                    gusts = [g for g in gusts_raw if g is not None]
+                    gusts = [g for g in gusts_raw if g is not None] # 过滤None
                     if gusts: 
                         daily_aggregated_data['max_gusts'].append(max(gusts))
 
                 # 处理CAPE
                 if f"cape_{model}" in point_data.get('hourly', {}):
                     capes_raw = point_data['hourly'][f"cape_{model}"][i*24:(i+1)*24]
-                    # 过滤掉None值
-                    capes = [c for c in capes_raw if c is not None]
+                    capes = [c for c in capes_raw if c is not None] # 过滤None
                     if capes: 
                         daily_aggregated_data['max_capes'].append(max(capes))
                 
-                # 处理天气代码 (通常不会是None，但保持健壮性)
+                # 处理天气代码
                 if f"weather_code_{model}" in point_data['daily'] and i < len(point_data['daily'][f"weather_code_{model}"]):
                     wmo_code = point_data['daily'][f"weather_code_{model}"][i]
-                    if wmo_code is not None:
+                    if wmo_code is not None: # 过滤None
                         daily_aggregated_data['wmo_codes'].append(wmo_code)
         
         final_analysis = generate_area_conclusion(daily_aggregated_data)
+        
+        # 计算最终的区域平均温度
         avg_max_temp = round(sum(daily_aggregated_data['max_temps']) / len(daily_aggregated_data['max_temps'])) if daily_aggregated_data['max_temps'] else None
         avg_min_temp = round(sum(daily_aggregated_data['min_temps']) / len(daily_aggregated_data['min_temps'])) if daily_aggregated_data['min_temps'] else None
         
