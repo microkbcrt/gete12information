@@ -183,7 +183,6 @@ def analyze_area_weather_data(all_points_data):
     for i in range(days_count):
         date = all_points_data[first_point_key]['daily']['time'][i]
         
-        # 【修改点 1】: 新增 max_hourly_precips 来存储日最大小时降水
         daily_aggregated_data = {
             'precipitations': [], 'max_gusts': [], 'max_capes': [],
             'wmo_codes': [], 'max_temps': [], 'min_temps': [],
@@ -192,41 +191,60 @@ def analyze_area_weather_data(all_points_data):
 
         for point_data in all_points_data.values():
             avg_max_temp_point, avg_min_temp_point, model_count = 0, 0, 0
+            # --- 处理每日数据 (已修复) ---
             for model in models:
+                # 检查数据是否存在且未超出索引
                 if f"temperature_2m_max_{model}" in point_data['daily'] and i < len(point_data['daily'][f"temperature_2m_max_{model}"]):
-                    
-                    # 【修复点】: 在累加前检查从API获取的温度值是否为 None
                     max_temp = point_data['daily'][f"temperature_2m_max_{model}"][i]
                     min_temp = point_data['daily'][f"temperature_2m_min_{model}"][i]
                     
-                    # 只有当 max_temp 和 min_temp 都不是 None (即数据有效) 时，才进行计算
                     if max_temp is not None and min_temp is not None:
                         avg_max_temp_point += max_temp
                         avg_min_temp_point += min_temp
                         model_count += 1
+
             if model_count > 0:
                 daily_aggregated_data['max_temps'].append(avg_max_temp_point / model_count)
                 daily_aggregated_data['min_temps'].append(avg_min_temp_point / model_count)
 
+            # --- 处理小时数据 (新增修复点) ---
             for model in models:
-                # 【修改点 1】: 同时计算日总降水和日最大小时降水
+                # 【修复点 2】: 对所有小时数据进行None值过滤
+                
+                # 处理降水
                 if f"precipitation_{model}" in point_data.get('hourly', {}):
-                    hourly_slice = point_data['hourly'][f"precipitation_{model}"][i*24:(i+1)*24]
+                    hourly_slice_raw = point_data['hourly'][f"precipitation_{model}"][i*24:(i+1)*24]
+                    # 过滤掉None值
+                    hourly_slice = [p for p in hourly_slice_raw if p is not None]
+                    
                     if hourly_slice:
                         daily_aggregated_data['precipitations'].append(sum(hourly_slice))
                         daily_aggregated_data['max_hourly_precips'].append(max(hourly_slice))
-                    else: # 以防万一数据不完整
+                    else:
                         daily_aggregated_data['precipitations'].append(0)
                         daily_aggregated_data['max_hourly_precips'].append(0)
 
+                # 处理阵风
                 if f"wind_gusts_10m_{model}" in point_data.get('hourly', {}):
-                    gusts = point_data['hourly'][f"wind_gusts_10m_{model}"][i*24:(i+1)*24]
-                    if gusts: daily_aggregated_data['max_gusts'].append(max(gusts))
+                    gusts_raw = point_data['hourly'][f"wind_gusts_10m_{model}"][i*24:(i+1)*24]
+                    # 过滤掉None值
+                    gusts = [g for g in gusts_raw if g is not None]
+                    if gusts: 
+                        daily_aggregated_data['max_gusts'].append(max(gusts))
+
+                # 处理CAPE
                 if f"cape_{model}" in point_data.get('hourly', {}):
-                    capes = point_data['hourly'][f"cape_{model}"][i*24:(i+1)*24]
-                    if capes: daily_aggregated_data['max_capes'].append(max(capes))
+                    capes_raw = point_data['hourly'][f"cape_{model}"][i*24:(i+1)*24]
+                    # 过滤掉None值
+                    capes = [c for c in capes_raw if c is not None]
+                    if capes: 
+                        daily_aggregated_data['max_capes'].append(max(capes))
+                
+                # 处理天气代码 (通常不会是None，但保持健壮性)
                 if f"weather_code_{model}" in point_data['daily'] and i < len(point_data['daily'][f"weather_code_{model}"]):
-                    daily_aggregated_data['wmo_codes'].append(point_data['daily'][f"weather_code_{model}"][i])
+                    wmo_code = point_data['daily'][f"weather_code_{model}"][i]
+                    if wmo_code is not None:
+                        daily_aggregated_data['wmo_codes'].append(wmo_code)
         
         final_analysis = generate_area_conclusion(daily_aggregated_data)
         avg_max_temp = round(sum(daily_aggregated_data['max_temps']) / len(daily_aggregated_data['max_temps'])) if daily_aggregated_data['max_temps'] else None
