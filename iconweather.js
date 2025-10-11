@@ -21,7 +21,7 @@ var iconWeatherData = {
         {
             "time": "2025-10-14",
             "temperature_2m_max": 31,
-            "temperature_2m_min": 25,
+            "temperature_2m_min": 24,
             "weather_desc": "多云，有雷阵雨",
             "weather_icon": "04.png",
             "warning_text": "提醒: 可能伴有雷电",
@@ -39,7 +39,7 @@ var iconWeatherData = {
         {
             "time": "2025-10-16",
             "temperature_2m_max": 32,
-            "temperature_2m_min": 24,
+            "temperature_2m_min": 25,
             "weather_desc": "多云",
             "weather_icon": "01.png",
             "warning_text": "",
