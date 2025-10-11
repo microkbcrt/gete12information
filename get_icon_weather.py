@@ -194,9 +194,16 @@ def analyze_area_weather_data(all_points_data):
             avg_max_temp_point, avg_min_temp_point, model_count = 0, 0, 0
             for model in models:
                 if f"temperature_2m_max_{model}" in point_data['daily'] and i < len(point_data['daily'][f"temperature_2m_max_{model}"]):
-                    avg_max_temp_point += point_data['daily'][f"temperature_2m_max_{model}"][i]
-                    avg_min_temp_point += point_data['daily'][f"temperature_2m_min_{model}"][i]
-                    model_count += 1
+                    
+                    # 【修复点】: 在累加前检查从API获取的温度值是否为 None
+                    max_temp = point_data['daily'][f"temperature_2m_max_{model}"][i]
+                    min_temp = point_data['daily'][f"temperature_2m_min_{model}"][i]
+                    
+                    # 只有当 max_temp 和 min_temp 都不是 None (即数据有效) 时，才进行计算
+                    if max_temp is not None and min_temp is not None:
+                        avg_max_temp_point += max_temp
+                        avg_min_temp_point += min_temp
+                        model_count += 1
             if model_count > 0:
                 daily_aggregated_data['max_temps'].append(avg_max_temp_point / model_count)
                 daily_aggregated_data['min_temps'].append(avg_min_temp_point / model_count)
