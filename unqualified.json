@@ -38,8 +38,9 @@
             ]
         },
         "孙运龙": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
+                "书未拿起",
                 "书未拿起",
                 "书未拿起",
                 "书未拿起"
@@ -72,17 +73,19 @@
             ]
         },
         "符耀宇": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "书箱旁有垃圾"
+                "书箱旁有垃圾",
+                "桌面有垃圾"
             ]
         },
         "黄政": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "书箱未放好",
                 "桌面有垃圾",
-                "垃圾"
+                "垃圾",
+                "桌面有垃圾"
             ]
         },
         "何睿政": {
@@ -106,9 +109,10 @@
             ]
         },
         "李峻宇": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "迪士尼正版授权什锦牛肉粒未拿起"
             ]
         },
         "黎晓雪": {
@@ -124,9 +128,10 @@
             ]
         },
         "张家睿": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "地上隐蔽处有垃圾"
+                "地上隐蔽处有垃圾",
+                "水杯未拿起"
             ]
         },
         "孔睿哲": {
@@ -182,10 +187,11 @@
             ]
         },
         "张丁戈": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "桌面有垃圾",
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "地面有嘉顿牛奶面包袋垃圾"
             ]
         }
     }
