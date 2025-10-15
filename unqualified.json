@@ -1,12 +1,15 @@
 {
     "score": 19,
-    "penaltyCoordinates": [],
+    "penaltyCoordinates": [
+        "(7,3)"
+    ],
     "unqualified": {
         "王安宇": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "书包未拿起",
-                "水杯未拿起"
+                "水杯未拿起",
+                "抽屉有垃圾"
             ]
         },
         "史筱婧": {
