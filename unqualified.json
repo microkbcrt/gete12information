@@ -1,9 +1,6 @@
 {
-    "score": 19,
-    "penaltyCoordinates": [
-        "(1,1)",
-        "(1,3)"
-    ],
+    "score": null,
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 3,
@@ -32,22 +29,25 @@
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 5,
+            "unqualifiedCount": 6,
             "unqualifiedReasons": [
                 "书箱上有垃圾",
                 "地上隐蔽处有垃圾",
                 "书箱上有垃圾",
                 "书箱上有垃圾",
-                "书箱上有垃圾"
+                "书箱上有垃圾",
+                "大扫除椅子起了箱子未起"
             ]
         },
         "孙运龙": {
-            "unqualifiedCount": 4,
+            "unqualifiedCount": 6,
             "unqualifiedReasons": [
                 "书未拿起",
                 "书未拿起",
                 "书未拿起",
-                "书未拿起"
+                "书未拿起",
+                "大扫除没起椅子",
+                "水杯未拿起"
             ]
         },
         "段皓宇": {
@@ -64,10 +64,12 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "笔盒未拿起",
-                "笔袋、书未拿起"
+                "笔袋、书未拿起",
+                "大扫除没起椅子",
+                "水杯未拿起"
             ]
         },
         "陈睿竹": {
@@ -84,13 +86,15 @@
             ]
         },
         "黄政": {
-            "unqualifiedCount": 5,
+            "unqualifiedCount": 7,
             "unqualifiedReasons": [
                 "书箱未放好",
                 "桌面有垃圾",
                 "垃圾",
                 "桌面有垃圾",
-                "地上隐蔽处有垃圾"
+                "地上隐蔽处有垃圾",
+                "窗台有垃圾",
+                "10月17日大扫除逃值"
             ]
         },
         "何睿政": {
@@ -106,19 +110,21 @@
             ]
         },
         "莫柽超": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "水杯未拿起",
                 "书箱盖未拿起",
-                "地上垃圾"
+                "地上垃圾",
+                "大扫除没起椅子"
             ]
         },
         "李峻宇": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "桌面有垃圾",
                 "迪士尼正版授权什锦牛肉粒未拿起",
-                "地上有垃圾：纸巾袋"
+                "地上有垃圾：纸巾袋",
+                "窗台有垃圾"
             ]
         },
         "黎晓雪": {
@@ -160,10 +166,11 @@
             ]
         },
         "唐瑭": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "球拍未拿起",
-                "球拍未拿起"
+                "球拍未拿起",
+                "大扫除没起椅子"
             ]
         },
         "林子墨": {
@@ -198,6 +205,12 @@
                 "桌面有垃圾",
                 "桌面有垃圾",
                 "地面有嘉顿牛奶面包袋垃圾"
+            ]
+        },
+        "曹天赐": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "大扫除没起椅子"
             ]
         }
     }
