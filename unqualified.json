@@ -154,10 +154,9 @@
             ]
         },
         "尹雯馨": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 1,
             "unqualifiedReasons": [
-                "水杯未拿起",
-                "夹缝有垃圾，同桌两都记了，后续找我删一个"
+                "水杯未拿起"
             ]
         },
         "张丁戈": {
@@ -173,10 +172,8 @@
             ]
         },
         "罗妍茜": {
-            "unqualifiedCount": 1,
-            "unqualifiedReasons": [
-                "夹缝有垃圾，同桌两都记了，后续找我删一个"
-            ]
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         }
     }
 }
