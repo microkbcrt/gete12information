@@ -41,10 +41,11 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "大扫除没起椅子",
-                "水杯未拿起"
+                "水杯未拿起",
+                "地上有垃圾+水杯未拿起"
             ]
         },
         "陈睿竹": {
@@ -153,9 +154,10 @@
             ]
         },
         "尹雯馨": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "水杯未拿起"
+                "水杯未拿起",
+                "夹缝有垃圾，同桌两都记了，后续找我删一个"
             ]
         },
         "张丁戈": {
@@ -168,6 +170,12 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "大扫除没起椅子"
+            ]
+        },
+        "罗妍茜": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "夹缝有垃圾，同桌两都记了，后续找我删一个"
             ]
         }
     }
