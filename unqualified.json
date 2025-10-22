@@ -1,6 +1,10 @@
 {
-    "score": null,
-    "penaltyCoordinates": [],
+    "score": 18,
+    "penaltyCoordinates": [
+        "(1,6)",
+        "(5,2)",
+        "(6,1)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 1,
@@ -78,10 +82,11 @@
             ]
         },
         "莫柽超": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "地上垃圾",
-                "大扫除没起椅子"
+                "大扫除没起椅子",
+                "箱子未推进去"
             ]
         },
         "李峻宇": {
@@ -160,9 +165,10 @@
             ]
         },
         "张丁戈": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "地面有嘉顿牛奶面包袋垃圾"
+                "地面有嘉顿牛奶面包袋垃圾",
+                "桌面有垃圾"
             ]
         },
         "曹天赐": {
@@ -172,8 +178,10 @@
             ]
         },
         "罗妍茜": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "桌面有垃圾"
+            ]
         }
     }
 }
