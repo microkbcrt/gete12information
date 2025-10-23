@@ -1,9 +1,9 @@
 {
     "score": 18,
     "penaltyCoordinates": [
-        "(1,6)",
-        "(5,2)",
-        "(6,1)"
+        "(1,5)",
+        "(2,1)",
+        "(8,2)"
     ],
     "unqualified": {
         "王安宇": {
@@ -13,10 +13,11 @@
             ]
         },
         "史筱婧": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "桌面有垃圾",
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "窗台有杂物"
             ]
         },
         "冯亿洋": {
@@ -59,10 +60,11 @@
             ]
         },
         "符耀宇": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "书箱旁有垃圾",
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "地上有垃圾"
             ]
         },
         "黄政": {
@@ -181,6 +183,12 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "桌面有垃圾"
+            ]
+        },
+        "张瑞洋": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "窗台上有垃圾"
             ]
         }
     }
