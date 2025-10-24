@@ -2,7 +2,7 @@ var iconWeatherData = {
     "daily": [
         {
             "time": "2025-10-24",
-            "temperature_2m_max": 25,
+            "temperature_2m_max": 24,
             "temperature_2m_min": 19,
             "weather_desc": "阴天",
             "weather_icon": "02.png",
