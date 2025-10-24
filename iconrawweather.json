@@ -2,7 +2,7 @@
     "center": {
         "latitude": -66.75,
         "longitude": 95.0,
-        "generationtime_ms": 27.40609645843506,
+        "generationtime_ms": 7.329463958740234,
         "utc_offset_seconds": 21600,
         "timezone": "Antarctica/Vostok",
         "timezone_abbreviation": "GMT+6",
@@ -1286,7 +1286,7 @@
     "north": {
         "latitude": -66.0,
         "longitude": 95.0,
-        "generationtime_ms": 4.150152206420898,
+        "generationtime_ms": 2.1358728408813477,
         "utc_offset_seconds": 21600,
         "timezone": "Antarctica/Vostok",
         "timezone_abbreviation": "GMT+6",
@@ -2570,7 +2570,7 @@
     "south": {
         "latitude": -66.25,
         "longitude": 94.5,
-        "generationtime_ms": 3.61478328704834,
+        "generationtime_ms": 1.0091066360473633,
         "utc_offset_seconds": 21600,
         "timezone": "Antarctica/Vostok",
         "timezone_abbreviation": "GMT+6",
@@ -3854,7 +3854,7 @@
     "east": {
         "latitude": -67.25,
         "longitude": 93.75,
-        "generationtime_ms": 1.0306835174560547,
+        "generationtime_ms": 0.8560419082641602,
         "utc_offset_seconds": 21600,
         "timezone": "Antarctica/Vostok",
         "timezone_abbreviation": "GMT+6",
@@ -5138,7 +5138,7 @@
     "west": {
         "latitude": -67.25,
         "longitude": 95.5,
-        "generationtime_ms": 0.18143653869628906,
+        "generationtime_ms": 0.2186298370361328,
         "utc_offset_seconds": 21600,
         "timezone": "Antarctica/Vostok",
         "timezone_abbreviation": "GMT+6",
