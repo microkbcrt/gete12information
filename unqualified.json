@@ -25,12 +25,17 @@
             "unqualifiedReasons": []
         },
         "杨力行": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 2,
+            "unqualifiedReasons": [
+                "逃值",
+                "没凳子"
+            ]
         },
         "孙运龙": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "逃值"
+            ]
         },
         "段皓宇": {
             "unqualifiedCount": 1,
@@ -46,11 +51,12 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "大扫除没起椅子",
                 "水杯未拿起",
-                "地上有垃圾+水杯未拿起"
+                "地上有垃圾+水杯未拿起",
+                "逃值"
             ]
         },
         "陈睿竹": {
@@ -92,10 +98,11 @@
             ]
         },
         "李峻宇": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "地上有垃圾：纸巾袋",
-                "窗台有垃圾"
+                "窗台有垃圾",
+                "逃值"
             ]
         },
         "黎晓雪": {
