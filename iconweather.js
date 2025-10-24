@@ -2,66 +2,66 @@ var iconWeatherData = {
     "daily": [
         {
             "time": "2025-10-24",
-            "temperature_2m_max": 18,
-            "temperature_2m_min": 13,
-            "weather_desc": "阴天，有分散中雨",
+            "temperature_2m_max": -11,
+            "temperature_2m_min": -12,
+            "weather_desc": "多云，有小雨到中雨",
             "weather_icon": "19.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 61
         },
         {
             "time": "2025-10-25",
-            "temperature_2m_max": 21,
-            "temperature_2m_min": 13,
-            "weather_desc": "多云到阴天，有分散暴雨",
+            "temperature_2m_max": -7,
+            "temperature_2m_min": -11,
+            "weather_desc": "阴天，有大雨到暴雨",
             "weather_icon": "13.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 65
         },
         {
             "time": "2025-10-26",
-            "temperature_2m_max": 21,
-            "temperature_2m_min": 14,
-            "weather_desc": "多云间晴，有分散大雨",
+            "temperature_2m_max": -8,
+            "temperature_2m_min": -9,
+            "weather_desc": "多云到阴天，有中雨到大雨",
             "weather_icon": "13.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 63
         },
         {
             "time": "2025-10-27",
-            "temperature_2m_max": 21,
-            "temperature_2m_min": 13,
-            "weather_desc": "多云间晴，有分散小雨",
+            "temperature_2m_max": -9,
+            "temperature_2m_min": -12,
+            "weather_desc": "多云，有小雨",
             "weather_icon": "07.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 53
         },
         {
             "time": "2025-10-28",
-            "temperature_2m_max": 22,
-            "temperature_2m_min": 13,
-            "weather_desc": "多云间晴，有分散小雨到中雨",
+            "temperature_2m_max": -9,
+            "temperature_2m_min": -13,
+            "weather_desc": "多云，有小雨到中雨",
             "weather_icon": "19.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 61
         },
         {
             "time": "2025-10-29",
-            "temperature_2m_max": 23,
-            "temperature_2m_min": 14,
-            "weather_desc": "多云到阴天，有分散中雨到大雨",
+            "temperature_2m_max": -9,
+            "temperature_2m_min": -11,
+            "weather_desc": "多云到阴天，有中雨到大雨",
             "weather_icon": "13.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 63
         },
         {
             "time": "2025-10-30",
-            "temperature_2m_max": 24,
-            "temperature_2m_min": 15,
-            "weather_desc": "多云到阴天",
-            "weather_icon": "02.png",
+            "temperature_2m_max": -9,
+            "temperature_2m_min": -12,
+            "weather_desc": "多云到阴天，有大雨",
+            "weather_icon": "13.png",
             "warning_text": "提醒: 可能伴有大风",
-            "weather_code": 3
+            "weather_code": 63
         }
     ]
 };
