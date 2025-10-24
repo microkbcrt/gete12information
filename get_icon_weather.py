@@ -29,7 +29,7 @@ def get_weather_data():
     成功时返回所有点的原始数据字典，失败时返回 None。
     """
     grid_points = {
-        'center': {'lat': 23.13, 'lon': 113.26}, # 广州市中心
+        'center': {'lat': -66.71, 'lon': 94.8}, # 广州市中心
         'north':  {'lat': 23.40, 'lon': 113.22}, # 北部 (花都)
         'south':  {'lat': 22.78, 'lon': 113.53}, # 南部 (南沙)
         'east':   {'lat': 23.29, 'lon': 113.82}, # 东部 (增城)
