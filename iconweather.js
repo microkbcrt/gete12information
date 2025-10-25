@@ -22,10 +22,10 @@ var iconWeatherData = {
             "time": "2025-10-27",
             "temperature_2m_max": -8,
             "temperature_2m_min": -11,
-            "weather_desc": "多云到阴天，中雪转大雪",
+            "weather_desc": "多云到阴天，中雪，局部暴雪",
             "weather_icon": "25.png",
             "warning_text": "提醒: 可能伴有大风",
-            "weather_code": 75
+            "weather_code": 86
         },
         {
             "time": "2025-10-28",
