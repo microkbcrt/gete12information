@@ -1,11 +1,11 @@
 {
     "score": 18,
     "penaltyCoordinates": [
-        "(2,2)",
         "(2,1)",
         "(4,6)",
         "(5,2)",
-        "(7,5)"
+        "(7,5)",
+        "(2,2)"
     ],
     "unqualified": {
         "王安宇": {
@@ -109,9 +109,10 @@
             ]
         },
         "黎晓雪": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "夹缝有杂物"
+                "夹缝有杂物",
+                "水杯未拿起"
             ]
         },
         "黄锦茵": {
