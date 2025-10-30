@@ -1,11 +1,7 @@
 {
     "score": 18,
     "penaltyCoordinates": [
-        "(2,1)",
-        "(4,6)",
-        "(5,2)",
-        "(7,5)",
-        "(2,2)"
+        "(3,2)"
     ],
     "unqualified": {
         "王安宇": {
@@ -77,8 +73,10 @@
             ]
         },
         "黄政": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "箱内有垃圾"
+            ]
         },
         "何睿政": {
             "unqualifiedCount": 1,
@@ -87,9 +85,10 @@
             ]
         },
         "刘宝琳": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "窗台有东西"
+                "窗台有东西",
+                "垃圾或杂物"
             ]
         },
         "莫柽超": {
@@ -116,9 +115,10 @@
             ]
         },
         "黄锦茵": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "夹缝有杂物"
+                "夹缝有杂物",
+                "雨伞未拿起"
             ]
         },
         "张家睿": {
@@ -200,9 +200,10 @@
             ]
         },
         "张瑞洋": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "窗台上有垃圾"
+                "窗台上有垃圾",
+                "窗台有垃圾"
             ]
         },
         "李幼玲": {
