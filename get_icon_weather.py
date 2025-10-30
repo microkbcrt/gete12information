@@ -1,5 +1,5 @@
 # ==========================================================
-# 气象数据获取与智能分析一体化脚本 (v7.0 - 全天候版)
+# 气象数据获取与智能分析一体化脚本 (v7.1 - 风格恢复版)
 #
 # 功能:
 # 1. 从API获取多个网格点的原始天气数据。
@@ -7,12 +7,11 @@
 # 3. 对原始数据进行智能分析，能正确处理雨、雪、雨夹雪等多种天气。
 # 4. 将分析结果保存到 iconweather.json 和 iconweather.js。
 #
-# v7.0 更新日志:
-# - [新增] 引入降水形态判断逻辑，全面支持降雪天气预报。
-# - [重构] get_precip_level 函数，使其能根据降水形态返回不同的量级描述。
-# - [重构] generate_area_conclusion 函数，采用“先定性，后定量”的预报逻辑。
-# - [新增] 为降雪天气增加了对应的天气图标和WMO代码。
-# - [修复] v6.3中对None值的处理逻辑被继承和保留。
+# v7.1 更新日志:
+# - [修复] 恢复了v6.3版本中关于“雨天”的描述逻辑，解决了v7.0中
+#   出现的“分散性阵雨小”、“转”等不符合原有风格和逻辑的问题。
+# - [优化] 将雨、雪的描述逻辑分离，使代码更清晰，确保雨天预报
+#   的描述与您最初的设计完全一致。
 # ==========================================================
 
 import requests
@@ -21,23 +20,21 @@ import time
 import sys
 from collections import Counter
 
-# (阶段一: 数据获取模块 get_weather_data 无需改变，此处省略以保持简洁)
+# (阶段一: 数据获取模块 get_weather_data 无需改变，此处省略)
 def get_weather_data():
     """
     从 Open-Meteo API 获取一个区域内多个点(网格)的天气数据。
     成功时返回所有点的原始数据字典，失败时返回 None。
     """
     grid_points = {
-        'center': {'lat': 23.13, 'lon': 113.26}, # 广州市中心
-        'north':  {'lat': 23.40, 'lon': 113.22}, # 北部 (花都)
-        'south':  {'lat': 22.78, 'lon': 113.53}, # 南部 (南沙)
-        'east':   {'lat': 23.29, 'lon': 113.82}, # 东部 (增城)
-        'west':   {'lat': 23.17, 'lon': 112.89}  # 西部 (佛山三水)
+        'center': {'lat': -66.71, 'lon': 94.8}, # 南极地区，用于测试降雪
+        'north':  {'lat': -66.00, 'lon': 95.0},
+        'south':  {'lat': -66.30, 'lon': 94.5},
+        'east':   {'lat': -67.00, 'lon': 94.0},
+        'west':   {'lat': -67.20, 'lon': 95.5}
     }
-    
     base_url = "https://api.open-meteo.com/v1/forecast"
     common_params = "&hourly=precipitation,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&models=ecmwf_ifs025,icon_global"
-    
     all_grid_data = {}
     print("--- 阶段 1: 开始获取区域网格天气数据 (模型: ECMWF, ICON) ---")
     for name, coords in grid_points.items():
@@ -67,35 +64,21 @@ def get_weather_data():
         return None
 
 # ==========================================================
-# 阶段二: 数据分析模块 (全面升级)
+# 阶段二: 数据分析模块 (已应用修复)
 # ==========================================================
 
-# 【新增】辅助函数：判断主要降水形态
 def get_dominant_precip_phase(wmo_codes):
-    """根据WMO代码列表，判断区域主导的降水形态"""
-    if not wmo_codes:
-        return 'rain' # 默认是雨
-
-    snow_codes = {71, 73, 75, 77, 85, 86} # 小雪, 中雪, 大雪, 阵雪等
-    sleet_codes = {56, 57, 68, 69, 83, 84} # 雨夹雪或冻雨相关
-    
+    if not wmo_codes: return 'rain'
+    snow_codes = {71, 73, 75, 77, 85, 86}
+    sleet_codes = {56, 57, 68, 69, 83, 84}
     snow_count = sum(1 for code in wmo_codes if code in snow_codes)
     sleet_count = sum(1 for code in wmo_codes if code in sleet_codes)
-    
-    # 如果超过30%的WMO代码明确指向雪，则主形态为雪
-    if snow_count / len(wmo_codes) > 0.3:
-        return 'snow'
-    # 如果超过30%的WMO代码明确指向雨夹雪，则主形态为雨夹雪
-    if sleet_count / len(wmo_codes) > 0.3:
-        return 'sleet'
-        
-    return 'rain' # 否则默认为雨
+    if snow_count / len(wmo_codes) > 0.3: return 'snow'
+    if sleet_count / len(wmo_codes) > 0.3: return 'sleet'
+    return 'rain'
 
-# 【重构】get_precip_level，现在支持不同降水形态
 def get_precip_level(mm, phase='rain'):
-    """根据降水量和形态，返回降水等级和名称"""
     if phase == 'snow':
-        # 降雪量级划分标准 (这里使用一个常用标准，可根据需要调整)
         if mm < 0.1:  return {'level': 0, 'name': '无雪'}
         if mm < 2.5:  return {'level': 1, 'name': '小雪'}
         if mm < 5.0:  return {'level': 2, 'name': '中雪'}
@@ -103,10 +86,9 @@ def get_precip_level(mm, phase='rain'):
         if mm < 20.0: return {'level': 4, 'name': '暴雪'}
         return {'level': 5, 'name': '大暴雪'}
     elif phase == 'sleet':
-        # 雨夹雪通常不严格区分量级，这里简化处理
         if mm < 0.1: return {'level': 0, 'name': '无'}
         return {'level': 1, 'name': '雨夹雪'}
-    else: # 默认为雨
+    else: # rain
         if mm < 0.1:  return {'level': 0, 'name': '无雨'}
         if mm < 10:   return {'level': 1, 'name': '小雨'}
         if mm < 25:   return {'level': 2, 'name': '中雨'}
@@ -115,39 +97,30 @@ def get_precip_level(mm, phase='rain'):
         if mm < 250:  return {'level': 5, 'name': '大暴雨'}
         return {'level': 6, 'name': '特大暴雨'}
 
-# 【重构】generate_area_conclusion，支持全天候
+# 【重构】generate_area_conclusion，恢复原有风格
 def generate_area_conclusion(agg_data):
-    """基于聚合后的数据，生成区域的最终天气结论 (全天候版)"""
     if not agg_data.get('precipitations'):
         return {'description': '数据不足', 'icon': 'unknown.png', 'warning': '', 'wmo_code': 0}
     
-    # --- 0. 基础数据准备 ---
     precipitations = sorted(agg_data['precipitations'])
     max_precip = precipitations[-1] if precipitations else 0
     max_gust_kmh = max(agg_data['max_gusts']) if agg_data.get('max_gusts') else 0
     max_cape = max(agg_data['max_capes']) if agg_data.get('max_capes') else 0
 
-    # --- 1. 【核心修改】先判断降水形态 ---
     dominant_phase = get_dominant_precip_phase(agg_data.get('wmo_codes', []))
 
-    # --- 2. 基于形态进行核心要素分析 ---
     max_level = get_precip_level(max_precip, dominant_phase)
-    rainy_points = [p for p in precipitations if p >= 0.5] # 此处阈值对雨雪通用
+    rainy_points = [p for p in precipitations if p >= 0.5]
     coverage_percent = (len(rainy_points) / len(precipitations)) * 100 if precipitations else 0
-    is_thunderstorm = max_cape > 700 and dominant_phase == 'rain' # 雷暴只在下雨时判断
+    is_thunderstorm = max_cape > 700 and dominant_phase == 'rain'
     
     avg_rainy_points = sum(rainy_points) / len(rainy_points) if rainy_points else 0
     main_level = get_precip_level(avg_rainy_points, dominant_phase)
 
-    # --- 3. 天空状况判断 (逻辑不变) ---
     base_sky_condition = "多云"
-    # (天空状况判断逻辑与v6.3完全相同，此处省略)
     if agg_data.get('wmo_codes'):
         wmo_counts = Counter(agg_data['wmo_codes'])
-        total_wmo = len(agg_data['wmo_codes'])
-        clear_count = wmo_counts.get(0, 0)
-        few_clouds_count = wmo_counts.get(1, 0) + wmo_counts.get(2, 0)
-        overcast_count = wmo_counts.get(3, 0)
+        total_wmo, clear_count, few_clouds_count, overcast_count = len(agg_data['wmo_codes']), wmo_counts.get(0, 0), wmo_counts.get(1, 0) + wmo_counts.get(2, 0), wmo_counts.get(3, 0)
         if (clear_count + few_clouds_count + overcast_count) / total_wmo > 0.6:
             if (clear_count + few_clouds_count) / total_wmo >= 0.6: base_sky_condition = "多云间晴"
             elif (few_clouds_count / total_wmo) >= 0.3 and (overcast_count / total_wmo) >= 0.3: base_sky_condition = "多云到阴天"
@@ -157,58 +130,64 @@ def generate_area_conclusion(agg_data):
             elif coverage_percent > 40 and main_level['level'] >= 2: base_sky_condition = "多云到阴天"
             elif coverage_percent < 20: base_sky_condition = "多云间晴"
 
-
-    # --- 4. 专业降水短语生成 (基于形态) ---
     precip_phrase = ""
     has_significant_daily_rain = any(p >= 2 for p in precipitations)
     has_significant_hourly_rain = any(h >= 1 for h in agg_data.get('max_hourly_precips', []))
     is_meaningful_precip = has_significant_daily_rain or has_significant_hourly_rain
 
     if is_meaningful_precip and coverage_percent > 15 and main_level['level'] > 0:
-        scope_word = "有分散性" if coverage_percent < 40 else ""
-        main_precip_name = main_level['name']
+        # --- 【核心修复】使用分支逻辑，区分雨和其他降水形态的描述 ---
         
-        # 优先处理雷阵雨 (仅限雨)
-        if is_thunderstorm and main_level['level'] <= 1:
-            precip_phrase = scope_word + "雷阵雨"
-            if max_level['level'] > main_level['level'] + 1:
-                precip_phrase += "，局部" + get_precip_level(max_precip, 'rain')['name']
-        else:
-            # 统一处理所有形态的降水
-            if max_level['level'] <= main_level['level']:
-                precip_phrase = scope_word + main_precip_name
-            elif max_level['level'] == main_level['level'] + 1:
-                precip_phrase = scope_word + main_precip_name + "转" + max_level['name']
+        if dominant_phase == 'rain':
+            # --- 这是完全恢复的、您原有的雨天描述逻辑 ---
+            scope_word = "有分散" if coverage_percent < 40 else "有"
+            main_precip_name = main_level['name']
+            extreme_precip_name = max_level['name']
+
+            if is_thunderstorm and main_level['level'] <= 1:
+                precip_phrase = scope_word + "雷阵雨"
+                if max_level['level'] > main_level['level'] + 1:
+                    precip_phrase += "局部" + extreme_precip_name
             else:
-                precip_phrase = scope_word + main_precip_name + "，局部" + max_level['name']
-        
-        # 如果是分散性降水，且形态不是雨夹雪，则可以加上"阵"字
-        if scope_word and dominant_phase != 'sleet':
-            precip_phrase = precip_phrase.replace(main_precip_name, "阵" + main_precip_name.replace('雨','').replace('雪',''))
-            if '雷' not in precip_phrase: # 避免生成 "分散性阵雷雨"
-                 precip_phrase = precip_phrase.replace('雨','').replace('雪','')
-                 precip_phrase = precip_phrase.replace('阵','阵'+dominant_phase.replace('rain','雨').replace('snow','雪'))
+                if max_level['level'] <= main_level['level']:
+                    precip_phrase = scope_word + main_precip_name
+                elif max_level['level'] == main_level['level'] + 1:
+                    precip_phrase = scope_word + main_precip_name + "到" + extreme_precip_name
+                else:
+                    precip_phrase = scope_word + main_precip_name + "局部" + extreme_precip_name
+        else:
+            # --- 这是为雪、雨夹雪设计的简化描述逻辑 ---
+            scope_word = "有分散性" if coverage_percent < 40 else "有"
+            main_precip_name = main_level['name']
+            extreme_precip_name = max_level['name']
+
+            if main_level['level'] == 0: # 避免 "有无雪"
+                 precip_phrase = ""
+            elif max_level['level'] <= main_level['level']:
+                precip_phrase = scope_word + main_precip_name
+            else: # 如果存在更强的局地降雪
+                precip_phrase = scope_word + main_precip_name + "，局部有" + extreme_precip_name
 
 
-    # --- 5. 最终组合与图标生成 (已扩展) ---
     final_desc = base_sky_condition
     if precip_phrase:
         if is_thunderstorm and main_level['level'] >= 2:
             precip_phrase = precip_phrase.replace("中雨", "中雷雨")
-        final_desc += "，" + precip_phrase.replace('有分散性','有分散性').replace('有','有')
+        final_desc += "，" + precip_phrase
     
+    # 图标逻辑保持v7.0的扩展版本
     icon = "01.png"; wmo_code = 1
     if not precip_phrase:
         if '晴' in final_desc: icon = "00.png"; wmo_code = 1
         if final_desc == "晴": wmo_code = 0
         if '阴' in final_desc: icon = "02.png"; wmo_code = 3
     elif dominant_phase == 'snow':
-        if max_level['level'] >= 4: icon = "25.png"; wmo_code = 86 # 暴雪
-        elif max_level['level'] >= 3: icon = "25.png"; wmo_code = 75 # 大雪
-        else: icon = "17.png"; wmo_code = 71 # 小到中雪
+        if max_level['level'] >= 4: icon = "25.png"; wmo_code = 86
+        elif max_level['level'] >= 3: icon = "25.png"; wmo_code = 75
+        else: icon = "17.png"; wmo_code = 71
     elif dominant_phase == 'sleet':
-        icon = "18.png"; wmo_code = 68 # 雨夹雪
-    else: # 是雨
+        icon = "18.png"; wmo_code = 68
+    else: # rain
         if is_thunderstorm:
             if coverage_percent < 40: icon = "03.png"; wmo_code = 95
             elif max_level['level'] >= 4: icon = "23.png"; wmo_code = 96
@@ -219,7 +198,6 @@ def generate_area_conclusion(agg_data):
             elif max_level['level'] >= 2: icon = "19.png"; wmo_code = 61
             else: icon = "07.png"; wmo_code = 53
 
-    # --- 6. 风险提示 (逻辑不变) ---
     warnings = []
     if is_thunderstorm and precip_phrase: warnings.append("雷电")
     if (max_gust_kmh / 3.6) >= 13.9: warnings.append("大风")
@@ -227,90 +205,51 @@ def generate_area_conclusion(agg_data):
 
     return {'description': final_desc, 'icon': icon, 'warning': warning, 'wmo_code': wmo_code}
 
-
 # (analyze_area_weather_data 和主执行流程与v6.3完全相同，此处省略)
 def analyze_area_weather_data(all_points_data):
     """分析所有网格点的天气数据。"""
     print("\n--- 阶段 2: 开始分析聚合后的天气数据 ---")
     if not all_points_data:
         raise ValueError("没有任何网格点数据可供分析.")
-    
     first_point_key = list(all_points_data.keys())[0]
     days_count = len(all_points_data[first_point_key]['daily']['time'])
     analyzed_results = []
     models_for_aggregation = ['ecmwf_ifs025', 'icon_global']
-
     for i in range(days_count):
         date = all_points_data[first_point_key]['daily']['time'][i]
-        
-        daily_aggregated_data = {
-            'precipitations': [], 'max_gusts': [], 'max_capes': [],
-            'wmo_codes': [], 'max_temps': [], 'min_temps': [],
-            'max_hourly_precips': [] 
-        }
-
+        daily_aggregated_data = {'precipitations': [], 'max_gusts': [], 'max_capes': [],'wmo_codes': [], 'max_temps': [], 'min_temps': [],'max_hourly_precips': []}
         for point_data in all_points_data.values():
-            
-            # 【修改点 1】: 只获取 ECMWF 模型的温度
             temp_model = 'ecmwf_ifs025'
             if f"temperature_2m_max_{temp_model}" in point_data['daily'] and i < len(point_data['daily'][f"temperature_2m_max_{temp_model}"]):
                 max_temp = point_data['daily'][f"temperature_2m_max_{temp_model}"][i]
                 min_temp = point_data['daily'][f"temperature_2m_min_{temp_model}"][i]
-                
-                if max_temp is not None:
-                    daily_aggregated_data['max_temps'].append(max_temp)
-                if min_temp is not None:
-                    daily_aggregated_data['min_temps'].append(min_temp)
-
-            # 【修复点】: 聚合其他数据时，全面过滤 None 值
+                if max_temp is not None: daily_aggregated_data['max_temps'].append(max_temp)
+                if min_temp is not None: daily_aggregated_data['min_temps'].append(min_temp)
             for model in models_for_aggregation:
-                
-                # 处理降水
                 if f"precipitation_{model}" in point_data.get('hourly', {}):
                     hourly_slice_raw = point_data['hourly'][f"precipitation_{model}"][i*24:(i+1)*24]
-                    hourly_slice = [p for p in hourly_slice_raw if p is not None] # 过滤None
+                    hourly_slice = [p for p in hourly_slice_raw if p is not None]
                     if hourly_slice:
                         daily_aggregated_data['precipitations'].append(sum(hourly_slice))
                         daily_aggregated_data['max_hourly_precips'].append(max(hourly_slice))
                     else:
                         daily_aggregated_data['precipitations'].append(0)
                         daily_aggregated_data['max_hourly_precips'].append(0)
-
-                # 处理阵风
                 if f"wind_gusts_10m_{model}" in point_data.get('hourly', {}):
                     gusts_raw = point_data['hourly'][f"wind_gusts_10m_{model}"][i*24:(i+1)*24]
-                    gusts = [g for g in gusts_raw if g is not None] # 过滤None
-                    if gusts: 
-                        daily_aggregated_data['max_gusts'].append(max(gusts))
-
-                # 处理CAPE
+                    gusts = [g for g in gusts_raw if g is not None]
+                    if gusts: daily_aggregated_data['max_gusts'].append(max(gusts))
                 if f"cape_{model}" in point_data.get('hourly', {}):
                     capes_raw = point_data['hourly'][f"cape_{model}"][i*24:(i+1)*24]
-                    capes = [c for c in capes_raw if c is not None] # 过滤None
-                    if capes: 
-                        daily_aggregated_data['max_capes'].append(max(capes))
-                
-                # 处理天气代码
+                    capes = [c for c in capes_raw if c is not None]
+                    if capes: daily_aggregated_data['max_capes'].append(max(capes))
                 if f"weather_code_{model}" in point_data['daily'] and i < len(point_data['daily'][f"weather_code_{model}"]):
                     wmo_code = point_data['daily'][f"weather_code_{model}"][i]
-                    if wmo_code is not None: # 过滤None
-                        daily_aggregated_data['wmo_codes'].append(wmo_code)
-        
+                    if wmo_code is not None: daily_aggregated_data['wmo_codes'].append(wmo_code)
         final_analysis = generate_area_conclusion(daily_aggregated_data)
-        
-        # 计算最终的区域平均温度
         avg_max_temp = round(sum(daily_aggregated_data['max_temps']) / len(daily_aggregated_data['max_temps'])) if daily_aggregated_data['max_temps'] else None
         avg_min_temp = round(sum(daily_aggregated_data['min_temps']) / len(daily_aggregated_data['min_temps'])) if daily_aggregated_data['min_temps'] else None
-        
-        analyzed_results.append({
-            'time': date, 
-            'temperature_2m_max': avg_max_temp, 
-            'temperature_2m_min': avg_min_temp,
-            'weather_desc': final_analysis['description'], 
-            'weather_icon': final_analysis['icon'],
-            'warning_text': final_analysis['warning'], 
-            'weather_code': final_analysis['wmo_code']
-        })
+        analyzed_results.append({'time': date, 'temperature_2m_max': avg_max_temp, 'temperature_2m_min': avg_min_temp, 'weather_desc': final_analysis['description'], 'weather_icon': final_analysis['icon'], 'warning_text': final_analysis['warning'], 'weather_code': final_analysis['wmo_code']})
     print("数据分析完成。")
     return {'daily': analyzed_results}
 
@@ -322,8 +261,7 @@ if __name__ == "__main__":
     try:
         analyzed_data = analyze_area_weather_data(raw_weather_data)
         print("\n--- 阶段 3: 开始保存分析结果 ---")
-        js_file_path = 'iconweather.js'
-        json_file_path = 'iconweather.json'
+        js_file_path, json_file_path = 'iconweather.js', 'iconweather.json'
         js_content = f"var iconWeatherData = {json.dumps(analyzed_data, ensure_ascii=False, indent=4)};"
         with open(js_file_path, 'w', encoding='utf-8') as f: f.write(js_content)
         print(f"成功保存分析结果到 {js_file_path}")
