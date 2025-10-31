@@ -1,8 +1,6 @@
 {
-    "score": 19,
-    "penaltyCoordinates": [
-        "(3,2)"
-    ],
+    "score": null,
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 1,
@@ -49,13 +47,16 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 5,
+            "unqualifiedCount": 8,
             "unqualifiedReasons": [
                 "大扫除没起椅子",
                 "水杯未拿起",
                 "地上有垃圾+水杯未拿起",
                 "逃值",
-                "垃圾袋未倒"
+                "垃圾袋未倒",
+                "椅子未起",
+                "中午逃值",
+                "大扫除逃值"
             ]
         },
         "陈睿竹": {
@@ -207,10 +208,8 @@
             ]
         },
         "李幼玲": {
-            "unqualifiedCount": 1,
-            "unqualifiedReasons": [
-                "衣服凌乱"
-            ]
+            "unqualifiedCount": 0,
+            "unqualifiedReasons": []
         }
     }
 }
