@@ -47,9 +47,8 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 8,
+            "unqualifiedCount": 7,
             "unqualifiedReasons": [
-                "大扫除没起椅子",
                 "水杯未拿起",
                 "地上有垃圾+水杯未拿起",
                 "逃值",
@@ -210,6 +209,12 @@
         "李幼玲": {
             "unqualifiedCount": 0,
             "unqualifiedReasons": []
+        },
+        "阚启瑞": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "地上隐蔽处有垃圾"
+            ]
         }
     }
 }
