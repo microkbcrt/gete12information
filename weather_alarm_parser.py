@@ -5,7 +5,7 @@ import re
 def fetch_and_parse_alarm_data():
     # 1. 使用新的、稳定的API URL
     # 我们移除了 callback, _, jsoncallback 等动态参数
-    url = "https://wxc.gd121.cn/gdecloud/servlet/servletcityweatherall4?DISTRICTCODE=440100"
+    url = "https://wxc.gd121.cn/gdecloud/servlet/servletcityweatherall4?DISTRICTCODE=440100&FROM=gd121_440100"
     
     # 添加请求头，模拟浏览器访问
     headers = {
