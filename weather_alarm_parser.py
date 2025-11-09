@@ -3,33 +3,41 @@ import json
 import re
 
 def fetch_and_parse_alarm_data():
-    # 目标URL
-    url = "http://www.tqyb.com.cn/data/alarm/gz_areaAlarm.js"
+    # 1. 使用新的、稳定的API URL
+    # 我们移除了 callback, _, jsoncallback 等动态参数
+    url = "https://wxc.gd121.cn/gdecloud/servlet/servletcityweatherall4?DISTRICTCODE=440100"
     
+    # 添加请求头，模拟浏览器访问
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Referer': 'https://wxc.gd121.cn/'
+    }
+
     try:
-        # 发送HTTP请求获取网页内容
-        response = requests.get(url)
+        # 发送HTTP请求获取内容
+        response = requests.get(url, headers=headers)
         response.raise_for_status()  # 检查请求是否成功
         print(f"成功获取网页内容，长度: {len(response.text)} 字节")
     except requests.exceptions.RequestException as e:
         print(f"无法获取网页内容，请检查链接或网络状态。错误: {e}")
         return
     
-    # 提取JSON数据
-    match = re.search(r'var\s+gz_areaAlarm\s*=\s*(\{.*?\});', response.text, re.DOTALL)
+    # 2. 提取JSONP回调中的JSON数据
+    # 新的格式是 callback({...})，而不是变量赋值
+    match = re.search(r'^\w+\((.*)\)$', response.text, re.DOTALL)
     if not match:
-        print("无法解析网页内容，请检查网页格式。")
+        print("无法从JSONP响应中解析出JSON内容，请检查网页格式。")
         return
     
-    json_data = match.group(1)
-    print("使用主模式匹配成功")
+    json_data_str = match.group(1)
+    print("成功从JSONP响应中提取JSON数据")
     
     try:
         # 将JSON字符串转换为Python字典
-        data = json.loads(json_data)
-        print(f"成功解析JSON数据，包含 {len(data)} 个预警类型")
+        data = json.loads(json_data_str)
+        print("成功解析JSON数据")
     except json.JSONDecodeError as e:
-        print(f"JSON解析失败，请检查网页内容格式。错误: {e}")
+        print(f"JSON解析失败，请检查数据格式。错误: {e}")
         return
     
     # 目标区域名称
@@ -37,33 +45,36 @@ def fetch_and_parse_alarm_data():
     # 初始化目标区域预警信息列表
     area_alarms = []
     
-    # 遍历所有预警类型
-    for alarm_type, alarm_data in data.items():
-        # 确保数据是字典类型
-        if not isinstance(alarm_data, dict):
-            print(f"警告: 发现非字典类型的预警数据 - 类型: {type(alarm_data)}, 键: {alarm_type}")
+    # 3. 遍历新的数据结构以查找预警
+    try:
+        # 新的预警数据在 'rows' 列表的第一个元素的 'yjrows' 和 'yjrowsV9' 键中
+        # 我们将两个列表合并，以防预警信息分散在两处
+        all_alarms = data.get('rows', [{}])[0].get('yjrows', [])
+        all_alarms.extend(data.get('rows', [{}])[0].get('yjrowsV9', []))
+        
+        if not all_alarms:
+            print("警告: 在返回的数据中未找到预警信息列表。")
+    except (IndexError, KeyError) as e:
+        print(f"解析预警列表失败，JSON结构可能已变更。错误: {e}")
+        all_alarms = []
+
+    # 遍历所有预警信息
+    for alarm_item in all_alarms:
+        if not isinstance(alarm_item, dict):
             continue
             
-        # 获取区域列表
-        areas = alarm_data.get('areas', [])
-        
-        # 检查目标区域是否在该预警中
-        if target_area in areas:
-            # 获取目标区域在列表中的索引
-            area_index = areas.index(target_area)
+        # 检查区域名称是否匹配 (新的字段是 'areacodename')
+        if alarm_item.get('areacodename') == target_area:
             
-            # 获取预警类型名称
-            areas_a_name = alarm_data.get('areasAName', [])
-            alarm_type_name = areas_a_name[area_index] if area_index < len(areas_a_name) else '未知预警类型'
+            # 4. 提取信息并映射到旧的格式
+            alarm_type_name = alarm_item.get('yjtitle', '未知预警类型')
             
-            # 获取防御措施
-            areas_guidelines = alarm_data.get('areasGuidelines', [])
-            guidelines = areas_guidelines[area_index] if area_index < len(areas_guidelines) else '无防御措施'
+            # 新数据源将含义和防御措施合并在 'content' 字段中
+            content = alarm_item.get('content', '无详细信息')
+            meaning = content
+            guidelines = content
             
-            # 获取预警含义
-            meaning = alarm_data.get('meaning', '未知预警含义')
-            
-            # 添加到结果列表
+            # 添加到结果列表，保持原有的字典结构
             area_alarms.append({
                 "area": target_area,
                 "alarmType": alarm_type_name,
@@ -71,13 +82,13 @@ def fetch_and_parse_alarm_data():
                 "guidelines": guidelines
             })
     
-    # 保存为JSON文件
+    # 保存为JSON文件 (这部分逻辑保持不变)
     try:
         with open("alarmcontent.json", "w", encoding="utf-8") as f:
             json.dump(area_alarms, f, ensure_ascii=False, indent=4)
-        print(f"成功保存 {len(area_alarms)} 条预警信息")
+        print(f"成功为 '{target_area}' 保存 {len(area_alarms)} 条预警信息到 alarmcontent.json")
         if len(area_alarms) == 0:
-            print(f"警告: 未找到 {target_area} 的预警信息，可能当前没有预警或网站结构已变化")
+            print(f"提示: 未找到 '{target_area}' 的当前预警信息，可能当前没有预警。")
     except Exception as e:
         print(f"保存文件失败: {e}")
 
