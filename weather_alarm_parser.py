@@ -1,94 +1,106 @@
 import requests
 import json
-import re
 
 def fetch_and_parse_alarm_data():
-    # 1. 使用新的、稳定的API URL
-    # 我们移除了 callback, _, jsoncallback 等动态参数
-    url = "https://wxc.gd121.cn/gdecloud/servlet/servletcityweatherall4?DISTRICTCODE=440100&FROM=gd121_440100"
+    # API URL
+    url = "https://app.gjzwfw.gov.cn/fwmhapp/qixiang/interfaces/findWarnCapByElement.do"
     
-    # 添加请求头，模拟浏览器访问
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Referer': 'https://wxc.gd121.cn/'
+    # 1. === 关键改动：定义前端JS所需的精确预警类型 ===
+    # 这个列表的元素必须与 JS 文件中 alarmIconsMap 的键完全一致
+    alarm_keywords = [
+        '台风白色', '台风蓝色', '台风黄色', '台风橙色', '台风红色', 
+        '暴雨黄色', '暴雨橙色', '暴雨红色', 
+        '高温黄色', '高温橙色', '高温红色', 
+        '寒冷黄色', '寒冷橙色', '寒冷红色', 
+        '大雾黄色', '大雾橙色', '大雾红色', 
+        '灰霾黄色', 
+        '雷雨大风蓝色', '雷雨大风黄色', '雷雨大风橙色', '雷雨大风红色', 
+        '道路结冰黄色', '道路结冰橙色', '道路结冰红色', 
+        '冰雹橙色', '冰雹红色', 
+        '森林火险黄色', '森林火险橙色', '森林火险红色'
+    ]
+    
+    # 根据 F12 抓包结果，构造完全一致的请求体
+    payload = {
+        'areaCode': '440000', # 广东省代码
+        'warnLevel': 'RED,BLUE,YELLOW,Orange,UNKOWN',
+        'warnEvent': 'A'
     }
 
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    }
+    
+    print("开始查询全省预警信息...")
+
     try:
-        # 发送HTTP请求获取内容
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()  # 检查请求是否成功
-        print(f"成功获取网页内容，长度: {len(response.text)} 字节")
-    except requests.exceptions.RequestException as e:
-        print(f"无法获取网页内容，请检查链接或网络状态。错误: {e}")
+        response = requests.post(url, data=payload, headers=headers)
+        response.raise_for_status()
+        all_alarms_raw = response.json()
+        
+        if not isinstance(all_alarms_raw, list):
+            print(f"API未返回预期的列表格式。响应: {response.text}")
+            return
+        print(f"成功获取全省 {len(all_alarms_raw)} 条预警记录。")
+
+    except (requests.exceptions.RequestException, json.JSONDecodeError) as e:
+        print(f"获取或解析数据失败: {e}")
         return
+            
+    # 处理预警取消状态
+    canceled_ids = set()
+    for alarm_item in all_alarms_raw:
+        if alarm_item.get('msgType') == 'Cancel':
+            canceled_id = alarm_item.get('referencesInfo')
+            if canceled_id:
+                canceled_ids.add(canceled_id)
     
-    # 2. 提取JSONP回调中的JSON数据
-    # 新的格式是 callback({...})，而不是变量赋值
-    match = re.search(r'^\w+\((.*)\)$', response.text, re.DOTALL)
-    if not match:
-        print("无法从JSONP响应中解析出JSON内容，请检查网页格式。")
-        return
+    print(f"分析完成：发现 {len(canceled_ids)} 条取消记录。开始筛选 '荔湾区' 的有效预警并适配前端格式...")
     
-    json_data_str = match.group(1)
-    print("成功从JSONP响应中提取JSON数据")
-    
-    try:
-        # 将JSON字符串转换为Python字典
-        data = json.loads(json_data_str)
-        print("成功解析JSON数据")
-    except json.JSONDecodeError as e:
-        print(f"JSON解析失败，请检查数据格式。错误: {e}")
-        return
-    
-    # 目标区域名称
     target_area = "荔湾"
-    # 初始化目标区域预警信息列表
     area_alarms = []
     
-    # 3. 遍历新的数据结构以查找预警
-    try:
-        # 新的预警数据在 'rows' 列表的第一个元素的 'yjrows' 和 'yjrowsV9' 键中
-        # 我们将两个列表合并，以防预警信息分散在两处
-        all_alarms = data.get('rows', [{}])[0].get('yjrows', [])
-        all_alarms.extend(data.get('rows', [{}])[0].get('yjrowsV9', []))
-        
-        if not all_alarms:
-            print("警告: 在返回的数据中未找到预警信息列表。")
-    except (IndexError, KeyError) as e:
-        print(f"解析预警列表失败，JSON结构可能已变更。错误: {e}")
-        all_alarms = []
+    # 筛选并适配数据
+    for alarm_item in all_alarms_raw:
+        # 必须是生效的预警，且未被取消
+        is_active = (alarm_item.get('msgType') in ['Alert', 'Update'] and 
+                     alarm_item.get('identifier') not in canceled_ids)
 
-    # 遍历所有预警信息
-    for alarm_item in all_alarms:
-        if not isinstance(alarm_item, dict):
+        if not is_active:
+            continue
+
+        # 发布单位必须包含目标区域
+        sender = alarm_item.get('sender', '')
+        if target_area not in sender:
             continue
             
-        # 检查区域名称是否匹配 (新的字段是 'areacodename')
-        if alarm_item.get('areacodename') == target_area:
+        # 2. === 关键改动：从 headline 中匹配并提取标准 alarmType ===
+        headline = alarm_item.get('headline', '')
+        matched_alarm_type = None
+        for keyword in alarm_keywords:
+            if keyword in headline:
+                matched_alarm_type = keyword
+                break # 找到第一个匹配就停止，避免混淆
+
+        # 如果成功匹配到了标准类型，才进行处理
+        if matched_alarm_type:
+            content = alarm_item.get('description', '无详细信息')
             
-            # 4. 提取信息并映射到旧的格式
-            alarm_type_name = alarm_item.get('yjtitle', '未知预警类型')
-            
-            # 新数据源将含义和防御措施合并在 'content' 字段中
-            content = alarm_item.get('content', '无详细信息')
-            meaning = content
-            guidelines = content
-            
-            # 添加到结果列表，保持原有的字典结构
+            # 使用匹配到的 keyword 作为 alarmType
             area_alarms.append({
                 "area": target_area,
-                "alarmType": alarm_type_name,
-                "meaning": meaning,
-                "guidelines": guidelines
+                "alarmType": matched_alarm_type,
+                "meaning": content,
+                "guidelines": content
             })
     
-    # 保存为JSON文件 (这部分逻辑保持不变)
+    # 保存为JSON文件
     try:
         with open("alarmcontent.json", "w", encoding="utf-8") as f:
             json.dump(area_alarms, f, ensure_ascii=False, indent=4)
-        print(f"成功为 '{target_area}' 保存 {len(area_alarms)} 条预警信息到 alarmcontent.json")
+        print(f"成功为 '{target_area}' 保存 {len(area_alarms)} 条适配前端的生效预警信息到 alarmcontent.json")
         if len(area_alarms) == 0:
-            print(f"提示: 未找到 '{target_area}' 的当前预警信息，可能当前没有预警。")
+            print(f"提示: '{target_area}' 当前没有任何与前端匹配的生效预警信息。")
     except Exception as e:
         print(f"保存文件失败: {e}")
 
