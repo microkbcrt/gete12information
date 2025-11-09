@@ -53,8 +53,8 @@ jobs:
        #- name: 运行回南天预测脚本
          #run: python get_huinan.py
         
-       - name: 运行天气预警脚本
-         run: python weather_alarm_parser.py
+      - name: 运行天气预警脚本
+        run: python weather_alarm_parser.py
 
       # 执行哔哩哔哩热搜脚本
       - name: Run geibilibilirank
