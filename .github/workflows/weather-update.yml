@@ -38,20 +38,20 @@ jobs:
       #- name: 获取通知数据        
       #  run: python fetch_notifications.py
 
-       #- name: 运行广州雷达图生成脚本
-         #run: python create_gz_radar_gif.py
+      - name: 运行广州雷达图生成脚本
+        run: python create_gz_radar_gif.py
         
-       #- name: 运行广东雷达图生成脚本
-         #run: python create_gd_radar_gif.py
+      - name: 运行广东雷达图生成脚本
+        run: python create_gd_radar_gif.py
         
       - name: 运行华南雷达拼图生成脚本
         run: python create_sc_radar_gif.py
         
-       #- name: 运行短时天气脚本
-         #run: python get_short_weather.py
+      - name: 运行短时天气脚本
+        run: python get_short_weather.py
         
-       #- name: 运行回南天预测脚本
-         #run: python get_huinan.py
+      - name: 运行回南天预测脚本
+        run: python get_huinan.py
         
       - name: 运行天气预警脚本
         run: python weather_alarm_parser.py
