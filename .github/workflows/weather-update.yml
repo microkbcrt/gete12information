@@ -1,95 +1,95 @@
-name: Data Update Workflow # 给工作流起一个更通用的名字
+# .github/workflows/main.yml
+
+# 给工作流起一个更明确的名字
+name: Update Data, Push to Repo, and Deploy to Netlify
 
 on:
   workflow_dispatch:  # 支持手动触发
+  schedule:
+    # 每3分钟运行一次
+    - cron: '*/3 * * * *'
+
 jobs:
-  update-data: # 作业名也改得通用一些
+  update-and-deploy: # 作业名也更新一下
     runs-on: ubuntu-latest
     
     steps:
+      # 第1步：检出仓库代码
       - name: 检出仓库
         uses: actions/checkout@v4
         with:
-          # 我们需要一个有写权限的token来推送变更
-          # PUSH_TOKEN 是您需要自己创建的Personal Access Token
+          # 使用您创建的 PUSH_TOKEN，以便工作流有权限推送变更
           token: ${{ secrets.PUSH_TOKEN }}
           
+      # 第2步：设置Python环境
       - name: 设置Python环境
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           
+      # 第3步：安装所有Python脚本的依赖
       - name: 安装依赖
         run: |
           python -m pip install --upgrade pip
-          # 将所有Python脚本的依赖都放在这里
           pip install requests beautifulsoup4 lxml pillow
           
-      # --- 执行所有数据获取脚本 ---
-      - name: 运行十天天气脚本
-        run: python get_weather.py
-          
-      - name: 运行NMC天气脚本
-        run: python getnmcweather.py
-
-      - name: 运行icon天气脚本
-        run: python get_icon_weather.py
-        
-      #- name: 获取通知数据        
-      #  run: python fetch_notifications.py
-
-      - name: 运行广州雷达图生成脚本
-        run: python create_gz_radar_gif.py
-        
-      - name: 运行广东雷达图生成脚本
-        run: python create_gd_radar_gif.py
-        
-      - name: 运行华南雷达拼图生成脚本
-        run: python create_sc_radar_gif.py
-        
-      - name: 运行短时天气脚本
-        run: python get_short_weather.py
-        
-      - name: 运行回南天预测脚本
-        run: python get_huinan.py
-        
-      - name: 运行天气预警脚本
-        run: python weather_alarm_parser.py
-
-      # 执行哔哩哔哩热搜脚本
-      - name: Run geibilibilirank
-        run: python get_bilibili_rank.py
-
-      # 执行获取微博热搜脚本
-      - name: Run geiweiborank
-        run: python get_weibo_rank.py
-
-      # 执行获取F1赛事资讯脚本
-      - name: 运行B站动态
-        # 这里是新增的步骤
+      # 第4步：运行所有数据获取脚本
+      - name: 运行所有数据获取脚本
         env:
-          # 将我们设置的GitHub Secret传递给脚本作为环境变量
+          # 将GitHub Secret中的B站SESSDATA传递给脚本
           BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
-        run: python get_all_bili_dynamics.py # 假设您的脚本名为 get_bili_post.py
+        run: |
+          python get_weather.py
+          python getnmcweather.py
+          python get_icon_weather.py
+          python create_gz_radar_gif.py
+          python create_gd_radar_gif.py
+          python create_sc_radar_gif.py
+          python get_short_weather.py
+          python get_huinan.py
+          python weather_alarm_parser.py
+          python get_bilibili_rank.py
+          python get_weibo_rank.py
+          python get_all_bili_dynamics.py
         
+      # 第5步：检查是否有任何文件发生了变更
       - name: 检查文件变更
         id: git-check
         run: |
-          # 检查所有可能被脚本修改或创建的文件
-          # 在列表的最后加上我们新脚本的输出文件 latest_bili_post.json
+          # 如果git status检测不到任何变更，则--quiet会使命令成功（退出码0）
+          # 我们用 '!' 来反转结果。所以，如果没有变更，if条件为假。
           if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.json weiborank.json dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected. Skipping commit and deploy."
           fi
           
-      - name: 提交并推送变更
+      # 第6步：如果有变更，则提交并推送到GitHub仓库
+      - name: 提交并推送变更到GitHub
         # 仅当上一步(id: git-check)的输出 changed 为 'true' 时才运行
         if: steps.git-check.outputs.changed == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # 添加所有可能变更的文件
+          # 添加所有已追踪和未追踪的变更文件
           git add .
-          git commit -m "chore: 自动更新数据 (B站动态及天气信息) - $(date)"
+          git commit -m "chore: 自动更新数据 - $(date)"
           git push
+
+      # 第7步：如果有变更，则将所有文件部署到Netlify
+      - name: 部署到Netlify
+        # 同样，仅当文件有变更时才执行部署
+        if: steps.git-check.outputs.changed == 'true'
+        uses: netlify/actions/cli@master
+        with:
+          # `dir` 参数指定了包含您网站所有静态文件的文件夹。
+          # 假设您的 index.html 和所有数据文件都在仓库根目录，所以使用 '.'
+          dir: '.'
+          # 可选的部署消息
+          message: "Deploy from GitHub Actions - $(date)"
+          # 从GitHub Secrets中获取站点ID
+          site_id: ${{ secrets.NETLIFY_SITE_ID }}
+        env:
+          # 从GitHub Secrets中获取部署所需的认证令牌
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
