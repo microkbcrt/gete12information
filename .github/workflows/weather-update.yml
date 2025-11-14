@@ -74,19 +74,17 @@ jobs:
           git commit -m "chore: 自动更新数据 - $(date)"
           git push
 
-      # 第7步：如果有变更，则将所有文件部署到Netlify
+      # 第7步：如果有变更，则将所有文件部署到Netlify (修正版)
       - name: 部署到Netlify
-        # 同样，仅当文件有变更时才执行部署
         if: steps.git-check.outputs.changed == 'true'
         uses: netlify/actions/cli@master
         with:
-          # `dir` 参数指定了包含您网站所有静态文件的文件夹。
-          # 假设您的 index.html 和所有数据文件都在仓库根目录，所以使用 '.'
-          dir: '.'
-          # 可选的部署消息
-          message: "Deploy from GitHub Actions - $(date)"
-          # 从GitHub Secrets中获取站点ID
-          site_id: ${{ secrets.NETLIFY_SITE_ID }}
+          # 将所有部署参数组合成一个命令行字符串，通过 'args' 传入
+          # --prod: 部署到生产环境，使其立即生效
+          # --dir=.: 指定要部署的文件夹是当前根目录
+          # --message: 设置本次部署的消息
+          args: deploy --prod --dir=. --message="Deploy from GitHub Actions - $(date)"
         env:
-          # 从GitHub Secrets中获取部署所需的认证令牌
+          # 认证令牌和站点ID作为环境变量传入，Netlify CLI会自动识别
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
