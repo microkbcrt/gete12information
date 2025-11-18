@@ -1,6 +1,8 @@
 {
     "score": 19,
-    "penaltyCoordinates": [],
+    "penaltyCoordinates": [
+        "(1,2)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 1,
@@ -46,14 +48,15 @@
             ]
         },
         "何文泽": {
-            "unqualifiedCount": 6,
+            "unqualifiedCount": 7,
             "unqualifiedReasons": [
                 "逃值",
                 "垃圾袋未倒",
                 "椅子未起",
                 "中午逃值",
                 "大扫除逃值",
-                "垃圾袋未倒"
+                "垃圾袋未倒",
+                "水杯未拿起"
             ]
         },
         "陈睿竹": {
