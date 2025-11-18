@@ -2,7 +2,7 @@
     "center": {
         "latitude": 23.25,
         "longitude": 113.25,
-        "generationtime_ms": 0.13005733489990234,
+        "generationtime_ms": 0.15795230865478516,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -698,6 +698,9 @@
                 0.0
             ],
             "precipitation_icon_global": [
+                0.1,
+                0.2,
+                0.2,
                 0.0,
                 0.0,
                 0.0,
@@ -862,10 +865,7 @@
                 0.0,
                 0.0,
                 0.0,
-                0.0,
-                null,
-                null,
-                null
+                0.0
             ],
             "wind_gusts_10m_icon_global": [
                 34.9,
@@ -1286,7 +1286,7 @@
     "north": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.1672506332397461,
+        "generationtime_ms": 0.125885009765625,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -1982,6 +1982,7 @@
                 0.0
             ],
             "precipitation_icon_global": [
+                0.1,
                 0.0,
                 0.0,
                 0.0,
@@ -2147,9 +2148,8 @@
                 0.0,
                 0.0,
                 0.0,
-                null,
-                null,
-                null
+                0.0,
+                0.0
             ],
             "wind_gusts_10m_icon_global": [
                 30.2,
@@ -2570,7 +2570,7 @@
     "south": {
         "latitude": 22.75,
         "longitude": 113.5,
-        "generationtime_ms": 0.13828277587890625,
+        "generationtime_ms": 0.20706653594970703,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -3266,7 +3266,11 @@
                 0.0
             ],
             "precipitation_icon_global": [
+                0.1,
                 0.0,
+                0.2,
+                0.4,
+                0.2,
                 0.0,
                 0.0,
                 0.0,
@@ -3429,11 +3433,7 @@
                 0.0,
                 0.0,
                 0.0,
-                0.0,
-                0.0,
-                null,
-                null,
-                null
+                0.0
             ],
             "wind_gusts_10m_icon_global": [
                 29.2,
@@ -3854,7 +3854,7 @@
     "east": {
         "latitude": 23.25,
         "longitude": 113.75,
-        "generationtime_ms": 0.13935565948486328,
+        "generationtime_ms": 0.1500844955444336,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -4551,6 +4551,7 @@
             ],
             "precipitation_icon_global": [
                 0.0,
+                0.1,
                 0.0,
                 0.0,
                 0.0,
@@ -4715,9 +4716,8 @@
                 0.0,
                 0.0,
                 0.0,
-                null,
-                null,
-                null
+                0.0,
+                0.0
             ],
             "wind_gusts_10m_icon_global": [
                 13.7,
@@ -5138,7 +5138,7 @@
     "west": {
         "latitude": 23.25,
         "longitude": 113.0,
-        "generationtime_ms": 0.12040138244628906,
+        "generationtime_ms": 0.179290771484375,
         "utc_offset_seconds": 28800,
         "timezone": "Asia/Shanghai",
         "timezone_abbreviation": "GMT+8",
@@ -5834,6 +5834,9 @@
                 0.0
             ],
             "precipitation_icon_global": [
+                0.3,
+                0.5,
+                0.1,
                 0.0,
                 0.0,
                 0.0,
@@ -5998,10 +6001,7 @@
                 0.0,
                 0.0,
                 0.0,
-                0.0,
-                null,
-                null,
-                null
+                0.0
             ],
             "wind_gusts_10m_icon_global": [
                 28.4,
