@@ -1,6 +1,9 @@
 {
-    "score": null,
-    "penaltyCoordinates": [],
+    "score": 19,
+    "penaltyCoordinates": [
+        "(1,2)",
+        "(5,6)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 1,
@@ -183,10 +186,11 @@
             ]
         },
         "曹天赐": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "大扫除没起椅子",
-                "衣服凌乱"
+                "衣服凌乱",
+                "桌面抽屉整理箱内或两侧有垃圾"
             ]
         },
         "罗妍茜": {
