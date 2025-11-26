@@ -11,7 +11,7 @@
     "night": {
       "weather": "晴到多云",
       "icon": "00n.png",
-      "temperature": "12℃",
+      "temperature": "11℃",
       "wind_direction": "北风",
       "wind_strength": "3~4级"
     }
@@ -22,13 +22,13 @@
       "weather": "晴到多云",
       "icon": "00.png",
       "temperature": "22℃",
-      "wind_direction": "无持续风向",
-      "wind_strength": "微风"
+      "wind_direction": "北风",
+      "wind_strength": "3~4级"
     },
     "night": {
       "weather": "晴到多云",
       "icon": "00n.png",
-      "temperature": "10℃",
+      "temperature": "12℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
@@ -45,7 +45,7 @@
     "night": {
       "weather": "晴到多云",
       "icon": "00n.png",
-      "temperature": "10℃",
+      "temperature": "11℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
