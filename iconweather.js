@@ -60,7 +60,7 @@ var iconWeatherData = {
             "temperature_2m_min": 15,
             "weather_desc": "多云",
             "weather_icon": "01.png",
-            "warning_text": "提醒: 可能伴有大风",
+            "warning_text": "",
             "weather_code": 1
         }
     ]
