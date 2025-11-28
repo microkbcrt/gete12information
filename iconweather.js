@@ -49,7 +49,7 @@ var iconWeatherData = {
             "time": "2025-12-03",
             "temperature_2m_max": 20,
             "temperature_2m_min": 15,
-            "weather_desc": "阴天，有分散小雨",
+            "weather_desc": "多云到阴天，有分散小雨",
             "weather_icon": "07.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 53
