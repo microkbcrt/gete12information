@@ -19,62 +19,66 @@ TARGET_USERS = [
 OUTPUT_FILENAME = 'dynamics.json'
 SESSDATA = os.environ.get('BILI_SESSDATA')
 
-def get_content_from_detail_api(dynamic_id, headers):
+def parse_dynamic_item(item):
     """
-    获取动态详情。
+    专门解析 Desktop API 返回的 items 结构 (modules 是个 list)
     """
-    detail_api_url = "https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/get_dynamic_detail"
-    params = {"dynamic_id": dynamic_id}
-    
     try:
-        # 详情页 API 通常不需要特别复杂的参数，但为了稳妥，带上基础 headers
-        response = requests.get(detail_api_url, params=params, headers=headers, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-
-        if data.get('code') == 0 and data.get('data', {}).get('card'):
-            card_str = data['data']['card'].get('card')
-            card_data = json.loads(card_str)
-            
-            # 1. 图文
-            description = card_data.get('item', {}).get('description')
-            if description:
-                return description.strip()
-            
-            # 2. 纯文本
-            content = card_data.get('item', {}).get('content')
-            if content:
-                return content.strip()
-            
-            # 3. 视频
-            title = card_data.get('title')
-            video_desc = card_data.get('desc')
-            dynamic_text = card_data.get('dynamic', '')
-            if title and video_desc is not None:
-                final_text = f"投稿了视频：【{title}】\n\n{dynamic_text}\n\n视频简介：\n{video_desc}"
-                return final_text.strip()
-
-            if dynamic_text:
-                 return dynamic_text.strip()
-            
-            return None
-        else:
-            return None
-            
+        id_str = item.get('id_str')
+        modules = item.get('modules', [])
+        
+        # 1. 提取发布时间 (从 module_author)
+        pub_ts = 0
+        for mod in modules:
+            if 'module_author' in mod:
+                pub_ts = mod['module_author'].get('pub_ts', 0)
+                break
+        
+        # 2. 提取文本内容 (从 module_desc)
+        text_content = ""
+        for mod in modules:
+            if 'module_desc' in mod:
+                text_content = mod['module_desc'].get('text', "")
+                break
+        
+        # 3. 提取视频/富媒体信息 (从 module_dynamic)
+        # 你的JSON显示有 dyn_archive (视频), dyn_draw (图文), dyn_forward (转发)
+        video_info = ""
+        for mod in modules:
+            if 'module_dynamic' in mod:
+                dynamic_data = mod['module_dynamic']
+                
+                # 情况A: 这是一个视频 (dyn_archive)
+                if 'dyn_archive' in dynamic_data:
+                    archive = dynamic_data['dyn_archive']
+                    title = archive.get('title', '')
+                    desc = archive.get('desc', '')
+                    video_info = f"\n【视频标题】: {title}\n【视频简介】: {desc}"
+                
+                # 情况B: 这是一个转发 (dyn_forward)
+                elif 'dyn_forward' in dynamic_data:
+                    # 转发的内容通常在 module_desc 里已经有了，这里可以标记一下
+                    video_info = "\n[这是一条转发动态]"
+        
+        # 组合最终内容
+        final_content = text_content + video_info
+        
+        return {
+            "id": id_str,
+            "pub_ts": pub_ts,
+            "content": final_content.strip()
+        }
+        
     except Exception as e:
-        print(f"  [详情API异常] {e}")
+        print(f"  解析单条动态时出错: {e}")
         return None
 
 def fetch_latest_dynamic_for_user(host_mid, base_headers):
     """
-    使用最新的 Desktop API 获取用户动态
+    使用 Desktop API 获取，并适配 List 结构的 modules
     """
-    # --- 【修改点 1】 使用 Desktop 版本的 API ---
     list_api_url = "https://api.bilibili.com/x/polymer/web-dynamic/desktop/v1/feed/space"
-
-    # --- 【修改点 2】 补全关键参数 ---
-    # 根据你提供的文档，timezone_offset 是必须的，模拟东八区(-480分钟)
-    # features 用于指定返回格式，网页端常带这个
+    
     params = {
         "host_mid": host_mid,
         "offset": "", 
@@ -82,7 +86,6 @@ def fetch_latest_dynamic_for_user(host_mid, base_headers):
         "features": "itemOpusStyle"
     }
 
-    # 伪造 Referer 仍然是必须的
     current_headers = base_headers.copy()
     current_headers['Referer'] = f'https://space.bilibili.com/{host_mid}/dynamic'
 
@@ -92,7 +95,7 @@ def fetch_latest_dynamic_for_user(host_mid, base_headers):
         data = response.json()
 
         if data.get('code') != 0:
-            print(f"  API返回错误 Code: {data.get('code')}, Msg: {data.get('message')}")
+            print(f"  API报错: {data.get('message')}")
             return None
 
         items_list = data.get('data', {}).get('items')
@@ -100,27 +103,29 @@ def fetch_latest_dynamic_for_user(host_mid, base_headers):
             print(f"  用户(UID: {host_mid}) 暂无动态。")
             return None
 
-        # Desktop API 返回结构中，pub_ts 依然在 modules.module_author 下，逻辑不用变
-        latest_post = max(items_list, key=lambda item: item.get('modules', {}).get('module_author', {}).get('pub_ts', 0))
+        # --- 【修复核心】 ---
+        # 你的报错是因为代码试图用 .get() 去操作 list
+        # 现在我们先解析所有动态，再按时间排序
+        parsed_items = []
+        for item in items_list:
+            parsed = parse_dynamic_item(item)
+            if parsed:
+                parsed_items.append(parsed)
         
-        dynamic_id = latest_post.get('id_str')
-        if not dynamic_id:
-            return None
-        
-        # 获取详情
-        final_content = get_content_from_detail_api(dynamic_id, current_headers)
-        
-        if final_content is None:
+        if not parsed_items:
+            print("  未能解析出任何有效动态。")
             return None
 
-        publish_timestamp = latest_post.get('modules', {}).get('module_author', {}).get('pub_ts', 0)
-        publish_time_str = datetime.fromtimestamp(publish_timestamp).strftime('%Y-%m-%d %H:%M:%S')
-        dynamic_url = f"https://www.bilibili.com/opus/{dynamic_id}"
+        # 找到最新的
+        latest_post = max(parsed_items, key=lambda x: x['pub_ts'])
+        
+        publish_time_str = datetime.fromtimestamp(latest_post['pub_ts']).strftime('%Y-%m-%d %H:%M:%S')
+        dynamic_url = f"https://www.bilibili.com/opus/{latest_post['id']}"
 
         return {
             "publish_time": publish_time_str,
             "dynamic_url": dynamic_url,
-            "content": final_content
+            "content": latest_post['content']
         }
 
     except Exception as e:
@@ -132,18 +137,16 @@ def main():
         print("错误：环境变量 BILI_SESSDATA 未设置！")
         exit(1)
 
-    # 基础 Headers
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
         'Cookie': f'SESSDATA={SESSDATA}',
         'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'zh-CN,zh;q=0.9',
         'Origin': 'https://space.bilibili.com',
         'Connection': 'keep-alive'
     }
 
     all_dynamics_data = {}
-    print("🚀 开始获取所有目标用户的最新B站动态 (Desktop API)...")
+    print("🚀 开始获取所有目标用户的最新B站动态 (Desktop List 模式)...")
 
     for user in TARGET_USERS:
         user_name = user['name']
@@ -154,15 +157,14 @@ def main():
         
         if dynamic_data:
             all_dynamics_data[user_name] = dynamic_data
-            print(f"✅ 成功: {user_name}")
+            print(f"✅ 成功: {user_name} | 时间: {dynamic_data['publish_time']}")
         else:
             print(f"❌ 失败: {user_name}")
         
-        # 随机延时
-        time.sleep(random.uniform(2, 5))
+        time.sleep(random.uniform(2, 4))
 
     if not all_dynamics_data:
-        print("\n⚠️ 未获取到数据，请检查 Cookie 是否过期。")
+        print("\n⚠️ 未获取到数据。")
         return
 
     try:
