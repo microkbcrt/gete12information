@@ -26,8 +26,8 @@
     },
     "link": "https://www.bilibili.com/v/popular/rank/all",
     "total": 100,
-    "fromCache": true,
-    "updateTime": "2025-12-02T03:33:08.609Z",
+    "fromCache": false,
+    "updateTime": "2025-12-02T04:33:17.322Z",
     "data": [
         {
             "id": "BV1hEUZBKErE",
@@ -36,7 +36,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/d16c0115bf5ff9d30dd6803d3e27e1adfacaa643.jpg",
             "author": "聊会电影吧",
             "timestamp": 1764410400000,
-            "hot": 4203980,
+            "hot": 4305872,
             "url": "https://b23.tv/BV1hEUZBKErE",
             "mobileUrl": "https://m.bilibili.com/video/BV1hEUZBKErE"
         },
@@ -47,20 +47,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/17fb88126881099e2ea1c62eeb8d07fb91bfc582.jpg",
             "author": "影视飓风",
             "timestamp": 1764327540000,
-            "hot": 5768922,
+            "hot": 5795849,
             "url": "https://b23.tv/BV1QMSjBREzr",
             "mobileUrl": "https://m.bilibili.com/video/BV1QMSjBREzr"
-        },
-        {
-            "id": "BV14FSLBGEKp",
-            "title": "我的一个朋友自杀了",
-            "desc": "请再为你自己活一下吧！",
-            "cover": "https://i0.hdslb.com/bfs/archive/463f8cb109703d91bd1a6a5b1b6d545cb1bf12c6.jpg",
-            "author": "小小段砸",
-            "timestamp": 1764327600000,
-            "hot": 2118392,
-            "url": "https://b23.tv/BV14FSLBGEKp",
-            "mobileUrl": "https://m.bilibili.com/video/BV14FSLBGEKp"
         },
         {
             "id": "BV1BcUZBmEvr",
@@ -69,42 +58,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/2c3912275f8d8f32526e6cadb126f7019e48716f.jpg",
             "author": "波士顿圆脸",
             "timestamp": 1764405541000,
-            "hot": 2545688,
+            "hot": 2580225,
             "url": "https://b23.tv/BV1BcUZBmEvr",
             "mobileUrl": "https://m.bilibili.com/video/BV1BcUZBmEvr"
         },
         {
-            "id": "BV16vSjBTE3V",
-            "title": "在？看看你的钱｜钱来！藏在人民币里的中式美学",
-            "desc": "BGM：聲無哀樂 - 飞升\n化妆/出镜/造型/剪辑/制作：晴晴\n摄影：小庄",
-            "cover": "https://i2.hdslb.com/bfs/archive/2e380d025b26cbe2f35099da4fdd78197bd999d8.jpg",
-            "author": "o小庄o",
-            "timestamp": 1764323062000,
-            "hot": 4398483,
-            "url": "https://b23.tv/BV16vSjBTE3V",
-            "mobileUrl": "https://m.bilibili.com/video/BV16vSjBTE3V"
-        },
-        {
-            "id": "BV1bqS7BREmh",
-            "title": "当 鸡 哥 参 加 掰 手 腕 大 赛",
-            "desc": "太帅了，我的鸡哥！",
-            "cover": "https://i2.hdslb.com/bfs/archive/7a4851081ef44c71fa128c8e6cedd03ef35810d4.jpg",
-            "author": "星有野",
-            "timestamp": 1764385200000,
-            "hot": 5551650,
-            "url": "https://b23.tv/BV1bqS7BREmh",
-            "mobileUrl": "https://m.bilibili.com/video/BV1bqS7BREmh"
-        },
-        {
-            "id": "BV1uaSLBnE97",
-            "title": "此地无银三百两...............",
-            "desc": "-",
-            "cover": "https://i0.hdslb.com/bfs/archive/43f2827b1b5b29f56bb7dec2177786ea290d095a.jpg",
-            "author": "饼饼佬",
-            "timestamp": 1764296825000,
-            "hot": 5128791,
-            "url": "https://b23.tv/BV1uaSLBnE97",
-            "mobileUrl": "https://m.bilibili.com/video/BV1uaSLBnE97"
+            "id": "BV14FSLBGEKp",
+            "title": "我的一个朋友自杀了",
+            "desc": "请再为你自己活一下吧！",
+            "cover": "https://i0.hdslb.com/bfs/archive/463f8cb109703d91bd1a6a5b1b6d545cb1bf12c6.jpg",
+            "author": "小小段砸",
+            "timestamp": 1764327600000,
+            "hot": 2132136,
+            "url": "https://b23.tv/BV14FSLBGEKp",
+            "mobileUrl": "https://m.bilibili.com/video/BV14FSLBGEKp"
         },
         {
             "id": "BV1VQSrBYE8L",
@@ -113,9 +80,31 @@
             "cover": "https://i1.hdslb.com/bfs/archive/16434e2135b377c4b4f3b0668db3d887154141a8.jpg",
             "author": "新西兰三妹Summer",
             "timestamp": 1764566459000,
-            "hot": 1214561,
+            "hot": 1317546,
             "url": "https://b23.tv/BV1VQSrBYE8L",
             "mobileUrl": "https://m.bilibili.com/video/BV1VQSrBYE8L"
+        },
+        {
+            "id": "BV1uaSLBnE97",
+            "title": "此地无银三百两...............",
+            "desc": "-",
+            "cover": "https://i0.hdslb.com/bfs/archive/43f2827b1b5b29f56bb7dec2177786ea290d095a.jpg",
+            "author": "饼饼佬",
+            "timestamp": 1764296825000,
+            "hot": 5166362,
+            "url": "https://b23.tv/BV1uaSLBnE97",
+            "mobileUrl": "https://m.bilibili.com/video/BV1uaSLBnE97"
+        },
+        {
+            "id": "BV16vSjBTE3V",
+            "title": "在？看看你的钱｜钱来！藏在人民币里的中式美学",
+            "desc": "BGM：聲無哀樂 - 飞升\n化妆/出镜/造型/剪辑/制作：晴晴\n摄影：小庄",
+            "cover": "https://i2.hdslb.com/bfs/archive/2e380d025b26cbe2f35099da4fdd78197bd999d8.jpg",
+            "author": "o小庄o",
+            "timestamp": 1764323062000,
+            "hot": 4409952,
+            "url": "https://b23.tv/BV16vSjBTE3V",
+            "mobileUrl": "https://m.bilibili.com/video/BV16vSjBTE3V"
         },
         {
             "id": "BV14YSFBeEg9",
@@ -124,9 +113,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/948a9903218c1a61888a0950b14226fae263066b.jpg",
             "author": "郑凯伦伦伦",
             "timestamp": 1764424200000,
-            "hot": 2817683,
+            "hot": 2851565,
             "url": "https://b23.tv/BV14YSFBeEg9",
             "mobileUrl": "https://m.bilibili.com/video/BV14YSFBeEg9"
+        },
+        {
+            "id": "BV1bqS7BREmh",
+            "title": "当 鸡 哥 参 加 掰 手 腕 大 赛",
+            "desc": "太帅了，我的鸡哥！",
+            "cover": "https://i2.hdslb.com/bfs/archive/7a4851081ef44c71fa128c8e6cedd03ef35810d4.jpg",
+            "author": "星有野",
+            "timestamp": 1764385200000,
+            "hot": 5590265,
+            "url": "https://b23.tv/BV1bqS7BREmh",
+            "mobileUrl": "https://m.bilibili.com/video/BV1bqS7BREmh"
         },
         {
             "id": "BV1HfUfBZEvE",
@@ -135,7 +135,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/1cb471d604979cb1bdb6a947a4c2342776f43a09.jpg",
             "author": "爱睡觉的_Koala",
             "timestamp": 1764419492000,
-            "hot": 1917752,
+            "hot": 1943118,
             "url": "https://b23.tv/BV1HfUfBZEvE",
             "mobileUrl": "https://m.bilibili.com/video/BV1HfUfBZEvE"
         },
@@ -146,7 +146,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/a56167736bf4b8bcad7795b1e32ef2edc16dc3ad.jpg",
             "author": "泛式",
             "timestamp": 1764417667000,
-            "hot": 1932406,
+            "hot": 1945613,
             "url": "https://b23.tv/BV1WiSFBaEBN",
             "mobileUrl": "https://m.bilibili.com/video/BV1WiSFBaEBN"
         },
@@ -157,20 +157,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/27bfc6b1cd24403de221ad922cacdf203dd6d7eb.jpg",
             "author": "云南网官方视频",
             "timestamp": 1764399526000,
-            "hot": 1294711,
+            "hot": 1314698,
             "url": "https://b23.tv/BV1E1UZBmEy1",
             "mobileUrl": "https://m.bilibili.com/video/BV1E1UZBmEy1"
-        },
-        {
-            "id": "BV1M7SjBSE4D",
-            "title": "国产智斗巅峰！佩奇离死亡最近的一集",
-            "desc": "素材：小猪佩奇E7S14--动物园\nBGM：Whoopty",
-            "cover": "https://i2.hdslb.com/bfs/archive/633c22a5370210c0bc8530ba1d5238ba9e44ff2d.jpg",
-            "author": "洛温阿特金森",
-            "timestamp": 1764324060000,
-            "hot": 2662138,
-            "url": "https://b23.tv/BV1M7SjBSE4D",
-            "mobileUrl": "https://m.bilibili.com/video/BV1M7SjBSE4D"
         },
         {
             "id": "BV1i7SPBcEiM",
@@ -179,9 +168,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/febbd02896d2748026d32a1f2c5d9390741993cf.jpg",
             "author": "伤心欲茄222",
             "timestamp": 1764475199000,
-            "hot": 3302477,
+            "hot": 3343799,
             "url": "https://b23.tv/BV1i7SPBcEiM",
             "mobileUrl": "https://m.bilibili.com/video/BV1i7SPBcEiM"
+        },
+        {
+            "id": "BV1M7SjBSE4D",
+            "title": "国产智斗巅峰！佩奇离死亡最近的一集",
+            "desc": "素材：小猪佩奇E7S14--动物园\nBGM：Whoopty",
+            "cover": "https://i2.hdslb.com/bfs/archive/633c22a5370210c0bc8530ba1d5238ba9e44ff2d.jpg",
+            "author": "洛温阿特金森",
+            "timestamp": 1764324060000,
+            "hot": 2665487,
+            "url": "https://b23.tv/BV1M7SjBSE4D",
+            "mobileUrl": "https://m.bilibili.com/video/BV1M7SjBSE4D"
         },
         {
             "id": "BV1vtSJBzEsG",
@@ -190,7 +190,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/6613f5ecb0f3710707f55412b5232d19ccde9842.jpg",
             "author": "争取最后的自由",
             "timestamp": 1764378325000,
-            "hot": 6706788,
+            "hot": 6752262,
             "url": "https://b23.tv/BV1vtSJBzEsG",
             "mobileUrl": "https://m.bilibili.com/video/BV1vtSJBzEsG"
         },
@@ -201,7 +201,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/c26ce281f03d33d6ba8659642eea584703bd7a40.jpg",
             "author": "瓜哥超爱玩QAQ",
             "timestamp": 1764402507000,
-            "hot": 4908542,
+            "hot": 4935926,
             "url": "https://b23.tv/BV1DJUZBvEmJ",
             "mobileUrl": "https://m.bilibili.com/video/BV1DJUZBvEmJ"
         },
@@ -212,7 +212,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/96cb56fbd7bdb5b2eb648a41ba51273ee114f1df.jpg",
             "author": "大鬍子牛仔",
             "timestamp": 1764308404000,
-            "hot": 4417457,
+            "hot": 4449855,
             "url": "https://b23.tv/BV1PsS5BTEnt",
             "mobileUrl": "https://m.bilibili.com/video/BV1PsS5BTEnt"
         },
@@ -223,9 +223,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/0ba40bc05b8f4281575e9d429a34f52bd37026e9.jpg",
             "author": "玉玉__",
             "timestamp": 1764509133000,
-            "hot": 1594764,
+            "hot": 1651650,
             "url": "https://b23.tv/BV1U9SqByEUg",
             "mobileUrl": "https://m.bilibili.com/video/BV1U9SqByEUg"
+        },
+        {
+            "id": "BV1dQSCBgENY",
+            "title": "吸毒违法记录是否应该被封存这个事儿，我来谈一下自己的看法，你们听一听",
+            "desc": "-",
+            "cover": "https://i2.hdslb.com/bfs/archive/d6f023536fe2617f06de3edca39bc0f31b702bba.jpg",
+            "author": "蔡雅奇刑法",
+            "timestamp": 1764584254000,
+            "hot": 1131566,
+            "url": "https://b23.tv/BV1dQSCBgENY",
+            "mobileUrl": "https://m.bilibili.com/video/BV1dQSCBgENY"
         },
         {
             "id": "BV1gTScB3EHD",
@@ -234,20 +245,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/93fa3a4662b1302b26433dd5fbd4f6ad8336153c.jpg",
             "author": "夏目严胜",
             "timestamp": 1764412294000,
-            "hot": 999357,
+            "hot": 1011692,
             "url": "https://b23.tv/BV1gTScB3EHD",
             "mobileUrl": "https://m.bilibili.com/video/BV1gTScB3EHD"
-        },
-        {
-            "id": "BV1YWSiBjEZ2",
-            "title": "我们拍到了大白鲨！",
-            "desc": "这次我们前往澳大利亚海王星群岛，坐上了合法提供海底笼的船只，想和你们一起来近距离认识一下，这个星球上最大的掠食性鲨鱼，大白鲨！如果你喜欢这期节目，请多多支持我们，并把视频分享给你的朋友们一起看看！",
-            "cover": "https://i2.hdslb.com/bfs/archive/bb7a7d48fe473b6a7cec13066f304d4b507f2224.jpg",
-            "author": "亿点点不一样",
-            "timestamp": 1764558000000,
-            "hot": 1278847,
-            "url": "https://b23.tv/BV1YWSiBjEZ2",
-            "mobileUrl": "https://m.bilibili.com/video/BV1YWSiBjEZ2"
         },
         {
             "id": "BV16TSwBFEoQ",
@@ -256,7 +256,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/d554f3e2812458314b840763a7f7efe722f1e2d2.jpg",
             "author": "狗头患有中二病",
             "timestamp": 1764430338000,
-            "hot": 1189709,
+            "hot": 1203457,
             "url": "https://b23.tv/BV16TSwBFEoQ",
             "mobileUrl": "https://m.bilibili.com/video/BV16TSwBFEoQ"
         },
@@ -267,20 +267,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/3655c5b39f194126d1fd6db75944bba41ed01f79.jpg",
             "author": "摩的司机徐师傅",
             "timestamp": 1764201600000,
-            "hot": 8035280,
+            "hot": 8093140,
             "url": "https://b23.tv/BV1FkUxBbEcs",
             "mobileUrl": "https://m.bilibili.com/video/BV1FkUxBbEcs"
-        },
-        {
-            "id": "BV1n3S7BkEdB",
-            "title": "弱智吧记者拷打神人视频泄露流出#3",
-            "desc": "关注我！！！",
-            "cover": "https://i0.hdslb.com/bfs/archive/c453682a905e8fd43a0973b2250ea47e0c0e6c1a.jpg",
-            "author": "谷谷永不咕咕",
-            "timestamp": 1764324000000,
-            "hot": 2712329,
-            "url": "https://b23.tv/BV1n3S7BkEdB",
-            "mobileUrl": "https://m.bilibili.com/video/BV1n3S7BkEdB"
         },
         {
             "id": "BV19vUfBVEWN",
@@ -289,31 +278,31 @@
             "cover": "https://i0.hdslb.com/bfs/archive/e5a96f6985b5a462a795ad43fc92f7a53ef493a7.jpg",
             "author": "韩比迪",
             "timestamp": 1764423570000,
-            "hot": 2083844,
+            "hot": 2119887,
             "url": "https://b23.tv/BV19vUfBVEWN",
             "mobileUrl": "https://m.bilibili.com/video/BV19vUfBVEWN"
         },
         {
-            "id": "BV1dQSCBgENY",
-            "title": "吸毒违法记录是否应该被封存这个事儿，我来谈一下自己的看法，你们听一听",
-            "desc": "-",
-            "cover": "https://i2.hdslb.com/bfs/archive/d6f023536fe2617f06de3edca39bc0f31b702bba.jpg",
-            "author": "蔡雅奇刑法",
-            "timestamp": 1764584254000,
-            "hot": 988343,
-            "url": "https://b23.tv/BV1dQSCBgENY",
-            "mobileUrl": "https://m.bilibili.com/video/BV1dQSCBgENY"
+            "id": "BV1n3S7BkEdB",
+            "title": "弱智吧记者拷打神人视频泄露流出#3",
+            "desc": "关注我！！！",
+            "cover": "https://i0.hdslb.com/bfs/archive/c453682a905e8fd43a0973b2250ea47e0c0e6c1a.jpg",
+            "author": "谷谷永不咕咕",
+            "timestamp": 1764324000000,
+            "hot": 2721190,
+            "url": "https://b23.tv/BV1n3S7BkEdB",
+            "mobileUrl": "https://m.bilibili.com/video/BV1n3S7BkEdB"
         },
         {
-            "id": "BV1UdSjBXEYR",
-            "title": "雪豹说他要打十个",
-            "desc": "该视频暂无简介",
-            "cover": "https://i0.hdslb.com/bfs/archive/9b0c48b77b6edbb34b5bd563818f24c6787b0580.jpg",
-            "author": "孤鹜AH",
-            "timestamp": 1764324360000,
-            "hot": 2605012,
-            "url": "https://b23.tv/BV1UdSjBXEYR",
-            "mobileUrl": "https://m.bilibili.com/video/BV1UdSjBXEYR"
+            "id": "BV1YWSiBjEZ2",
+            "title": "我们拍到了大白鲨！",
+            "desc": "这次我们前往澳大利亚海王星群岛，坐上了合法提供海底笼的船只，想和你们一起来近距离认识一下，这个星球上最大的掠食性鲨鱼，大白鲨！如果你喜欢这期节目，请多多支持我们，并把视频分享给你的朋友们一起看看！",
+            "cover": "https://i2.hdslb.com/bfs/archive/bb7a7d48fe473b6a7cec13066f304d4b507f2224.jpg",
+            "author": "亿点点不一样",
+            "timestamp": 1764558000000,
+            "hot": 1336366,
+            "url": "https://b23.tv/BV1YWSiBjEZ2",
+            "mobileUrl": "https://m.bilibili.com/video/BV1YWSiBjEZ2"
         },
         {
             "id": "BV17yUZBEEUw",
@@ -322,7 +311,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/db94f677ca60d8999eb0c12f21fc782355a3a441.jpg",
             "author": "李宗恒Actor",
             "timestamp": 1764398516000,
-            "hot": 2609534,
+            "hot": 2672780,
             "url": "https://b23.tv/BV17yUZBEEUw",
             "mobileUrl": "https://m.bilibili.com/video/BV17yUZBEEUw"
         },
@@ -333,9 +322,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/b9a1984b2b1aa403036972f287edd2eb54cbea57.jpg",
             "author": "北美运动学博士Bruce_PhD",
             "timestamp": 1764558619000,
-            "hot": 2447137,
+            "hot": 2588060,
             "url": "https://b23.tv/BV18CSkBoEs1",
             "mobileUrl": "https://m.bilibili.com/video/BV18CSkBoEs1"
+        },
+        {
+            "id": "BV1UdSjBXEYR",
+            "title": "雪豹说他要打十个",
+            "desc": "该视频暂无简介",
+            "cover": "https://i0.hdslb.com/bfs/archive/9b0c48b77b6edbb34b5bd563818f24c6787b0580.jpg",
+            "author": "孤鹜AH",
+            "timestamp": 1764324360000,
+            "hot": 2613908,
+            "url": "https://b23.tv/BV1UdSjBXEYR",
+            "mobileUrl": "https://m.bilibili.com/video/BV1UdSjBXEYR"
         },
         {
             "id": "BV1BPUZB1EhD",
@@ -344,9 +344,31 @@
             "cover": "https://i0.hdslb.com/bfs/archive/fd1cf6626ea8bbddfef920f38951b89bdce5ea9b.jpg",
             "author": "旺卡_Wonka",
             "timestamp": 1764405964000,
-            "hot": 3393086,
+            "hot": 3430893,
             "url": "https://b23.tv/BV1BPUZB1EhD",
             "mobileUrl": "https://m.bilibili.com/video/BV1BPUZB1EhD"
+        },
+        {
+            "id": "BV1rfUfBoEvp",
+            "title": "为什么偏偏是【光速】？",
+            "desc": "BGM：wake phonk",
+            "cover": "https://i0.hdslb.com/bfs/archive/bceb4b3bb229f81ff655a3d92f2b60a8b508cc91.jpg",
+            "author": "星团菌",
+            "timestamp": 1764419518000,
+            "hot": 1692968,
+            "url": "https://b23.tv/BV1rfUfBoEvp",
+            "mobileUrl": "https://m.bilibili.com/video/BV1rfUfBoEvp"
+        },
+        {
+            "id": "BV1abSPBXEjt",
+            "title": "你的世界太安静 所以我来添乱了",
+            "desc": "-",
+            "cover": "https://i2.hdslb.com/bfs/archive/5dfd1a99bf0a61f5acee2938a8becf42946b6bc3.jpg",
+            "author": "封茗囧菌",
+            "timestamp": 1764472674000,
+            "hot": 1432894,
+            "url": "https://b23.tv/BV1abSPBXEjt",
+            "mobileUrl": "https://m.bilibili.com/video/BV1abSPBXEjt"
         },
         {
             "id": "BV1XNSjBoER6",
@@ -355,7 +377,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/0999524bd921cebe735fcbbb5f9faad75caf08ed.jpg",
             "author": "王小七Fire",
             "timestamp": 1764326853000,
-            "hot": 5594540,
+            "hot": 5623450,
             "url": "https://b23.tv/BV1XNSjBoER6",
             "mobileUrl": "https://m.bilibili.com/video/BV1XNSjBoER6"
         },
@@ -366,31 +388,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/9a3544d2febdf8e591a08c9b09105bb12b6caceb.jpg",
             "author": "旋风凉水",
             "timestamp": 1764324000000,
-            "hot": 2286839,
+            "hot": 2315386,
             "url": "https://b23.tv/BV1FvUYBEEmM",
             "mobileUrl": "https://m.bilibili.com/video/BV1FvUYBEEmM"
-        },
-        {
-            "id": "BV1xpSjBjEwp",
-            "title": "🍎在美国上学带饭有这么难绷吗？！",
-            "desc": "什么东西油炸最好吃？对比看看有没有比老美更奇葩的食材🫵👁️👁️\n\n翻译/剪辑：@炫酷张较瘦  \n特别鸣谢：Domics的配音，以及AntiDarkHeart创作的抽象画（见视频4分37秒）",
-            "cover": "https://i0.hdslb.com/bfs/archive/481f70b58efa1b39ac937f7499194fce9ed84c69.jpg",
-            "author": "RingoTsuga津贺林吾",
-            "timestamp": 1764321073000,
-            "hot": 2063865,
-            "url": "https://b23.tv/BV1xpSjBjEwp",
-            "mobileUrl": "https://m.bilibili.com/video/BV1xpSjBjEwp"
-        },
-        {
-            "id": "BV1abSPBXEjt",
-            "title": "你的世界太安静 所以我来添乱了",
-            "desc": "-",
-            "cover": "https://i2.hdslb.com/bfs/archive/5dfd1a99bf0a61f5acee2938a8becf42946b6bc3.jpg",
-            "author": "封茗囧菌",
-            "timestamp": 1764472674000,
-            "hot": 1407916,
-            "url": "https://b23.tv/BV1abSPBXEjt",
-            "mobileUrl": "https://m.bilibili.com/video/BV1abSPBXEjt"
         },
         {
             "id": "BV1QBUfB3EtC",
@@ -399,20 +399,9 @@
             "cover": "https://i2.hdslb.com/bfs/archive/32a78917d0648465cec9a1eba38d7c6a0cddc70e.jpg",
             "author": "萨鏝鷵",
             "timestamp": 1764422508000,
-            "hot": 710806,
+            "hot": 718053,
             "url": "https://b23.tv/BV1QBUfB3EtC",
             "mobileUrl": "https://m.bilibili.com/video/BV1QBUfB3EtC"
-        },
-        {
-            "id": "BV1rfUfBoEvp",
-            "title": "为什么偏偏是【光速】？",
-            "desc": "BGM：wake phonk",
-            "cover": "https://i0.hdslb.com/bfs/archive/bceb4b3bb229f81ff655a3d92f2b60a8b508cc91.jpg",
-            "author": "星团菌",
-            "timestamp": 1764419518000,
-            "hot": 1598371,
-            "url": "https://b23.tv/BV1rfUfBoEvp",
-            "mobileUrl": "https://m.bilibili.com/video/BV1rfUfBoEvp"
         },
         {
             "id": "BV1JqUdBLELe",
@@ -421,7 +410,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/305fcf7f6e89b69fdf9b807373d99aaa78ef5e9e.jpg",
             "author": "小暮mumu",
             "timestamp": 1764391838000,
-            "hot": 2659476,
+            "hot": 2675537,
             "url": "https://b23.tv/BV1JqUdBLELe",
             "mobileUrl": "https://m.bilibili.com/video/BV1JqUdBLELe"
         },
@@ -432,9 +421,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/4aa347d60795ace9c5ae782ea04452c750691f33.jpg",
             "author": "徐大花xudahua",
             "timestamp": 1764499937000,
-            "hot": 1832825,
+            "hot": 1881400,
             "url": "https://b23.tv/BV11ZSvBPEAn",
             "mobileUrl": "https://m.bilibili.com/video/BV11ZSvBPEAn"
+        },
+        {
+            "id": "BV1xpSjBjEwp",
+            "title": "🍎在美国上学带饭有这么难绷吗？！",
+            "desc": "什么东西油炸最好吃？对比看看有没有比老美更奇葩的食材🫵👁️👁️\n\n翻译/剪辑：@炫酷张较瘦  \n特别鸣谢：Domics的配音，以及AntiDarkHeart创作的抽象画（见视频4分37秒）",
+            "cover": "https://i0.hdslb.com/bfs/archive/481f70b58efa1b39ac937f7499194fce9ed84c69.jpg",
+            "author": "RingoTsuga津贺林吾",
+            "timestamp": 1764321073000,
+            "hot": 2079550,
+            "url": "https://b23.tv/BV1xpSjBjEwp",
+            "mobileUrl": "https://m.bilibili.com/video/BV1xpSjBjEwp"
         },
         {
             "id": "BV19MSjBREAu",
@@ -443,7 +443,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/16b2c036b5d719f0744d2d239bce1fc6ab515c6f.jpg",
             "author": "原神",
             "timestamp": 1764475200000,
-            "hot": 995872,
+            "hot": 1006824,
             "url": "https://b23.tv/BV19MSjBREAu",
             "mobileUrl": "https://m.bilibili.com/video/BV19MSjBREAu"
         },
@@ -454,20 +454,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/1f693eded6a2edba58d92c83f70c08bcd8e1da65.jpg",
             "author": "小王Albert",
             "timestamp": 1764464400000,
-            "hot": 1608142,
+            "hot": 1627910,
             "url": "https://b23.tv/BV1EmUZBjEwL",
             "mobileUrl": "https://m.bilibili.com/video/BV1EmUZBjEwL"
-        },
-        {
-            "id": "BV1cyS3BdECH",
-            "title": "【毕导】光一直在欺骗你，而只有开塞露可以揭穿它",
-            "desc": "化妆品放进水里，看着竟然会变少！这究竟是正常的光学现象，还是商家的真实用量现出了原形？类似的现象你其实每天喝水的时候都会见到，但它背后的原理你可能从来没想过。\n\n你还可以看看: \n看完这个视频，你会释怀这停滞不前的人生 BV1qJsizkEp1\n地球是平的？不要随便跟网友辩论…… BV1iCpozfE8w\n千 万 不 要 给 蜡 烛 放 这 首 歌 ！ BV1Vqe3z4E1n\n你有一种绝妙的方法吃披萨，但你并不知道为什么 BV16Hbdz2Eqq\n太阳究竟早上近还是中午近？两小儿辩日的答案，99%的人都",
-            "cover": "https://i0.hdslb.com/bfs/archive/515d7d5da386fc3ee5357e0e5e6d6d8a14d5dc03.jpg",
-            "author": "毕导",
-            "timestamp": 1764299700000,
-            "hot": 5483551,
-            "url": "https://b23.tv/BV1cyS3BdECH",
-            "mobileUrl": "https://m.bilibili.com/video/BV1cyS3BdECH"
         },
         {
             "id": "BV1TGSAB1EZD",
@@ -476,7 +465,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/b88479dcb7af2b3f841556e670d8b582a3e71328.jpg",
             "author": "明日方舟",
             "timestamp": 1764471600000,
-            "hot": 1694702,
+            "hot": 1701073,
             "url": "https://b23.tv/BV1TGSAB1EZD",
             "mobileUrl": "https://m.bilibili.com/video/BV1TGSAB1EZD"
         },
@@ -487,20 +476,9 @@
             "cover": "https://i2.hdslb.com/bfs/archive/4eb722909f18d75331c6376cf5502275e8dae04d.jpg",
             "author": "三十六贱笑",
             "timestamp": 1764387000000,
-            "hot": 1302111,
+            "hot": 1312321,
             "url": "https://b23.tv/BV1FGURBCEBX",
             "mobileUrl": "https://m.bilibili.com/video/BV1FGURBCEBX"
-        },
-        {
-            "id": "BV1iuSnBrEAS",
-            "title": "我用AI在24小时内，做了一个逆天MC躲猫猫！",
-            "desc": "关注我！",
-            "cover": "https://i2.hdslb.com/bfs/archive/a6412b413a7cb01ab2c79e6f15587e3ae79f7be6.jpg",
-            "author": "幕川北",
-            "timestamp": 1764381600000,
-            "hot": 2209215,
-            "url": "https://b23.tv/BV1iuSnBrEAS",
-            "mobileUrl": "https://m.bilibili.com/video/BV1iuSnBrEAS"
         },
         {
             "id": "BV1gcUfBqEwo",
@@ -509,7 +487,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/af57eb8f2d77df6cf99818c51911aa34db4adbba.jpg",
             "author": "老王聊天",
             "timestamp": 1764401572000,
-            "hot": 1286820,
+            "hot": 1298461,
             "url": "https://b23.tv/BV1gcUfBqEwo",
             "mobileUrl": "https://m.bilibili.com/video/BV1gcUfBqEwo"
         },
@@ -520,20 +498,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/de2fd5d6c77e69acda89dc577e667b0873881d4d.jpg",
             "author": "上海戒毒",
             "timestamp": 1764337076000,
-            "hot": 493295,
+            "hot": 496544,
             "url": "https://b23.tv/BV1FZS7B3EHG",
             "mobileUrl": "https://m.bilibili.com/video/BV1FZS7B3EHG"
         },
         {
-            "id": "BV1dNSEBvESs",
-            "title": "《超级水手》",
-            "desc": "-",
-            "cover": "https://i1.hdslb.com/bfs/archive/41169cd2cd5749f63ffa76e8540e3429e85804e9.jpg",
-            "author": "白浩-抽象爷爷",
-            "timestamp": 1764336523000,
-            "hot": 1207062,
-            "url": "https://b23.tv/BV1dNSEBvESs",
-            "mobileUrl": "https://m.bilibili.com/video/BV1dNSEBvESs"
+            "id": "BV1cyS3BdECH",
+            "title": "【毕导】光一直在欺骗你，而只有开塞露可以揭穿它",
+            "desc": "化妆品放进水里，看着竟然会变少！这究竟是正常的光学现象，还是商家的真实用量现出了原形？类似的现象你其实每天喝水的时候都会见到，但它背后的原理你可能从来没想过。\n\n你还可以看看: \n看完这个视频，你会释怀这停滞不前的人生 BV1qJsizkEp1\n地球是平的？不要随便跟网友辩论…… BV1iCpozfE8w\n千 万 不 要 给 蜡 烛 放 这 首 歌 ！ BV1Vqe3z4E1n\n你有一种绝妙的方法吃披萨，但你并不知道为什么 BV16Hbdz2Eqq\n太阳究竟早上近还是中午近？两小儿辩日的答案，99%的人都",
+            "cover": "https://i0.hdslb.com/bfs/archive/515d7d5da386fc3ee5357e0e5e6d6d8a14d5dc03.jpg",
+            "author": "毕导",
+            "timestamp": 1764299700000,
+            "hot": 5506281,
+            "url": "https://b23.tv/BV1cyS3BdECH",
+            "mobileUrl": "https://m.bilibili.com/video/BV1cyS3BdECH"
         },
         {
             "id": "BV1LASNB8EAK",
@@ -542,42 +520,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/cefb5c3159a22bc93846d91d59a2c25bb14ed1d9.jpg",
             "author": "坏孩子的角落",
             "timestamp": 1764470442000,
-            "hot": 795012,
+            "hot": 804817,
             "url": "https://b23.tv/BV1LASNB8EAK",
             "mobileUrl": "https://m.bilibili.com/video/BV1LASNB8EAK"
         },
         {
-            "id": "BV1jWS7BeE31",
-            "title": "野外徒步，你会带哪一个压缩食物球呢？ ASMR",
-            "desc": "该视频暂无简介",
-            "cover": "https://i0.hdslb.com/bfs/archive/979097f87c22cd65a026b14bdd3f96f5c278dd6d.jpg",
-            "author": "Aismr_",
-            "timestamp": 1764314755000,
-            "hot": 5858809,
-            "url": "https://b23.tv/BV1jWS7BeE31",
-            "mobileUrl": "https://m.bilibili.com/video/BV1jWS7BeE31"
-        },
-        {
-            "id": "BV1JvUdB2Emt",
-            "title": "缉毒警察 永远向前",
-            "desc": "缉毒警察 永远向前#她是踏碎星河落入我梦境的幻想#贵州文旅 #缉毒警察 #致敬",
-            "cover": "https://i0.hdslb.com/bfs/archive/dfac8598dd5400a441aca0163cf5d80eedc0fa05.jpg",
-            "author": "贵州文旅",
-            "timestamp": 1764391162000,
-            "hot": 520653,
-            "url": "https://b23.tv/BV1JvUdB2Emt",
-            "mobileUrl": "https://m.bilibili.com/video/BV1JvUdB2Emt"
-        },
-        {
-            "id": "BV1YHSiBmE5M",
-            "title": "帮助从来不一场表演",
+            "id": "BV1dNSEBvESs",
+            "title": "《超级水手》",
             "desc": "-",
-            "cover": "https://i1.hdslb.com/bfs/archive/50bb830bc010cfe51a3a56f93062ecb2cdddfcbb.jpg",
-            "author": "脱缰凯Kk",
-            "timestamp": 1764495771000,
-            "hot": 1046482,
-            "url": "https://b23.tv/BV1YHSiBmE5M",
-            "mobileUrl": "https://m.bilibili.com/video/BV1YHSiBmE5M"
+            "cover": "https://i1.hdslb.com/bfs/archive/41169cd2cd5749f63ffa76e8540e3429e85804e9.jpg",
+            "author": "白浩-抽象爷爷",
+            "timestamp": 1764336523000,
+            "hot": 1212246,
+            "url": "https://b23.tv/BV1dNSEBvESs",
+            "mobileUrl": "https://m.bilibili.com/video/BV1dNSEBvESs"
         },
         {
             "id": "BV1ZhSvBQEqs",
@@ -586,20 +542,53 @@
             "cover": "https://i2.hdslb.com/bfs/archive/6fcd2c354e42ec75006fddcad9428b1dca7e0471.jpg",
             "author": "恶人王小花",
             "timestamp": 1764503020000,
-            "hot": 816026,
+            "hot": 879948,
             "url": "https://b23.tv/BV1ZhSvBQEqs",
             "mobileUrl": "https://m.bilibili.com/video/BV1ZhSvBQEqs"
         },
         {
-            "id": "BV1LhUiBUEDZ",
-            "title": "\"满腔的热血已经沸腾 要为真理而斗争\"",
-            "desc": "\"满腔的热血已经沸腾 要为真理而斗争\"",
-            "cover": "https://i0.hdslb.com/bfs/archive/95fe7bfb60003f11d5ed6a0c4d8e73963e86bf7e.jpg",
-            "author": "我爱吃派大星",
-            "timestamp": 1764202800000,
-            "hot": 619803,
-            "url": "https://b23.tv/BV1LhUiBUEDZ",
-            "mobileUrl": "https://m.bilibili.com/video/BV1LhUiBUEDZ"
+            "id": "BV1JvUdB2Emt",
+            "title": "缉毒警察 永远向前",
+            "desc": "缉毒警察 永远向前#她是踏碎星河落入我梦境的幻想#贵州文旅 #缉毒警察 #致敬",
+            "cover": "https://i0.hdslb.com/bfs/archive/dfac8598dd5400a441aca0163cf5d80eedc0fa05.jpg",
+            "author": "贵州文旅",
+            "timestamp": 1764391162000,
+            "hot": 524651,
+            "url": "https://b23.tv/BV1JvUdB2Emt",
+            "mobileUrl": "https://m.bilibili.com/video/BV1JvUdB2Emt"
+        },
+        {
+            "id": "BV1jWS7BeE31",
+            "title": "野外徒步，你会带哪一个压缩食物球呢？ ASMR",
+            "desc": "该视频暂无简介",
+            "cover": "https://i0.hdslb.com/bfs/archive/979097f87c22cd65a026b14bdd3f96f5c278dd6d.jpg",
+            "author": "Aismr_",
+            "timestamp": 1764314755000,
+            "hot": 5891868,
+            "url": "https://b23.tv/BV1jWS7BeE31",
+            "mobileUrl": "https://m.bilibili.com/video/BV1jWS7BeE31"
+        },
+        {
+            "id": "BV1iuSnBrEAS",
+            "title": "我用AI在24小时内，做了一个逆天MC躲猫猫！",
+            "desc": "关注我！",
+            "cover": "https://i2.hdslb.com/bfs/archive/a6412b413a7cb01ab2c79e6f15587e3ae79f7be6.jpg",
+            "author": "幕川北",
+            "timestamp": 1764381600000,
+            "hot": 2214453,
+            "url": "https://b23.tv/BV1iuSnBrEAS",
+            "mobileUrl": "https://m.bilibili.com/video/BV1iuSnBrEAS"
+        },
+        {
+            "id": "BV1YHSiBmE5M",
+            "title": "帮助从来不一场表演",
+            "desc": "-",
+            "cover": "https://i1.hdslb.com/bfs/archive/50bb830bc010cfe51a3a56f93062ecb2cdddfcbb.jpg",
+            "author": "脱缰凯Kk",
+            "timestamp": 1764495771000,
+            "hot": 1063446,
+            "url": "https://b23.tv/BV1YHSiBmE5M",
+            "mobileUrl": "https://m.bilibili.com/video/BV1YHSiBmE5M"
         },
         {
             "id": "BV1XzScBEEU1",
@@ -608,20 +597,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/f461924c97295d3647f424c1593cf1a7ab4955a9.jpg",
             "author": "叫我洗头_恩师无足鸟",
             "timestamp": 1764435670000,
-            "hot": 759483,
+            "hot": 767085,
             "url": "https://b23.tv/BV1XzScBEEU1",
             "mobileUrl": "https://m.bilibili.com/video/BV1XzScBEEU1"
-        },
-        {
-            "id": "BV1dBS5B4ExQ",
-            "title": "世界上最激昂的演奏",
-            "desc": "-\n世界上最激昂的演奏",
-            "cover": "https://i0.hdslb.com/bfs/archive/e4e6e0f296e2c4a596f3b7a19e8f127c75c6fe88.jpg",
-            "author": "ZakoBlast",
-            "timestamp": 1764309910000,
-            "hot": 1026953,
-            "url": "https://b23.tv/BV1dBS5B4ExQ",
-            "mobileUrl": "https://m.bilibili.com/video/BV1dBS5B4ExQ"
         },
         {
             "id": "BV19vUfBVETg",
@@ -630,20 +608,31 @@
             "cover": "https://i1.hdslb.com/bfs/archive/8587d41ce638662ea8e85c0a82b1a3bf61ad17a7.jpg",
             "author": "困困君丶",
             "timestamp": 1764423667000,
-            "hot": 2418740,
+            "hot": 2447830,
             "url": "https://b23.tv/BV19vUfBVETg",
             "mobileUrl": "https://m.bilibili.com/video/BV19vUfBVETg"
         },
         {
-            "id": "BV1ocSjB8E6A",
-            "title": "宝石磨石机第一阶段已完成，主播意外解锁不得了的宝石！",
-            "desc": "该视频暂无简介",
-            "cover": "https://i2.hdslb.com/bfs/archive/8c00e3827f5c2ff4db1a159b6faeb29b3c2cd31d.jpg",
-            "author": "嘟嘟想吃",
-            "timestamp": 1764323512000,
-            "hot": 4964777,
-            "url": "https://b23.tv/BV1ocSjB8E6A",
-            "mobileUrl": "https://m.bilibili.com/video/BV1ocSjB8E6A"
+            "id": "BV1LhUiBUEDZ",
+            "title": "\"满腔的热血已经沸腾 要为真理而斗争\"",
+            "desc": "\"满腔的热血已经沸腾 要为真理而斗争\"",
+            "cover": "https://i0.hdslb.com/bfs/archive/95fe7bfb60003f11d5ed6a0c4d8e73963e86bf7e.jpg",
+            "author": "我爱吃派大星",
+            "timestamp": 1764202800000,
+            "hot": 626947,
+            "url": "https://b23.tv/BV1LhUiBUEDZ",
+            "mobileUrl": "https://m.bilibili.com/video/BV1LhUiBUEDZ"
+        },
+        {
+            "id": "BV1dBS5B4ExQ",
+            "title": "世界上最激昂的演奏",
+            "desc": "-\n世界上最激昂的演奏",
+            "cover": "https://i0.hdslb.com/bfs/archive/e4e6e0f296e2c4a596f3b7a19e8f127c75c6fe88.jpg",
+            "author": "ZakoBlast",
+            "timestamp": 1764309910000,
+            "hot": 1068498,
+            "url": "https://b23.tv/BV1dBS5B4ExQ",
+            "mobileUrl": "https://m.bilibili.com/video/BV1dBS5B4ExQ"
         },
         {
             "id": "BV1iKUZB5E8q",
@@ -652,7 +641,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/186d35a2300d4839d69040352c13973dfb9cb5da.jpg",
             "author": "鲤鱼Ace",
             "timestamp": 1764408847000,
-            "hot": 690313,
+            "hot": 694712,
             "url": "https://b23.tv/BV1iKUZB5E8q",
             "mobileUrl": "https://m.bilibili.com/video/BV1iKUZB5E8q"
         },
@@ -663,7 +652,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/e4fd769e9d9797409bc75e41f33ab05a78dbb354.jpg",
             "author": "猴哥的小生活",
             "timestamp": 1764329400000,
-            "hot": 537203,
+            "hot": 547138,
             "url": "https://b23.tv/BV16iSjBiEMG",
             "mobileUrl": "https://m.bilibili.com/video/BV16iSjBiEMG"
         },
@@ -674,7 +663,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/93cdd07a1f5d3e0cb5103a2a13e32c719822f250.jpg",
             "author": "芭比小郭",
             "timestamp": 1764298032000,
-            "hot": 1554675,
+            "hot": 1578358,
             "url": "https://b23.tv/BV1NrSLB5Eme",
             "mobileUrl": "https://m.bilibili.com/video/BV1NrSLB5Eme"
         },
@@ -685,7 +674,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/b787246f6c6330bcd7f40134146a7b4f44f8f381.jpg",
             "author": "TF家族",
             "timestamp": 1764415929000,
-            "hot": 1600618,
+            "hot": 1606651,
             "url": "https://b23.tv/BV1bxSFBuEsH",
             "mobileUrl": "https://m.bilibili.com/video/BV1bxSFBuEsH"
         },
@@ -696,20 +685,9 @@
             "cover": "https://i1.hdslb.com/bfs/archive/9b3e113242fcef9be4c95b6aa86e478dcdfd07a3.jpg",
             "author": "蔡蔡的vlog",
             "timestamp": 1764390914000,
-            "hot": 512547,
+            "hot": 515118,
             "url": "https://b23.tv/BV18LUdB8E4R",
             "mobileUrl": "https://m.bilibili.com/video/BV18LUdB8E4R"
-        },
-        {
-            "id": "BV18HUZBPE5w",
-            "title": "AI大战A股！公司全员AI炒股，谁会成为理财王？",
-            "desc": "为了探索人与AI协作的各种可能，我们用虚拟盘炒股这个任务搞了场公司全员的投资大赛！写代码、生成报告、或者纯“情绪价值”，哪种策略最有效呢？",
-            "cover": "https://i0.hdslb.com/bfs/archive/1ae193826ca9ccc54df0f29ba3aaddc92f866c84.jpg",
-            "author": "林亦LYi",
-            "timestamp": 1764410400000,
-            "hot": 1228076,
-            "url": "https://b23.tv/BV18HUZBPE5w",
-            "mobileUrl": "https://m.bilibili.com/video/BV18HUZBPE5w"
         },
         {
             "id": "BV1w7UfBdEKJ",
@@ -718,20 +696,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/b9bb471737e0a1d3be800f0e8b0f2f628cecbdc6.jpg",
             "author": "放飞自我的星辰",
             "timestamp": 1764408600000,
-            "hot": 2847051,
+            "hot": 2891304,
             "url": "https://b23.tv/BV1w7UfBdEKJ",
             "mobileUrl": "https://m.bilibili.com/video/BV1w7UfBdEKJ"
         },
         {
-            "id": "BV14PS7B7EVn",
-            "title": "在“浙”里，跟“警”步伐！致敬缉毒警察，一起向毒品说不！",
-            "desc": "资料来源：浙江禁毒",
-            "cover": "https://i0.hdslb.com/bfs/archive/aaa52852e44b354cbd030fbd5dea183b2a4194a5.jpg",
-            "author": "浙江文旅",
-            "timestamp": 1764318114000,
-            "hot": 704772,
-            "url": "https://b23.tv/BV14PS7B7EVn",
-            "mobileUrl": "https://m.bilibili.com/video/BV14PS7B7EVn"
+            "id": "BV18HUZBPE5w",
+            "title": "AI大战A股！公司全员AI炒股，谁会成为理财王？",
+            "desc": "为了探索人与AI协作的各种可能，我们用虚拟盘炒股这个任务搞了场公司全员的投资大赛！写代码、生成报告、或者纯“情绪价值”，哪种策略最有效呢？",
+            "cover": "https://i0.hdslb.com/bfs/archive/1ae193826ca9ccc54df0f29ba3aaddc92f866c84.jpg",
+            "author": "林亦LYi",
+            "timestamp": 1764410400000,
+            "hot": 1228978,
+            "url": "https://b23.tv/BV18HUZBPE5w",
+            "mobileUrl": "https://m.bilibili.com/video/BV18HUZBPE5w"
         },
         {
             "id": "BV1sTS7BLEbJ",
@@ -740,9 +718,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/d100eb8dfecc78bcc6a97fe09c623d45e999a274.jpg",
             "author": "奈娃家族NEVERSFAMILY",
             "timestamp": 1764322500000,
-            "hot": 1379246,
+            "hot": 1415971,
             "url": "https://b23.tv/BV1sTS7BLEbJ",
             "mobileUrl": "https://m.bilibili.com/video/BV1sTS7BLEbJ"
+        },
+        {
+            "id": "BV1ocSjB8E6A",
+            "title": "宝石磨石机第一阶段已完成，主播意外解锁不得了的宝石！",
+            "desc": "该视频暂无简介",
+            "cover": "https://i2.hdslb.com/bfs/archive/8c00e3827f5c2ff4db1a159b6faeb29b3c2cd31d.jpg",
+            "author": "嘟嘟想吃",
+            "timestamp": 1764323512000,
+            "hot": 4972829,
+            "url": "https://b23.tv/BV1ocSjB8E6A",
+            "mobileUrl": "https://m.bilibili.com/video/BV1ocSjB8E6A"
         },
         {
             "id": "BV1bAUoBtEF3",
@@ -751,9 +740,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/794ba3701d9be626a045dc220a470c62cd15cffd.jpg",
             "author": "陕西共青团",
             "timestamp": 1764387576000,
-            "hot": 465244,
+            "hot": 471085,
             "url": "https://b23.tv/BV1bAUoBtEF3",
             "mobileUrl": "https://m.bilibili.com/video/BV1bAUoBtEF3"
+        },
+        {
+            "id": "BV14PS7B7EVn",
+            "title": "在“浙”里，跟“警”步伐！致敬缉毒警察，一起向毒品说不！",
+            "desc": "资料来源：浙江禁毒",
+            "cover": "https://i0.hdslb.com/bfs/archive/aaa52852e44b354cbd030fbd5dea183b2a4194a5.jpg",
+            "author": "浙江文旅",
+            "timestamp": 1764318114000,
+            "hot": 709321,
+            "url": "https://b23.tv/BV14PS7B7EVn",
+            "mobileUrl": "https://m.bilibili.com/video/BV14PS7B7EVn"
         },
         {
             "id": "BV1UEUdBtEM4",
@@ -762,20 +762,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/6a2cef2f35120b39ed0e1da064644e33796de717.jpg",
             "author": "混饭达人",
             "timestamp": 1764390840000,
-            "hot": 1719496,
+            "hot": 1745741,
             "url": "https://b23.tv/BV1UEUdBtEM4",
             "mobileUrl": "https://m.bilibili.com/video/BV1UEUdBtEM4"
-        },
-        {
-            "id": "BV1q1SEBMEL5",
-            "title": "如何用三分钟把一个广东人唱红温☝️",
-            "desc": "全国各地都能学会的粤语歌教学（雾）\n\n主唱：代佳怡 @诡佳目      \n吉他：朱禹杭\n鼓手：雷一鸣 \n键盘/编曲：大熊\n摄影/剪辑：王江\n录音/混音/贝斯：岳上森",
-            "cover": "https://i1.hdslb.com/bfs/archive/9991e9acc2f9fdb3d463cdade28d943a83046cd5.jpg",
-            "author": "吹拉弹唱慕星银",
-            "timestamp": 1764328946000,
-            "hot": 2055048,
-            "url": "https://b23.tv/BV1q1SEBMEL5",
-            "mobileUrl": "https://m.bilibili.com/video/BV1q1SEBMEL5"
         },
         {
             "id": "BV1cJUfBsELK",
@@ -784,7 +773,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/4f677c425def11fe328c3a15cc84beeebfb1ef00.jpg",
             "author": "莫实说",
             "timestamp": 1764396485000,
-            "hot": 1050042,
+            "hot": 1071310,
             "url": "https://b23.tv/BV1cJUfBsELK",
             "mobileUrl": "https://m.bilibili.com/video/BV1cJUfBsELK"
         },
@@ -795,42 +784,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/c405b739a09451d1724d4ef4809d7ba60d0c01d7.jpg",
             "author": "孙熙然",
             "timestamp": 1764406800000,
-            "hot": 661434,
+            "hot": 665090,
             "url": "https://b23.tv/BV1kvUZBsEnw",
             "mobileUrl": "https://m.bilibili.com/video/BV1kvUZBsEnw"
         },
         {
-            "id": "BV1RYSgB5Eyo",
-            "title": "九款旺仔牛奶做法看看有没有你喜欢吃的呀~",
-            "desc": "一分钟带你了解九种牛奶的不同做法，操作简单，赶快去吃!!评论区有详细防翻车指南!!!!",
-            "cover": "https://i2.hdslb.com/bfs/archive/767dbd48e50ede0c1723efd6fc8c2b4d6926bbac.jpg",
-            "author": "甜水井数钱的肉桂",
-            "timestamp": 1764252604000,
-            "hot": 1956585,
-            "url": "https://b23.tv/BV1RYSgB5Eyo",
-            "mobileUrl": "https://m.bilibili.com/video/BV1RYSgB5Eyo"
-        },
-        {
-            "id": "BV18XSjBREUK",
-            "title": "“Cheems，你要逃出时间循环吗？”【大结局·1】",
-            "desc": "在一切的开始之前，和一切的结束之后。\n\n\n1.本期视频为充电抢先看的模式，到星期六晚上七点就可以免费观看啦！\n2.大结局每期的时间会稍微比之前短一点，但更新也会加快的，12月目标更新两期！\n3.最后求个三连和关注！点个赞也可以的，谢谢大家啦~\n\n再次感谢@Voincer  的封面！还有@浮光-Luxabaspis  的光影协助！",
-            "cover": "https://i2.hdslb.com/bfs/archive/ac8f361e3096943c942cabc1ee20e3019182988d.jpg",
-            "author": "清竹莫叶",
-            "timestamp": 1764327600000,
-            "hot": 571347,
-            "url": "https://b23.tv/BV18XSjBREUK",
-            "mobileUrl": "https://m.bilibili.com/video/BV18XSjBREUK"
-        },
-        {
-            "id": "BV1kaSjBuEYf",
-            "title": "女子刚进入电梯门就关了，细思极恐 #电梯惊魂 #监控下一幕 #核队长",
-            "desc": "-",
-            "cover": "https://i0.hdslb.com/bfs/archive/0e5f08e56a033ef9a5d0bcc913507403cfa86356.jpg",
-            "author": "我是核队长",
-            "timestamp": 1764322716000,
-            "hot": 3188330,
-            "url": "https://b23.tv/BV1kaSjBuEYf",
-            "mobileUrl": "https://m.bilibili.com/video/BV1kaSjBuEYf"
+            "id": "BV1q1SEBMEL5",
+            "title": "如何用三分钟把一个广东人唱红温☝️",
+            "desc": "全国各地都能学会的粤语歌教学（雾）\n\n主唱：代佳怡 @诡佳目      \n吉他：朱禹杭\n鼓手：雷一鸣 \n键盘/编曲：大熊\n摄影/剪辑：王江\n录音/混音/贝斯：岳上森",
+            "cover": "https://i1.hdslb.com/bfs/archive/9991e9acc2f9fdb3d463cdade28d943a83046cd5.jpg",
+            "author": "吹拉弹唱慕星银",
+            "timestamp": 1764328946000,
+            "hot": 2070169,
+            "url": "https://b23.tv/BV1q1SEBMEL5",
+            "mobileUrl": "https://m.bilibili.com/video/BV1q1SEBMEL5"
         },
         {
             "id": "BV1hUS5BSEyR",
@@ -839,7 +806,7 @@
             "cover": "https://i2.hdslb.com/bfs/archive/a61585a01c86c97b66539ae14aae8e9643c7f21c.jpg",
             "author": "长片短解",
             "timestamp": 1764325800000,
-            "hot": 2997392,
+            "hot": 3028930,
             "url": "https://b23.tv/BV1hUS5BSEyR",
             "mobileUrl": "https://m.bilibili.com/video/BV1hUS5BSEyR"
         },
@@ -850,31 +817,9 @@
             "cover": "https://i0.hdslb.com/bfs/archive/f0de1ad3910b375024fabb51384f40bbd9ac665f.jpg",
             "author": "徐Toso",
             "timestamp": 1764403567000,
-            "hot": 1565870,
+            "hot": 1572559,
             "url": "https://b23.tv/BV1piUZB9Ey9",
             "mobileUrl": "https://m.bilibili.com/video/BV1piUZB9Ey9"
-        },
-        {
-            "id": "BV1SeURBtEbk",
-            "title": "【明日方舟】▲握 力 剂▼ Doomer💘",
-            "desc": "本来以为能很快就做完的，硬生生做了将近一个月，原曲和b站的BV1W52ABYEUo这个视频真的是太可爱，太喜欢了，希望大家也能喜欢我的作品。\n这次的视频里面也带一些些剧情向，做的时候也被狠狠感动到了5555555555555，狠狠共情了55555555555555，牢猫，牢普5555555555555\n\n\n\n描改原视频是这个：https://www.nicovideo.jp/watch/sm45305971",
-            "cover": "https://i0.hdslb.com/bfs/archive/a8b8d7d29c50ee3c9c64e96a0df9e38074388244.jpg",
-            "author": "碳纤维c_",
-            "timestamp": 1764384300000,
-            "hot": 616514,
-            "url": "https://b23.tv/BV1SeURBtEbk",
-            "mobileUrl": "https://m.bilibili.com/video/BV1SeURBtEbk"
-        },
-        {
-            "id": "BV152UdBuEyC",
-            "title": "风拂过蔷薇花径，魂灵的呼啸至此安息——秦彻「银翼安魂地」系列活动PV公开！",
-            "desc": "🩸秦彻「银翼安魂地」系列活动PV公开！\n\n🩸「银翼安魂地」五星套装思念\n12月2日更新后~12月16日上午4:59，五星日冕套装思念「秦彻·猩红席卷」、「秦彻·猩红弥散」开放获取。\n活动期间，最多150次许愿，即可获取两张活动五星思念，解锁全新搭档身份「秦彻·银翼恶魔」。\n*详细许愿规则与保底说明可在后续活动预告中查看。\n\n🩸「血魂灵」传说故事\n12月2日更新后，秦彻全新传说「血魂灵」同步上线。\n“于最蒙昧的世界里诞生最狂热的盲目；被死亡阴影笼罩的时代沉醉于魔法幻梦。\n魔法师化身为凡世的希望与信仰，恶魔以",
-            "cover": "https://i0.hdslb.com/bfs/archive/84c079648cb8a20b2cbcc168fb3b27ae79e4d9e5.jpg",
-            "author": "恋与深空",
-            "timestamp": 1764385521000,
-            "hot": 1073065,
-            "url": "https://b23.tv/BV152UdBuEyC",
-            "mobileUrl": "https://m.bilibili.com/video/BV152UdBuEyC"
         },
         {
             "id": "BV1msUZBwEVL",
@@ -883,20 +828,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/769b83ca49c9735399190238bf92171648a7c8d6.jpg",
             "author": "无我漂佩MY",
             "timestamp": 1764412200000,
-            "hot": 1471801,
+            "hot": 1487729,
             "url": "https://b23.tv/BV1msUZBwEVL",
             "mobileUrl": "https://m.bilibili.com/video/BV1msUZBwEVL"
         },
         {
-            "id": "BV1JaS5BaEkz",
-            "title": "用中餐的烹饪逻辑优化一下外国的家常菜“苹果炖猪排”更适合我们口味，调料精确到克……",
+            "id": "BV1kaSjBuEYf",
+            "title": "女子刚进入电梯门就关了，细思极恐 #电梯惊魂 #监控下一幕 #核队长",
             "desc": "-",
-            "cover": "https://i0.hdslb.com/bfs/archive/e63ce8f2b6e4914a5ea7a69ee54a30c4d3e47f32.jpg",
-            "author": "段小段美食教程",
-            "timestamp": 1764318000000,
-            "hot": 812506,
-            "url": "https://b23.tv/BV1JaS5BaEkz",
-            "mobileUrl": "https://m.bilibili.com/video/BV1JaS5BaEkz"
+            "cover": "https://i0.hdslb.com/bfs/archive/0e5f08e56a033ef9a5d0bcc913507403cfa86356.jpg",
+            "author": "我是核队长",
+            "timestamp": 1764322716000,
+            "hot": 3199094,
+            "url": "https://b23.tv/BV1kaSjBuEYf",
+            "mobileUrl": "https://m.bilibili.com/video/BV1kaSjBuEYf"
         },
         {
             "id": "BV1h9UdBeESN",
@@ -905,7 +850,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/4ef2497a7edeade8829a46085cb271c39e0d0f14.jpg",
             "author": "小草律师呀",
             "timestamp": 1764405000000,
-            "hot": 1773343,
+            "hot": 1791673,
             "url": "https://b23.tv/BV1h9UdBeESN",
             "mobileUrl": "https://m.bilibili.com/video/BV1h9UdBeESN"
         },
@@ -916,31 +861,42 @@
             "cover": "https://i0.hdslb.com/bfs/archive/5185039db9445e96136dc0aea059f6010c228435.jpg",
             "author": "老非凡了啊",
             "timestamp": 1764388721000,
-            "hot": 1321739,
+            "hot": 1331026,
             "url": "https://b23.tv/BV1uoUdBaEyc",
             "mobileUrl": "https://m.bilibili.com/video/BV1uoUdBaEyc"
         },
         {
-            "id": "BV1BqU9BqEGH",
-            "title": "生死攀岩：改写身心极限的作弊史",
-            "desc": "“因为山在那里”，马洛里的名言背后，藏着人类文明的密码，重力是铁律，恐惧是本能，但总有人要抬头看山，然后说“往上”。这是写进基因的向上冲动，是直立行走百万年后的终极表达！\n参考文献\n[1]   The HJ/71/11 High Altitude Medicine : A Brief History[EB/OL]. [2025-11-24]. https://www.himalayanclub.org/hj/.\n[2]   NOVA Online | Everest | First Without Oxy",
-            "cover": "https://i0.hdslb.com/bfs/archive/2c19331a7c1935d1f6d181b8a5bd0e10f72c6627.jpg",
-            "author": "大圆镜科普",
-            "timestamp": 1764373946000,
-            "hot": 963538,
-            "url": "https://b23.tv/BV1BqU9BqEGH",
-            "mobileUrl": "https://m.bilibili.com/video/BV1BqU9BqEGH"
+            "id": "BV18XSjBREUK",
+            "title": "“Cheems，你要逃出时间循环吗？”【大结局·1】",
+            "desc": "在一切的开始之前，和一切的结束之后。\n\n\n1.本期视频为充电抢先看的模式，到星期六晚上七点就可以免费观看啦！\n2.大结局每期的时间会稍微比之前短一点，但更新也会加快的，12月目标更新两期！\n3.最后求个三连和关注！点个赞也可以的，谢谢大家啦~\n\n再次感谢@Voincer  的封面！还有@浮光-Luxabaspis  的光影协助！",
+            "cover": "https://i2.hdslb.com/bfs/archive/ac8f361e3096943c942cabc1ee20e3019182988d.jpg",
+            "author": "清竹莫叶",
+            "timestamp": 1764327600000,
+            "hot": 573125,
+            "url": "https://b23.tv/BV18XSjBREUK",
+            "mobileUrl": "https://m.bilibili.com/video/BV18XSjBREUK"
         },
         {
-            "id": "BV1hGSNBWEBC",
-            "title": "实拍！我们用科技实现了真正的万剑归宗！",
-            "desc": "该视频暂无简介",
-            "cover": "https://i0.hdslb.com/bfs/archive/58ad3df28dcc2942b1484a069e9a17c841cdbaf2.jpg",
-            "author": "剑客范十三",
-            "timestamp": 1764469757000,
-            "hot": 2337459,
-            "url": "https://b23.tv/BV1hGSNBWEBC",
-            "mobileUrl": "https://m.bilibili.com/video/BV1hGSNBWEBC"
+            "id": "BV1RYSgB5Eyo",
+            "title": "九款旺仔牛奶做法看看有没有你喜欢吃的呀~",
+            "desc": "一分钟带你了解九种牛奶的不同做法，操作简单，赶快去吃!!评论区有详细防翻车指南!!!!",
+            "cover": "https://i2.hdslb.com/bfs/archive/767dbd48e50ede0c1723efd6fc8c2b4d6926bbac.jpg",
+            "author": "甜水井数钱的肉桂",
+            "timestamp": 1764252604000,
+            "hot": 1962034,
+            "url": "https://b23.tv/BV1RYSgB5Eyo",
+            "mobileUrl": "https://m.bilibili.com/video/BV1RYSgB5Eyo"
+        },
+        {
+            "id": "BV1JaS5BaEkz",
+            "title": "用中餐的烹饪逻辑优化一下外国的家常菜“苹果炖猪排”更适合我们口味，调料精确到克……",
+            "desc": "-",
+            "cover": "https://i0.hdslb.com/bfs/archive/e63ce8f2b6e4914a5ea7a69ee54a30c4d3e47f32.jpg",
+            "author": "段小段美食教程",
+            "timestamp": 1764318000000,
+            "hot": 816817,
+            "url": "https://b23.tv/BV1JaS5BaEkz",
+            "mobileUrl": "https://m.bilibili.com/video/BV1JaS5BaEkz"
         },
         {
             "id": "BV1fvSzBvEot",
@@ -949,9 +905,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/4d1bc0b741b52748ae5ab6d6956f4afe0101fa1b.jpg",
             "author": "特厨隋坡",
             "timestamp": 1764559800000,
-            "hot": 888881,
+            "hot": 920930,
             "url": "https://b23.tv/BV1fvSzBvEot",
             "mobileUrl": "https://m.bilibili.com/video/BV1fvSzBvEot"
+        },
+        {
+            "id": "BV1hGSNBWEBC",
+            "title": "实拍！我们用科技实现了真正的万剑归宗！",
+            "desc": "该视频暂无简介",
+            "cover": "https://i0.hdslb.com/bfs/archive/58ad3df28dcc2942b1484a069e9a17c841cdbaf2.jpg",
+            "author": "剑客范十三",
+            "timestamp": 1764469757000,
+            "hot": 2347499,
+            "url": "https://b23.tv/BV1hGSNBWEBC",
+            "mobileUrl": "https://m.bilibili.com/video/BV1hGSNBWEBC"
         },
         {
             "id": "BV1KSSJBsEPR",
@@ -960,7 +927,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/82bee30b9a065924ea5837871ef17f10d51bc978.jpg",
             "author": "IPx的粉红豹",
             "timestamp": 1764374400000,
-            "hot": 1442813,
+            "hot": 1447798,
             "url": "https://b23.tv/BV1KSSJBsEPR",
             "mobileUrl": "https://m.bilibili.com/video/BV1KSSJBsEPR"
         },
@@ -971,9 +938,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/b8e4360188e38f870c3e687cb9708f6454ef090a.jpg",
             "author": "鼠鼠行动俱乐部",
             "timestamp": 1764417482000,
-            "hot": 860824,
+            "hot": 866633,
             "url": "https://b23.tv/BV1WiSFBaEjQ",
             "mobileUrl": "https://m.bilibili.com/video/BV1WiSFBaEjQ"
+        },
+        {
+            "id": "BV1BqU9BqEGH",
+            "title": "生死攀岩：改写身心极限的作弊史",
+            "desc": "“因为山在那里”，马洛里的名言背后，藏着人类文明的密码，重力是铁律，恐惧是本能，但总有人要抬头看山，然后说“往上”。这是写进基因的向上冲动，是直立行走百万年后的终极表达！\n参考文献\n[1]   The HJ/71/11 High Altitude Medicine : A Brief History[EB/OL]. [2025-11-24]. https://www.himalayanclub.org/hj/.\n[2]   NOVA Online | Everest | First Without Oxy",
+            "cover": "https://i0.hdslb.com/bfs/archive/2c19331a7c1935d1f6d181b8a5bd0e10f72c6627.jpg",
+            "author": "大圆镜科普",
+            "timestamp": 1764373946000,
+            "hot": 973160,
+            "url": "https://b23.tv/BV1BqU9BqEGH",
+            "mobileUrl": "https://m.bilibili.com/video/BV1BqU9BqEGH"
         },
         {
             "id": "BV16cSuB7EdD",
@@ -982,20 +960,20 @@
             "cover": "https://i2.hdslb.com/bfs/archive/002761f0078388c73350f6b831307f0d363e4cad.jpg",
             "author": "努力的小鹿-",
             "timestamp": 1764230698000,
-            "hot": 910737,
+            "hot": 913059,
             "url": "https://b23.tv/BV16cSuB7EdD",
             "mobileUrl": "https://m.bilibili.com/video/BV16cSuB7EdD"
         },
         {
-            "id": "BV1U7SjBUE3c",
-            "title": "免费包20亩鱼塘，塘主还包抽水！这盛情难却…这次应该要赚了吧？",
-            "desc": "该视频暂无简介",
-            "cover": "https://i2.hdslb.com/bfs/archive/39a97d2da72f7bcbb9350526fe79a44529015d2f.jpg",
-            "author": "李维刚的日常",
-            "timestamp": 1764320880000,
-            "hot": 1371003,
-            "url": "https://b23.tv/BV1U7SjBUE3c",
-            "mobileUrl": "https://m.bilibili.com/video/BV1U7SjBUE3c"
+            "id": "BV1SeURBtEbk",
+            "title": "【明日方舟】▲握 力 剂▼ Doomer💘",
+            "desc": "本来以为能很快就做完的，硬生生做了将近一个月，原曲和b站的BV1W52ABYEUo这个视频真的是太可爱，太喜欢了，希望大家也能喜欢我的作品。\n这次的视频里面也带一些些剧情向，做的时候也被狠狠感动到了5555555555555，狠狠共情了55555555555555，牢猫，牢普5555555555555\n\n\n\n描改原视频是这个：https://www.nicovideo.jp/watch/sm45305971",
+            "cover": "https://i0.hdslb.com/bfs/archive/a8b8d7d29c50ee3c9c64e96a0df9e38074388244.jpg",
+            "author": "碳纤维c_",
+            "timestamp": 1764384300000,
+            "hot": 617821,
+            "url": "https://b23.tv/BV1SeURBtEbk",
+            "mobileUrl": "https://m.bilibili.com/video/BV1SeURBtEbk"
         },
         {
             "id": "BV1vESiBSE3J",
@@ -1004,9 +982,20 @@
             "cover": "https://i1.hdslb.com/bfs/archive/2fe0b361a99cac781b09eab5c6a973e30fa2c9b0.jpg",
             "author": "STN工作室",
             "timestamp": 1764496328000,
-            "hot": 850922,
+            "hot": 864434,
             "url": "https://b23.tv/BV1vESiBSE3J",
             "mobileUrl": "https://m.bilibili.com/video/BV1vESiBSE3J"
+        },
+        {
+            "id": "BV152UdBuEyC",
+            "title": "风拂过蔷薇花径，魂灵的呼啸至此安息——秦彻「银翼安魂地」系列活动PV公开！",
+            "desc": "🩸秦彻「银翼安魂地」系列活动PV公开！\n\n🩸「银翼安魂地」五星套装思念\n12月2日更新后~12月16日上午4:59，五星日冕套装思念「秦彻·猩红席卷」、「秦彻·猩红弥散」开放获取。\n活动期间，最多150次许愿，即可获取两张活动五星思念，解锁全新搭档身份「秦彻·银翼恶魔」。\n*详细许愿规则与保底说明可在后续活动预告中查看。\n\n🩸「血魂灵」传说故事\n12月2日更新后，秦彻全新传说「血魂灵」同步上线。\n“于最蒙昧的世界里诞生最狂热的盲目；被死亡阴影笼罩的时代沉醉于魔法幻梦。\n魔法师化身为凡世的希望与信仰，恶魔以",
+            "cover": "https://i0.hdslb.com/bfs/archive/84c079648cb8a20b2cbcc168fb3b27ae79e4d9e5.jpg",
+            "author": "恋与深空",
+            "timestamp": 1764385521000,
+            "hot": 1074607,
+            "url": "https://b23.tv/BV152UdBuEyC",
+            "mobileUrl": "https://m.bilibili.com/video/BV152UdBuEyC"
         },
         {
             "id": "BV1k6SnBJEKS",
@@ -1015,42 +1004,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/b44c26110fcb577dfff8995f5201a8698a4ad19d.jpg",
             "author": "荣仔带带带",
             "timestamp": 1764347674000,
-            "hot": 2080953,
+            "hot": 2090895,
             "url": "https://b23.tv/BV1k6SnBJEKS",
             "mobileUrl": "https://m.bilibili.com/video/BV1k6SnBJEKS"
         },
         {
-            "id": "BV1dMSEBYEEe",
-            "title": "【黄龄X黄霄雲】女版《天下》力量感拉满！换乐器这一招背后必有高人指点！",
+            "id": "BV1U7SjBUE3c",
+            "title": "免费包20亩鱼塘，塘主还包抽水！这盛情难却…这次应该要赚了吧？",
             "desc": "该视频暂无简介",
-            "cover": "https://i0.hdslb.com/bfs/archive/29cc7ebcbe92c3d3f3356395a43dc251e9ec4804.jpg",
-            "author": "黄霄雲",
-            "timestamp": 1764339226000,
-            "hot": 1316072,
-            "url": "https://b23.tv/BV1dMSEBYEEe",
-            "mobileUrl": "https://m.bilibili.com/video/BV1dMSEBYEEe"
-        },
-        {
-            "id": "BV1rSSPBuEfr",
-            "title": "上海.蟹黄面 厨子探店¥522",
-            "desc": "这味道？这价格！？吃的直瞪眼！",
-            "cover": "https://i0.hdslb.com/bfs/archive/c099d3f400c4ffeaf36a52e49c9f460fb2c805bc.jpg",
-            "author": "真探唐仁杰",
-            "timestamp": 1764474129000,
-            "hot": 1091184,
-            "url": "https://b23.tv/BV1rSSPBuEfr",
-            "mobileUrl": "https://m.bilibili.com/video/BV1rSSPBuEfr"
-        },
-        {
-            "id": "BV1DHU5B5EjH",
-            "title": "如果跳楼机卡在中间会怎样？",
-            "desc": "该视频暂无简介",
-            "cover": "https://i2.hdslb.com/bfs/archive/f4d45bbe86e700d5cd57e41598dcef790175fc88.jpg",
-            "author": "木伦牌曲奇",
-            "timestamp": 1764331200000,
-            "hot": 1576262,
-            "url": "https://b23.tv/BV1DHU5B5EjH",
-            "mobileUrl": "https://m.bilibili.com/video/BV1DHU5B5EjH"
+            "cover": "https://i2.hdslb.com/bfs/archive/39a97d2da72f7bcbb9350526fe79a44529015d2f.jpg",
+            "author": "李维刚的日常",
+            "timestamp": 1764320880000,
+            "hot": 1373346,
+            "url": "https://b23.tv/BV1U7SjBUE3c",
+            "mobileUrl": "https://m.bilibili.com/video/BV1U7SjBUE3c"
         },
         {
             "id": "BV19uSTBPELF",
@@ -1059,9 +1026,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/d07661d2f35678fab9f90ca0340a81c400013c2e.jpg",
             "author": "阿战吃不饱",
             "timestamp": 1764482915000,
-            "hot": 1635983,
+            "hot": 1710851,
             "url": "https://b23.tv/BV19uSTBPELF",
             "mobileUrl": "https://m.bilibili.com/video/BV19uSTBPELF"
+        },
+        {
+            "id": "BV1rSSPBuEfr",
+            "title": "上海.蟹黄面 厨子探店¥522",
+            "desc": "这味道？这价格！？吃的直瞪眼！",
+            "cover": "https://i0.hdslb.com/bfs/archive/c099d3f400c4ffeaf36a52e49c9f460fb2c805bc.jpg",
+            "author": "真探唐仁杰",
+            "timestamp": 1764474129000,
+            "hot": 1106477,
+            "url": "https://b23.tv/BV1rSSPBuEfr",
+            "mobileUrl": "https://m.bilibili.com/video/BV1rSSPBuEfr"
         },
         {
             "id": "BV1DQUQBJEnz",
@@ -1070,9 +1048,20 @@
             "cover": "https://i0.hdslb.com/bfs/archive/fb92c3e699a1128af0c8199888fb39afda985cd1.jpg",
             "author": "DECO27_Official",
             "timestamp": 1764583200000,
-            "hot": 216349,
+            "hot": 225545,
             "url": "https://b23.tv/BV1DQUQBJEnz",
             "mobileUrl": "https://m.bilibili.com/video/BV1DQUQBJEnz"
+        },
+        {
+            "id": "BV1DHU5B5EjH",
+            "title": "如果跳楼机卡在中间会怎样？",
+            "desc": "该视频暂无简介",
+            "cover": "https://i2.hdslb.com/bfs/archive/f4d45bbe86e700d5cd57e41598dcef790175fc88.jpg",
+            "author": "木伦牌曲奇",
+            "timestamp": 1764331200000,
+            "hot": 1579475,
+            "url": "https://b23.tv/BV1DHU5B5EjH",
+            "mobileUrl": "https://m.bilibili.com/video/BV1DHU5B5EjH"
         },
         {
             "id": "BV1HQS7BLEd6",
@@ -1081,7 +1070,7 @@
             "cover": "https://i1.hdslb.com/bfs/archive/931273c016b8404a06ae7b1539bd9d2f783ec9cc.jpg",
             "author": "相声王琦",
             "timestamp": 1764341950000,
-            "hot": 1317659,
+            "hot": 1333549,
             "url": "https://b23.tv/BV1HQS7BLEd6",
             "mobileUrl": "https://m.bilibili.com/video/BV1HQS7BLEd6"
         },
@@ -1092,7 +1081,7 @@
             "cover": "https://i0.hdslb.com/bfs/archive/84838919696f90daad0380f10609afd41ddc888b.jpg",
             "author": "大正爱跑步",
             "timestamp": 1764467737000,
-            "hot": 1343429,
+            "hot": 1351415,
             "url": "https://b23.tv/BV1RwSNBcE96",
             "mobileUrl": "https://m.bilibili.com/video/BV1RwSNBcE96"
         },
@@ -1103,31 +1092,42 @@
             "cover": "https://i0.hdslb.com/bfs/archive/da489395312672aa98ff470af0171af55507d1a1.jpg",
             "author": "麦片是只小金毛",
             "timestamp": 1764508131000,
-            "hot": 528176,
+            "hot": 551830,
             "url": "https://b23.tv/BV1aDSqBmEqt",
             "mobileUrl": "https://m.bilibili.com/video/BV1aDSqBmEqt"
         },
         {
-            "id": "BV1LSUdBTEHu",
-            "title": "【Suno ai】卫戍协议金曲《我漏怪啦》",
-            "desc": "已上传重置版，修改了一些发音错误\n网易云：https://y.music.163.com/m/program?id=3708438351&userid=13204438657&djId=13204438657",
-            "cover": "https://i0.hdslb.com/bfs/archive/02f36706109ec7f4cca48b153753579c83225818.jpg",
-            "author": "嵚葱",
-            "timestamp": 1764385828000,
-            "hot": 408266,
-            "url": "https://b23.tv/BV1LSUdBTEHu",
-            "mobileUrl": "https://m.bilibili.com/video/BV1LSUdBTEHu"
+            "id": "BV1dMSEBYEEe",
+            "title": "【黄龄X黄霄雲】女版《天下》力量感拉满！换乐器这一招背后必有高人指点！",
+            "desc": "该视频暂无简介",
+            "cover": "https://i0.hdslb.com/bfs/archive/29cc7ebcbe92c3d3f3356395a43dc251e9ec4804.jpg",
+            "author": "黄霄雲",
+            "timestamp": 1764339226000,
+            "hot": 1326650,
+            "url": "https://b23.tv/BV1dMSEBYEEe",
+            "mobileUrl": "https://m.bilibili.com/video/BV1dMSEBYEEe"
         },
         {
-            "id": "BV1gfSEB8EfY",
-            "title": "一直在挑衅我的三观",
+            "id": "BV1ZASnByEzh",
+            "title": "不提雨，写雨大",
             "desc": "-",
-            "cover": "https://i0.hdslb.com/bfs/archive/6a66be97e3351fba9b610584ce5ce41945a2098d.jpg",
-            "author": "碎嘴企鹅",
-            "timestamp": 1764330741000,
-            "hot": 1092118,
-            "url": "https://b23.tv/BV1gfSEB8EfY",
-            "mobileUrl": "https://m.bilibili.com/video/BV1gfSEB8EfY"
+            "cover": "https://i1.hdslb.com/bfs/archive/b69fd073c7624a534e6bed87d12806be31ff55c4.jpg",
+            "author": "李大海_差点火了版",
+            "timestamp": 1764349538000,
+            "hot": 1880724,
+            "url": "https://b23.tv/BV1ZASnByEzh",
+            "mobileUrl": "https://m.bilibili.com/video/BV1ZASnByEzh"
+        },
+        {
+            "id": "BV1oSSFBXEiP",
+            "title": "三角洲行动 25万100%命中率！性价比平民神器，最新暗杀型改法回归！【A+】",
+            "desc": "三角洲行动 25万100%命中率！性价比平民神器，最新暗杀型改法回归！【A+】\n\nM4A1\n强度分级：A+\n优点：稳定性极高，输出尚可，适合全距离作战。对于子弹比甲高一级的对局来说强度会更好。\n缺点：除了定级限制输出外没有明显缺点。\n\n改枪mua\nM4A1高改25万性价比-6IA4FPO049H3TLFDHMKHO\nM4A1暗杀33万高倍版-6IA4HHO0CBLUR0ITR0OK6\nM4A1暗杀33万红点版-6IA4HC4049H3TLFDHMKHO",
+            "cover": "https://i2.hdslb.com/bfs/archive/99d67885368dd28dd3b0726d0eab1d12cc809f99.jpg",
+            "author": "Always聪聪",
+            "timestamp": 1764474285000,
+            "hot": 672477,
+            "url": "https://b23.tv/BV1oSSFBXEiP",
+            "mobileUrl": "https://m.bilibili.com/video/BV1oSSFBXEiP"
         }
     ],
     "api_source": "官方API网:https://api.pearktrue.cn/"
