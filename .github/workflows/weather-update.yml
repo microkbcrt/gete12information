@@ -23,7 +23,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           # 将所有Python脚本的依赖都放在这里
-          pip install requests beautifulsoup4 lxml pillow
+          pip install requests beautifulsoup4 lxml pillow DrissionPage
           
       # --- 执行所有数据获取脚本 ---
       - name: 运行十天天气脚本
@@ -68,6 +68,10 @@ jobs:
       - name: Run geitiebarank
         run: python tiebarank.py
 
+      # 新增小红书爬虫步骤
+      - name: 运行小红书热搜脚本 (DrissionPage)
+        run: python get_xiaohongshu_rank.py
+
       # 执行获取F1赛事资讯脚本
       - name: 运行B站动态
         # 这里是新增的步骤
@@ -81,7 +85,7 @@ jobs:
         run: |
           # 检查所有可能被脚本修改或创建的文件
           # 在列表的最后加上我们新脚本的输出文件 latest_bili_post.json
-          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.json weiborank.json dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif tiebarank.txt; then
+          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.json weiborank.json dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif tiebarank.txt xiaohongshurank.txt; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
