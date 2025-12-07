@@ -64,6 +64,10 @@ jobs:
       - name: Run geiweiborank
         run: python get_weibo_rank.py
 
+      # 执行获取贴吧热搜脚本
+      - name: Run geitiebarank
+        run: python tiebarank.py
+
       # 执行获取F1赛事资讯脚本
       - name: 运行B站动态
         # 这里是新增的步骤
@@ -77,7 +81,7 @@ jobs:
         run: |
           # 检查所有可能被脚本修改或创建的文件
           # 在列表的最后加上我们新脚本的输出文件 latest_bili_post.json
-          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.json weiborank.json dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif; then
+          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.json weiborank.json dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif tiebarank.txt; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
