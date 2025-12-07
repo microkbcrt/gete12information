@@ -72,6 +72,14 @@ jobs:
       - name: 运行小红书热搜脚本 (DrissionPage)
         run: python get_xiaohongshu_rank.py
 
+      # 知乎热搜
+      - name: Run getzhihurank
+        run: python get_zhihu_rank.py
+
+      # 知乎热搜
+      - name: Run getdouyinrank
+        run: python get_douyin_rank.py
+
       # 执行获取F1赛事资讯脚本
       - name: 运行B站动态
         # 这里是新增的步骤
@@ -85,7 +93,7 @@ jobs:
         run: |
           # 检查所有可能被脚本修改或创建的文件
           # 在列表的最后加上我们新脚本的输出文件 latest_bili_post.json
-          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.txt weiborank.txt dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif tiebarank.txt xiaohongshurank.txt zhihurank.txt; then
+          if ! git diff --quiet -- tendaysweather.txt nmcweather.js nmcweather.json notifications.json unqualified.json getshortweather.json huinan.json alarmcontent.json bilibilirank.txt weiborank.txt dynamics.json iconweather.json iconweather.js iconrawweather.json gz_radar.gif gd_radar.gif sc_radar.gif tiebarank.txt xiaohongshurank.txt zhihurank.txt douyinrank.txt; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
