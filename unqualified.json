@@ -1,9 +1,6 @@
 {
-    "score": 19,
-    "penaltyCoordinates": [
-        "(1,2)",
-        "(5,6)"
-    ],
+    "score": null,
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 1,
@@ -42,10 +39,11 @@
             ]
         },
         "何欣悦": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "窗台有垃圾",
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "地面垃圾"
             ]
         },
         "何文泽": {
@@ -77,9 +75,10 @@
             ]
         },
         "何睿政": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "地上隐蔽处有垃圾"
+                "地上隐蔽处有垃圾",
+                "桌面抽屉整理箱内或两侧有垃圾"
             ]
         },
         "刘宝琳": {
@@ -97,9 +96,10 @@
             ]
         },
         "李峻宇": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "窗台有垃圾",
+                "桌面有垃圾",
                 "桌面有垃圾"
             ]
         },
@@ -118,15 +118,17 @@
             ]
         },
         "张家睿": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "地上隐蔽处有垃圾",
-                "水杯未拿起"
+                "水杯未拿起",
+                "书包"
             ]
         },
         "孔睿哲": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
+                "桌面有垃圾",
                 "桌面有垃圾"
             ]
         },
@@ -138,9 +140,10 @@
             ]
         },
         "周灵": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "桌面有垃圾"
+                "桌面有垃圾",
+                "整理箱突出来了"
             ]
         },
         "唐瑭": {
@@ -175,8 +178,9 @@
             ]
         },
         "张丁戈": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
+                "桌面有垃圾",
                 "桌面有垃圾",
                 "桌面有垃圾"
             ]
@@ -184,9 +188,9 @@
         "曹天赐": {
             "unqualifiedCount": 3,
             "unqualifiedReasons": [
-                "大扫除没起椅子",
-                "衣服凌乱",
-                "桌面抽屉整理箱内或两侧有垃圾"
+                "桌面抽屉整理箱内或两侧有垃圾",
+                "桌面有垃圾",
+                "整理箱突出"
             ]
         },
         "罗妍茜": {
