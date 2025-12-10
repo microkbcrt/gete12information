@@ -1,6 +1,9 @@
 {
-    "score": null,
-    "penaltyCoordinates": [],
+    "score": 19,
+    "penaltyCoordinates": [
+        "(1,4)",
+        "(6,4)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 1,
@@ -16,8 +19,10 @@
             ]
         },
         "冯亿洋": {
-            "unqualifiedCount": 0,
-            "unqualifiedReasons": []
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "桌面有垃圾"
+            ]
         },
         "杨力行": {
             "unqualifiedCount": 2,
@@ -153,10 +158,11 @@
             ]
         },
         "林子墨": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "地上药袋未拿起",
-                "面包未拿起"
+                "面包未拿起",
+                "桌面凌乱"
             ]
         },
         "张楚倩": {
