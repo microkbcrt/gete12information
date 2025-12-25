@@ -38,7 +38,7 @@ var iconWeatherData = {
         },
         {
             "time": "2025-12-29",
-            "temperature_2m_max": 22,
+            "temperature_2m_max": 23,
             "temperature_2m_min": 10,
             "weather_desc": "多云间晴",
             "weather_icon": "00.png",
@@ -47,7 +47,7 @@ var iconWeatherData = {
         },
         {
             "time": "2025-12-30",
-            "temperature_2m_max": 24,
+            "temperature_2m_max": 25,
             "temperature_2m_min": 11,
             "weather_desc": "多云间晴",
             "weather_icon": "00.png",
