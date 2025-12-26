@@ -49,7 +49,7 @@ var iconWeatherData = {
             "time": "2026-01-01",
             "temperature_2m_max": 23,
             "temperature_2m_min": 12,
-            "weather_desc": "多云到阴天",
+            "weather_desc": "阴天",
             "weather_icon": "02.png",
             "warning_text": "提醒: 可能伴有大风",
             "weather_code": 3
