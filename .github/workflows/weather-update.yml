@@ -47,8 +47,8 @@ jobs:
       - name: 运行华南雷达拼图生成脚本
         run: python create_sc_radar_gif.py
         
-      - name: 运行短时天气脚本
-        run: python get_short_weather.py
+#     - name: 运行短时天气脚本
+#        run: python get_short_weather.py
         
       - name: 运行回南天预测脚本
         run: python get_huinan.py
