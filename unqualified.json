@@ -1,6 +1,8 @@
 {
-    "score": null,
-    "penaltyCoordinates": [],
+    "score": 18,
+    "penaltyCoordinates": [
+        "(2,5)"
+    ],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 2,
@@ -24,10 +26,11 @@
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "逃值",
                 "没凳子",
+                "书箱上有垃圾",
                 "书箱上有垃圾"
             ]
         },
@@ -199,10 +202,11 @@
             ]
         },
         "罗妍茜": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 3,
             "unqualifiedReasons": [
                 "桌面有垃圾",
-                "衣服凌乱"
+                "衣服凌乱",
+                "箱子突出"
             ]
         },
         "张瑞洋": {
