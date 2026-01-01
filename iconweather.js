@@ -30,7 +30,7 @@ var iconWeatherData = {
         {
             "time": "2026-01-04",
             "temperature_2m_max": 19,
-            "temperature_2m_min": 8,
+            "temperature_2m_min": 7,
             "weather_desc": "多云间晴",
             "weather_icon": "00.png",
             "warning_text": "",
