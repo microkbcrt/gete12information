@@ -12,11 +12,11 @@ var iconWeatherData = {
         {
             "time": "2026-01-10",
             "temperature_2m_max": 21,
-            "temperature_2m_min": 7,
-            "weather_desc": "多云间晴",
-            "weather_icon": "00.png",
+            "temperature_2m_min": 6,
+            "weather_desc": "阴天",
+            "weather_icon": "02.png",
             "warning_text": "",
-            "weather_code": 1
+            "weather_code": 3
         },
         {
             "time": "2026-01-11",
@@ -47,7 +47,7 @@ var iconWeatherData = {
         },
         {
             "time": "2026-01-14",
-            "temperature_2m_max": 24,
+            "temperature_2m_max": 23,
             "temperature_2m_min": 10,
             "weather_desc": "多云间晴",
             "weather_icon": "00.png",
