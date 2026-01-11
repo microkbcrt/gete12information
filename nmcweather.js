@@ -1,22 +1,5 @@
 var weatherData = [
   {
-    "date": "01/11周日",
-    "daytime": {
-      "weather": "",
-      "icon": "default.png",
-      "temperature": "",
-      "wind_direction": "",
-      "wind_strength": ""
-    },
-    "night": {
-      "weather": "晴到多云",
-      "icon": "00n.png",
-      "temperature": "8℃",
-      "wind_direction": "无持续风向",
-      "wind_strength": "微风"
-    }
-  },
-  {
     "date": "01/12周一",
     "daytime": {
       "weather": "晴到多云",
@@ -38,13 +21,13 @@ var weatherData = [
     "daytime": {
       "weather": "晴到多云",
       "icon": "00.png",
-      "temperature": "23℃",
+      "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
+      "weather": "晴到多云",
+      "icon": "00n.png",
       "temperature": "11℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -53,16 +36,16 @@ var weatherData = [
   {
     "date": "01/14周三",
     "daytime": {
-      "weather": "多云",
-      "icon": "01.png",
-      "temperature": "23℃",
+      "weather": "晴到多云",
+      "icon": "00.png",
+      "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
-      "temperature": "12℃",
+      "weather": "晴到多云",
+      "icon": "00n.png",
+      "temperature": "13℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
@@ -113,6 +96,23 @@ var weatherData = [
     "night": {
       "weather": "多云",
       "icon": "01n.png",
+      "temperature": "14℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
+    }
+  },
+  {
+    "date": "01/18周日",
+    "daytime": {
+      "weather": "晴到多云",
+      "icon": "00.png",
+      "temperature": "26℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
+    },
+    "night": {
+      "weather": "晴到多云",
+      "icon": "00n.png",
       "temperature": "14℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
