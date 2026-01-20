@@ -1,10 +1,6 @@
 {
-    "score": 19,
-    "penaltyCoordinates": [
-        "(1,2)",
-        "(3,1)",
-        "(2,3)"
-    ],
+    "score": null,
+    "penaltyCoordinates": [],
     "unqualified": {
         "王安宇": {
             "unqualifiedCount": 2,
@@ -21,20 +17,22 @@
             ]
         },
         "冯亿洋": {
-            "unqualifiedCount": 3,
+            "unqualifiedCount": 4,
             "unqualifiedReasons": [
                 "桌面有垃圾",
                 "地面垃圾",
-                "地上隐蔽处有垃圾"
+                "地上隐蔽处有垃圾",
+                "1月20地面垃圾"
             ]
         },
         "杨力行": {
-            "unqualifiedCount": 4,
+            "unqualifiedCount": 5,
             "unqualifiedReasons": [
                 "逃值",
                 "没凳子",
                 "书箱上有垃圾",
-                "书箱上有垃圾"
+                "书箱上有垃圾",
+                "1月19日书箱上垃圾"
             ]
         },
         "孙运龙": {
@@ -82,9 +80,10 @@
             ]
         },
         "黄政": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "箱内有垃圾"
+                "箱内有垃圾",
+                "1月15日垃圾"
             ]
         },
         "何睿政": {
@@ -102,12 +101,13 @@
             ]
         },
         "莫柽超": {
-            "unqualifiedCount": 4,
+            "unqualifiedCount": 5,
             "unqualifiedReasons": [
                 "大扫除没起椅子",
                 "椅子未起",
                 "地面有垃圾",
-                "地上隐蔽处有垃圾"
+                "地上隐蔽处有垃圾",
+                "1月20日地面垃圾"
             ]
         },
         "李峻宇": {
@@ -127,10 +127,13 @@
             ]
         },
         "黄锦茵": {
-            "unqualifiedCount": 2,
+            "unqualifiedCount": 5,
             "unqualifiedReasons": [
                 "雨伞未拿起",
-                "垃圾"
+                "垃圾",
+                "垃圾",
+                "1月19日垃圾",
+                "1月20日地面垃圾"
             ]
         },
         "张家睿": {
@@ -232,6 +235,12 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "地上隐蔽处有垃圾"
+            ]
+        },
+        "陈子璐": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "垃圾或杂物"
             ]
         }
     }
