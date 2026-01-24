@@ -2,17 +2,17 @@ var iconWeatherData = {
     "daily": [
         {
             "time": "2026-01-24",
-            "temperature_2m_max": 17,
-            "temperature_2m_min": 9,
-            "weather_desc": "多云",
-            "weather_icon": "01.png",
+            "temperature_2m_max": 19,
+            "temperature_2m_min": 10,
+            "weather_desc": "多云间晴",
+            "weather_icon": "00.png",
             "warning_text": "",
             "weather_code": 1
         },
         {
             "time": "2026-01-25",
             "temperature_2m_max": 23,
-            "temperature_2m_min": 10,
+            "temperature_2m_min": 11,
             "weather_desc": "多云间晴",
             "weather_icon": "00.png",
             "warning_text": "",
@@ -21,7 +21,7 @@ var iconWeatherData = {
         {
             "time": "2026-01-26",
             "temperature_2m_max": 20,
-            "temperature_2m_min": 14,
+            "temperature_2m_min": 13,
             "weather_desc": "多云，有小雨到中雨",
             "weather_icon": "19.png",
             "warning_text": "",
@@ -39,15 +39,15 @@ var iconWeatherData = {
         {
             "time": "2026-01-28",
             "temperature_2m_max": 22,
-            "temperature_2m_min": 12,
-            "weather_desc": "多云间晴",
-            "weather_icon": "00.png",
+            "temperature_2m_min": 14,
+            "weather_desc": "阴天",
+            "weather_icon": "02.png",
             "warning_text": "",
-            "weather_code": 1
+            "weather_code": 3
         },
         {
             "time": "2026-01-29",
-            "temperature_2m_max": 23,
+            "temperature_2m_max": 22,
             "temperature_2m_min": 12,
             "weather_desc": "多云间晴",
             "weather_icon": "00.png",
@@ -57,7 +57,7 @@ var iconWeatherData = {
         {
             "time": "2026-01-30",
             "temperature_2m_max": 19,
-            "temperature_2m_min": 16,
+            "temperature_2m_min": 15,
             "weather_desc": "多云，有小雨",
             "weather_icon": "07.png",
             "warning_text": "",
