@@ -31,7 +31,7 @@ def get_weather_data():
     }
     base_url = "https://api.open-meteo.com/v1/forecast"
     # 指定 ECMWF 模型
-    common_params = "&hourly=precipitation,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&models=ecmwf_ifs025"
+    common_params = "&hourly=precipitation,wind_gusts_10m,cape&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&models=gfs_seamless"
     
     all_grid_data = {}
     print("--- 阶段 1: 开始获取区域网格天气数据 (模型: ECMWF) ---")
