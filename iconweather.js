@@ -13,10 +13,10 @@ var iconWeatherData = {
             "time": "2026-01-31",
             "temperature_2m_max": 20,
             "temperature_2m_min": 15,
-            "weather_desc": "阴天",
-            "weather_icon": "02.png",
+            "weather_desc": "阴天，有小雨",
+            "weather_icon": "07.png",
             "warning_text": "",
-            "weather_code": 3
+            "weather_code": 53
         },
         {
             "time": "2026-02-01",
