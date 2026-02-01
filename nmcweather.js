@@ -1,33 +1,16 @@
 var weatherData = [
   {
-    "date": "02/01周日",
-    "daytime": {
-      "weather": "",
-      "icon": "default.png",
-      "temperature": "",
-      "wind_direction": "",
-      "wind_strength": ""
-    },
-    "night": {
-      "weather": "多云",
-      "icon": "01n.png",
-      "temperature": "9℃",
-      "wind_direction": "无持续风向",
-      "wind_strength": "微风"
-    }
-  },
-  {
     "date": "02/02周一",
     "daytime": {
       "weather": "晴到多云",
       "icon": "00.png",
-      "temperature": "21℃",
+      "temperature": "20℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "晴到多云",
-      "icon": "00n.png",
+      "weather": "多云",
+      "icon": "01n.png",
       "temperature": "10℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -36,9 +19,9 @@ var weatherData = [
   {
     "date": "02/03周二",
     "daytime": {
-      "weather": "晴到多云",
-      "icon": "00.png",
-      "temperature": "22℃",
+      "weather": "多云",
+      "icon": "01.png",
+      "temperature": "21℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
@@ -55,14 +38,14 @@ var weatherData = [
     "daytime": {
       "weather": "多云",
       "icon": "01.png",
-      "temperature": "24℃",
+      "temperature": "22℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
-      "temperature": "14℃",
+      "weather": "晴到多云",
+      "icon": "00n.png",
+      "temperature": "13℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
@@ -107,6 +90,23 @@ var weatherData = [
       "weather": "多云",
       "icon": "01.png",
       "temperature": "20℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
+    },
+    "night": {
+      "weather": "多云",
+      "icon": "01n.png",
+      "temperature": "10℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
+    }
+  },
+  {
+    "date": "02/08周日",
+    "daytime": {
+      "weather": "晴到多云",
+      "icon": "00.png",
+      "temperature": "18℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
