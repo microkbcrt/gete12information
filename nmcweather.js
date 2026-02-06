@@ -1,36 +1,19 @@
 var weatherData = [
   {
-    "date": "02/06周五",
-    "daytime": {
-      "weather": "",
-      "icon": "default.png",
-      "temperature": "",
-      "wind_direction": "",
-      "wind_strength": ""
-    },
-    "night": {
-      "weather": "多云",
-      "icon": "01n.png",
-      "temperature": "14℃",
-      "wind_direction": "北风",
-      "wind_strength": "3~4级"
-    }
-  },
-  {
     "date": "02/07周六",
     "daytime": {
       "weather": "多云",
       "icon": "01.png",
-      "temperature": "20℃",
-      "wind_direction": "北风",
-      "wind_strength": "3~4级"
+      "temperature": "21℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
     },
     "night": {
       "weather": "多云",
       "icon": "01n.png",
-      "temperature": "10℃",
-      "wind_direction": "北风",
-      "wind_strength": "3~4级"
+      "temperature": "11℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
     }
   },
   {
@@ -38,14 +21,14 @@ var weatherData = [
     "daytime": {
       "weather": "多云",
       "icon": "01.png",
-      "temperature": "16℃",
-      "wind_direction": "北风",
-      "wind_strength": "3~4级"
+      "temperature": "18℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
     },
     "night": {
       "weather": "多云",
       "icon": "01n.png",
-      "temperature": "9℃",
+      "temperature": "10℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
@@ -60,8 +43,8 @@ var weatherData = [
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
+      "weather": "阴",
+      "icon": "02n.png",
       "temperature": "12℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -114,6 +97,23 @@ var weatherData = [
       "weather": "多云",
       "icon": "01n.png",
       "temperature": "14℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
+    }
+  },
+  {
+    "date": "02/13周五",
+    "daytime": {
+      "weather": "多云",
+      "icon": "01.png",
+      "temperature": "26℃",
+      "wind_direction": "无持续风向",
+      "wind_strength": "微风"
+    },
+    "night": {
+      "weather": "多云",
+      "icon": "01n.png",
+      "temperature": "15℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
