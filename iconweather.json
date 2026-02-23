@@ -2,8 +2,8 @@
     "daily": [
         {
             "time": "2026-02-23",
-            "temperature_2m_max": 20,
-            "temperature_2m_min": 20,
+            "temperature_2m_max": 21,
+            "temperature_2m_min": 21,
             "weather_desc": "大部分地区阴天",
             "weather_icon": "02.png",
             "warning_text": "",
@@ -20,7 +20,7 @@
         },
         {
             "time": "2026-02-25",
-            "temperature_2m_max": 27,
+            "temperature_2m_max": 28,
             "temperature_2m_min": 21,
             "weather_desc": "阴天",
             "weather_icon": "02.png",
@@ -39,7 +39,7 @@
         {
             "time": "2026-02-27",
             "temperature_2m_max": 24,
-            "temperature_2m_min": 19,
+            "temperature_2m_min": 20,
             "weather_desc": "雨",
             "weather_icon": "19.png",
             "warning_text": "",
@@ -65,7 +65,7 @@
         },
         {
             "time": "2026-03-02",
-            "temperature_2m_max": 23,
+            "temperature_2m_max": 22,
             "temperature_2m_min": 17,
             "weather_desc": "阵雨",
             "weather_icon": "19.png",
@@ -83,9 +83,9 @@
         },
         {
             "time": "2026-03-04",
-            "temperature_2m_max": 19,
+            "temperature_2m_max": 20,
             "temperature_2m_min": 16,
-            "weather_desc": "雨",
+            "weather_desc": "阵雨",
             "weather_icon": "19.png",
             "warning_text": "",
             "weather_code": 4
