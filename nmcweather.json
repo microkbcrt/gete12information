@@ -2,16 +2,16 @@
   {
     "date": "02/24周二",
     "daytime": {
-      "weather": "多云",
-      "icon": "01.png",
+      "weather": "阴",
+      "icon": "02.png",
       "temperature": "27℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
-      "temperature": "19℃",
+      "weather": "阴",
+      "icon": "02n.png",
+      "temperature": "20℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
@@ -19,15 +19,15 @@
   {
     "date": "02/25周三",
     "daytime": {
-      "weather": "多云",
-      "icon": "01.png",
+      "weather": "阴",
+      "icon": "02.png",
       "temperature": "27℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
+      "weather": "多云，有(雷)阵雨",
+      "icon": "03n.png",
       "temperature": "19℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -36,16 +36,16 @@
   {
     "date": "02/26周四",
     "daytime": {
-      "weather": "多云，有小雨",
-      "icon": "07.png",
-      "temperature": "25℃",
+      "weather": "多云，有(雷)阵雨",
+      "icon": "03.png",
+      "temperature": "26℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云，有小雨",
-      "icon": "07n.png",
-      "temperature": "20℃",
+      "weather": "多云，有中雷雨",
+      "icon": "08.png",
+      "temperature": "19℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
