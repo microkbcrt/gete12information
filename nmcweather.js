@@ -2,11 +2,11 @@ var weatherData = [
   {
     "date": "02/25周三",
     "daytime": {
-      "weather": "阴",
-      "icon": "02.png",
-      "temperature": "27℃",
-      "wind_direction": "无持续风向",
-      "wind_strength": "微风"
+      "weather": "",
+      "icon": "default.png",
+      "temperature": "",
+      "wind_direction": "",
+      "wind_strength": ""
     },
     "night": {
       "weather": "多云，有(雷)阵雨",
@@ -21,7 +21,7 @@ var weatherData = [
     "daytime": {
       "weather": "多云，有(雷)阵雨",
       "icon": "03.png",
-      "temperature": "26℃",
+      "temperature": "25℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
@@ -38,7 +38,7 @@ var weatherData = [
     "daytime": {
       "weather": "多云，有中雷雨",
       "icon": "08.png",
-      "temperature": "24℃",
+      "temperature": "23℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
@@ -55,16 +55,16 @@ var weatherData = [
     "daytime": {
       "weather": "多云，有中雷雨局部暴雨",
       "icon": "10.png",
-      "temperature": "23℃",
+      "temperature": "22℃",
       "wind_direction": "东南风",
       "wind_strength": "3~4级"
     },
     "night": {
       "weather": "多云，有中雷雨",
       "icon": "08.png",
-      "temperature": "18℃",
-      "wind_direction": "无持续风向",
-      "wind_strength": "微风"
+      "temperature": "19℃",
+      "wind_direction": "东风",
+      "wind_strength": "3~4级"
     }
   },
   {
@@ -72,13 +72,13 @@ var weatherData = [
     "daytime": {
       "weather": "多云，有中雷雨",
       "icon": "08.png",
-      "temperature": "23℃",
-      "wind_direction": "无持续风向",
-      "wind_strength": "微风"
+      "temperature": "24℃",
+      "wind_direction": "南风",
+      "wind_strength": "3~4级"
     },
     "night": {
-      "weather": "多云，有中雷雨",
-      "icon": "08.png",
+      "weather": "多云，有小到中雨",
+      "icon": "07n.png",
       "temperature": "20℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -87,15 +87,15 @@ var weatherData = [
   {
     "date": "03/02周一",
     "daytime": {
-      "weather": "多云，有中雷雨",
-      "icon": "08.png",
-      "temperature": "24℃",
+      "weather": "多云，有小到中雨",
+      "icon": "07.png",
+      "temperature": "25℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云，有中雷雨",
-      "icon": "08.png",
+      "weather": "多云，有小雨",
+      "icon": "07n.png",
       "temperature": "18℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -104,16 +104,16 @@ var weatherData = [
   {
     "date": "03/03周二",
     "daytime": {
-      "weather": "多云，有中雷雨",
-      "icon": "08.png",
-      "temperature": "25℃",
+      "weather": "多云，有小雨",
+      "icon": "07.png",
+      "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云",
-      "icon": "01n.png",
-      "temperature": "16℃",
+      "weather": "多云，有小雨",
+      "icon": "07n.png",
+      "temperature": "17℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
