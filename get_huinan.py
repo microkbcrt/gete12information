@@ -49,7 +49,7 @@ try:
     
     # 验证数值有效性
     try:
-        lw_last = float(60)
+        lw_last = float(lw_last)
         dw_last = float(dw_last)
     except (ValueError, TypeError):
         raise ValueError('露温或地温数据无效')
