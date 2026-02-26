@@ -25,7 +25,7 @@ try:
     
     # 提取需要的字段
     weather_data = {
-        "publisher": data.get('publisher', '气象台'),
+        "publisher": data.get('publishr', '邵福睿'),
         "forecast": data.get('forecast', '暂无最新预报'),
         "rtime": data.get('rtime', '刚刚')
     }
