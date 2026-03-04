@@ -1,1 +1,29 @@
-<div style="font-size:36px;color:#ffffff;font-weight:bold;">3月5日</div><div style="margin-top:4px;font-weight:bold;font-size:36px;color:#FFFFFF;">原因</div><div style="background-color:#001f3f;color:#7FDBFF;padding:4px 6px;border-radius:3px;font-size:36px;font-weight:bold;">受陨星集群影响</div><div style="margin-top:4px;font-weight:bold;font-size:36px;color:#FFFFFF;">现象</div><div style="background-color:#004D40;color:#64FFDA;padding:4px 6px;border-radius:3px;font-size:36px;font-weight:bold;"><del>地壳碎裂，大陆板块解体</del></div>
+<script>
+// 将网页切换为黑白色调的函数
+function setPageGrayscale() {
+    // 创建一个style标签用于注入CSS
+    const style = document.createElement('style');
+    style.id = 'grayscale-style';
+    style.textContent = `
+        /* 对整个页面应用灰度滤镜，兼容不同浏览器 */
+        html {
+            filter: grayscale(100%) !important;
+            -webkit-filter: grayscale(100%) !important; /* 兼容webkit内核浏览器（Chrome/Safari） */
+            -moz-filter: grayscale(100%) !important;    /* 兼容Firefox */
+            -ms-filter: grayscale(100%) !important;     /* 兼容IE */
+            -o-filter: grayscale(100%) !important;      /* 兼容Opera */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); /* IE8及以下兼容 */
+            transition: filter 0.3s ease; /* 可选：添加过渡动画，让黑白切换更平滑 */
+        }
+    `;
+    // 将样式添加到页面头部
+    document.head.appendChild(style);
+}
+
+// 页面加载完成后执行黑白化
+if (document.readyState === 'complete') {
+    setPageGrayscale();
+} else {
+    window.addEventListener('load', setPageGrayscale);
+}
+</script>>
