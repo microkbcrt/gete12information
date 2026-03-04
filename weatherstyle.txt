@@ -1,29 +1,42 @@
-<script>
-// 将网页切换为黑白色调的函数
-function setPageGrayscale() {
-    // 创建一个style标签用于注入CSS
+<script type="text/javascript">
+// 强制将网站转为黑白（灰度）模式
+(function() {
+    // 创建style标签用于注入灰度样式
     const style = document.createElement('style');
-    style.id = 'grayscale-style';
-    style.textContent = `
-        /* 对整个页面应用灰度滤镜，兼容不同浏览器 */
-        html {
+    style.type = 'text/css';
+    // 核心样式：对根元素设置100%灰度，添加浏览器前缀保证兼容性
+    const grayStyle = `
+        html, body {
             filter: grayscale(100%) !important;
-            -webkit-filter: grayscale(100%) !important; /* 兼容webkit内核浏览器（Chrome/Safari） */
-            -moz-filter: grayscale(100%) !important;    /* 兼容Firefox */
-            -ms-filter: grayscale(100%) !important;     /* 兼容IE */
-            -o-filter: grayscale(100%) !important;      /* 兼容Opera */
-            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); /* IE8及以下兼容 */
-            transition: filter 0.3s ease; /* 可选：添加过渡动画，让黑白切换更平滑 */
+            -webkit-filter: grayscale(100%) !important; /* 兼容Chrome/Safari */
+            -moz-filter: grayscale(100%) !important; /* 兼容Firefox */
+            -ms-filter: grayscale(100%) !important; /* 兼容IE */
+            -o-filter: grayscale(100%) !important; /* 兼容Opera */
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1) !important; /* IE8及以下兼容 */
+            background-color: #f5f5f5 !important; /* 避免纯白/纯黑背景突兀 */
+        }
+        /* 覆盖所有子元素，防止部分元素未生效 */
+        * {
+            filter: inherit !important;
+            -webkit-filter: inherit !important;
         }
     `;
-    // 将样式添加到页面头部
-    document.head.appendChild(style);
-}
 
-// 页面加载完成后执行黑白化
-if (document.readyState === 'complete') {
-    setPageGrayscale();
-} else {
-    window.addEventListener('load', setPageGrayscale);
-}
+    // 注入样式内容
+    if (style.styleSheet) {
+        // IE浏览器兼容写法
+        style.styleSheet.cssText = grayStyle;
+    } else {
+        style.appendChild(document.createTextNode(grayStyle));
+    }
+
+    // 将样式插入到head标签中（优先插入到头部，确保优先级）
+    document.head.appendChild(style);
+
+    // 监听页面动态加载的内容，确保新元素也生效（可选，增强鲁棒性）
+    const observer = new MutationObserver(() => {
+        document.documentElement.style.filter = 'grayscale(100%) !important';
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+})();
 </script>
