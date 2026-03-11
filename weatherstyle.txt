@@ -1,15 +1,9 @@
 <iframe 
-    src="https://m.weather.com.cn/mweather/101280101.shtml" 
+    src="https://e.weather.com.cn/mweather/101280101.shtml" 
     width="400px" 
     height="750px" 
     frameborder="0" 
     scrolling="auto"
     title="广州天气信息"
 ></iframe>
-<div style="width:260px;background:#1c1b2e;border-radius:18px;padding:28px 24px 22px;color:#fff;font-family:Georgia,serif;box-shadow:0 8px 32px rgba(0,0,0,.25);text-align:center">
-  <div style="font-size:38px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px">frugal</div>
-  <div style="font-size:15px;color:rgba(190,170,255,.7);font-style:italic;margin-bottom:16px">/ˈfruːɡ(ə)l/</div>
-  <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(200,180,255,.3),transparent);margin-bottom:16px"></div>
-  <div style="font-size:20px;font-weight:600;margin-bottom:14px">节俭的；朴素的</div>
-  <div style="display:inline-block;font-size:24px;color:rgba(255,210,80,.75);border:1px solid rgba(255,210,80,.25);border-radius:20px;padding:3px 12px;letter-spacing:2px">巧记：福瑞狗</div>
-</div>
+OpenClaw，中文昵称“小龙虾”。自2026年初发布以来迅速走红，因其强大的自动化能力被广泛应用于个人办公、开发辅助和团队协作中，真正实现了“用自然语言替代人工完成重复性工作”
