@@ -6,37 +6,50 @@
     scrolling="auto"
     title="广州天气信息"
 ></iframe>
+<div id="summer-progress" style="width:100%;max-width:520px;margin:0 auto;padding:16px;border-radius:16px;box-sizing:border-box;background:#ffffff;color:#111827;border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 16px rgba(0,0,0,0.06);font-family:Arial,sans-serif;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+    <span style="font-size:32px;font-weight:700;">入夏进度</span>
+    <span id="summer-progress-text" style="font-size:24px;font-weight:600;">15%</span>
+  </div>
+  <div style="width:100%;height:14px;border-radius:999px;overflow:hidden;background:rgba(0,0,0,0.08);">
+    <div id="summer-progress-bar" style="width:15%;height:100%;border-radius:999px;background:linear-gradient(90deg,#22c55e 0%,#f59e0b 100%);transition:width .4s ease;"></div>
+  </div>
+</div>
 
-<div id="summer-progress"></div>
 <script>
-(function () {
-  var progress = 15;
+  (function () {
+    var progress = 15;
+    var root = document.getElementById('summer-progress');
+    var bar = document.getElementById('summer-progress-bar');
+    var text = document.getElementById('summer-progress-text');
+    var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var trackBg = isDark ? '#2a2a2a' : '#f1f5f9';
-  var fillBg = isDark ? 'linear-gradient(90deg, #22c55e, #84cc16)' : 'linear-gradient(90deg, #16a34a, #65a30d)';
-  var textColor = isDark ? '#f8fafc' : '#0f172a';
-  var subTextColor = isDark ? '#94a3b8' : '#64748b';
-  var borderColor = isDark ? '#3f3f46' : '#e2e8f0';
-  var glow = isDark ? '0 0 0 1px rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.35)' : '0 0 0 1px rgba(15,23,42,0.04), 0 8px 24px rgba(15,23,42,0.08)';
+    function applyTheme(dark) {
+      root.style.background = dark ? '#111827' : '#ffffff';
+      root.style.color = dark ? '#f9fafb' : '#111827';
+      root.style.border = dark ? '1px solid rgba(255,255,255,0.12)' : '1px solid rgba(0,0,0,0.08)';
+      root.style.boxShadow = dark ? '0 4px 16px rgba(0,0,0,0.35)' : '0 4px 16px rgba(0,0,0,0.06)';
+      root.querySelector('div > div + div').style.background = dark
+        ? 'rgba(255,255,255,0.12)'
+        : 'rgba(0,0,0,0.08)';
+    }
 
-  document.getElementById('summer-progress').innerHTML =
-    '<div style="max-width:520px;width:100%;padding:16px 18px;border-radius:16px;border:1px solid ' + borderColor + ';background:' + (isDark ? '#18181b' : '#ffffff') + ';box-shadow:' + glow + ';font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">' +
-      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">' +
-        '<span style="font-size:32px;font-weight:600;color:' + textColor + ';">入夏进度</span>' +
-        '<span style="font-size:24px;font-weight:700;color:' + textColor + ';">' + progress + '%</span>' +
-      '</div>' +
-      '<div style="width:100%;height:14px;background:' + trackBg + ';border-radius:999px;overflow:hidden;position:relative;">' +
-        '<div style="width:' + progress + '%;height:100%;background:' + fillBg + ';border-radius:999px;transition:width .4s ease;"></div>' +
-      '</div>' +
-      '<div style="margin-top:10px;font-size:12px;color:' + subTextColor + ';">夏天正在加载中...</div>' +
-    '</div>';
+    bar.style.width = progress + '%';
+    text.textContent = progress + '%';
+    applyTheme(isDark);
 
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-      location.reload();
-    });
-  }
-})();
+    if (window.matchMedia) {
+      var media = window.matchMedia('(prefers-color-scheme: dark)');
+      if (media.addEventListener) {
+        media.addEventListener('change', function (e) {
+          applyTheme(e.matches);
+        });
+      } else if (media.addListener) {
+        media.addListener(function (e) {
+          applyTheme(e.matches);
+        });
+      }
+    }
+  })();
 </script>
 
