@@ -60,9 +60,10 @@
             "unqualifiedReasons": []
         },
         "莫柽超": {
-            "unqualifiedCount": 1,
+            "unqualifiedCount": 2,
             "unqualifiedReasons": [
-                "夹缝有垃圾"
+                "夹缝有垃圾",
+                "水杯未拿起"
             ]
         },
         "李峻宇": {
@@ -149,6 +150,12 @@
             "unqualifiedCount": 1,
             "unqualifiedReasons": [
                 "在讲台上留垃圾"
+            ]
+        },
+        "张佳衡": {
+            "unqualifiedCount": 1,
+            "unqualifiedReasons": [
+                "水杯未拿起"
             ]
         }
     }
