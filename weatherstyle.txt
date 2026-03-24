@@ -9,7 +9,7 @@
 <div id="summer-progress" style="width:100%;max-width:520px;margin:0 auto;padding:16px;border-radius:16px;box-sizing:border-box;background:#ffffff;color:#111827;border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 16px rgba(0,0,0,0.06);font-family:Arial,sans-serif;">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
     <span style="font-size:32px;font-weight:700;">入夏进度</span>
-    <span id="summer-progress-text" style="font-size:24px;font-weight:600;">30%</span>
+    <span id="summer-progress-text" style="font-size:24px;font-weight:600;">40%</span>
   </div>
   <div style="width:100%;height:14px;border-radius:999px;overflow:hidden;background:rgba(0,0,0,0.08);">
     <div id="summer-progress-bar" style="width:15%;height:100%;border-radius:999px;background:linear-gradient(90deg,#22c55e 0%,#f59e0b 100%);transition:width .4s ease;"></div>
@@ -18,7 +18,7 @@
 
 <script>
   (function () {
-    var progress = 30;
+    var progress = 40;
     var root = document.getElementById('summer-progress');
     var bar = document.getElementById('summer-progress-bar');
     var text = document.getElementById('summer-progress-text');
@@ -87,4 +87,5 @@
     <td style="padding:8px 10px;border:1px solid #000;background:#fff34a;font-weight:700;">22.44</td>
   </tr>
 </table>
-<img width="400"src="https://microkbcrt.github.io/gete12information/7cff7687gy1ibgwwo1wgjj21jk2bc7n8.jpg">
+【江门入夏】刚刚官宣
+<img width="400"src="https://microkbcrt.github.io/gete12information/88bd8accgy1ibhvimupk2j20yi1pcwjs.jpg">
