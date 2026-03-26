@@ -20,15 +20,6 @@
         },
         {
             "time": "2026-03-28",
-            "temperature_2m_max": 28,
-            "temperature_2m_min": 23,
-            "weather_desc": "下午有阵雨",
-            "weather_icon": "19.png",
-            "warning_text": "",
-            "weather_code": 4
-        },
-        {
-            "time": "2026-03-29",
             "temperature_2m_max": 27,
             "temperature_2m_min": 23,
             "weather_desc": "下午有雷雨",
@@ -37,9 +28,18 @@
             "weather_code": 6
         },
         {
+            "time": "2026-03-29",
+            "temperature_2m_max": 27,
+            "temperature_2m_min": 23,
+            "weather_desc": "阴天",
+            "weather_icon": "02.png",
+            "warning_text": "",
+            "weather_code": 3
+        },
+        {
             "time": "2026-03-30",
             "temperature_2m_max": 30,
-            "temperature_2m_min": 24,
+            "temperature_2m_min": 23,
             "weather_desc": "下午有雷雨",
             "weather_icon": "23.png",
             "warning_text": "",
@@ -47,7 +47,7 @@
         },
         {
             "time": "2026-03-31",
-            "temperature_2m_max": 27,
+            "temperature_2m_max": 28,
             "temperature_2m_min": 21,
             "weather_desc": "雷阵雨",
             "weather_icon": "04.png",
@@ -58,14 +58,14 @@
             "time": "2026-04-01",
             "temperature_2m_max": 25,
             "temperature_2m_min": 22,
-            "weather_desc": "上午有阵雨",
+            "weather_desc": "下午有阵雨",
             "weather_icon": "19.png",
             "warning_text": "",
             "weather_code": 4
         },
         {
             "time": "2026-04-02",
-            "temperature_2m_max": 27,
+            "temperature_2m_max": 28,
             "temperature_2m_min": 22,
             "weather_desc": "阵雨",
             "weather_icon": "19.png",
