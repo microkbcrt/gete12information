@@ -14,12 +14,14 @@
     <span id="summer-progress-text" style="font-size:24px;font-weight:600;">70%</span>
   </div>
   <div style="width:100%;height:14px;border-radius:999px;overflow:hidden;background:rgba(0,0,0,0.08);">
-    <div id="summer-progress-bar" style="width:15%;height:100%;border-radius:999px;background:linear-gradient(90deg,#22c55e 0%,#f59e0b 100%);transition:width .4s ease;"></div>
+    <!-- 内联宽度会被JS覆盖，仅作初始值 -->
+    <div id="summer-progress-bar" style="width:70%;height:100%;border-radius:999px;background:linear-gradient(90deg,#22c55e 0%,#f59e0b 100%);transition:width .4s ease;"></div>
   </div>
 </div>
 
 <script>
   (function () {
+    // 核心修改：进度值固定为70
     var progress = 70;
     var root = document.getElementById('summer-progress');
     var bar = document.getElementById('summer-progress-bar');
@@ -36,10 +38,12 @@
         : 'rgba(0,0,0,0.08)';
     }
 
+    // 动态设置进度条宽度和百分比文字
     bar.style.width = progress + '%';
     text.textContent = progress + '%';
     applyTheme(isDark);
 
+    // 深色模式监听
     if (window.matchMedia) {
       var media = window.matchMedia('(prefers-color-scheme: dark)');
       if (media.addEventListener) {
