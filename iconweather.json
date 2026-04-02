@@ -4,7 +4,7 @@
             "time": "2026-04-02",
             "temperature_2m_max": 23,
             "temperature_2m_min": 23,
-            "weather_desc": "夜间有阵雨",
+            "weather_desc": "阵雨",
             "weather_icon": "19.png",
             "warning_text": "",
             "weather_code": 4
@@ -48,7 +48,7 @@
         {
             "time": "2026-04-07",
             "temperature_2m_max": 32,
-            "temperature_2m_min": 25,
+            "temperature_2m_min": 24,
             "weather_desc": "上午阴天，下午晴朗",
             "weather_icon": "00.png",
             "warning_text": "",
