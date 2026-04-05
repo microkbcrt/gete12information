@@ -26,6 +26,9 @@ jobs:
           pip install requests beautifulsoup4 lxml pillow DrissionPage pandas
           
       # --- 执行所有数据获取脚本 ---
+      - name: 运行保活脚本
+        run: python keep_alive.py
+        
       - name: 运行十天天气脚本
         run: python get_weather.py
           
