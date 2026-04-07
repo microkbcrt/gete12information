@@ -1,10 +1,10 @@
 <script>
 (function() {
-  // 防重复加载
-  if (window.__ANTONYM_ENGINE_LOADED__) return;
-  window.__ANTONYM_ENGINE_LOADED__ = true;
+  // 防云控重复注入导致多定时器冲突
+  if (window.__VUE_ANTONYM__) return;
+  window.__VUE_ANTONYM__ = true;
 
-  // 📖 1000个高频娱乐反义单字词典（双向映射，覆盖方位/状态/动作/情感/自然等）
+  // 📖 1000条高频单字反义映射（500对双向）
   const DICT = {
     "大":"小","小":"大","高":"低","低":"高","长":"短","短":"长","多":"少","少":"多","快":"慢","慢":"快",
     "热":"冷","冷":"热","黑":"白","白":"黑","上":"下","下":"上","左":"右","右":"左","前":"后","后":"前",
@@ -51,7 +51,7 @@
     "绷":"松","松":"绷","拉":"松","松":"拉","扯":"收","收":"扯","拽":"放","放":"拽","拖":"提","提":"拖",
     "抬":"压","压":"抬","举":"落","落":"举","擎":"卸","卸":"擎","托":"压","压":"托","负":"释","释":"负",
     "荷":"卸","卸":"荷","挑":"放","放":"挑","扛":"卸","卸":"扛","背":"面","面":"背","披":"脱","脱":"披",
-    "穿":"脱","脱":"穿","戴":"摘","摘":"戴","佩":"卸","卸":"佩","挂":"取","取":"挂","悬":"落","落":"悬",
+    "穿":"脱","脱":"穿","戴":"摘":"戴","佩":"卸","卸":"佩","挂":"取","取":"挂","悬":"落","落":"悬",
     "吊":"放","放":"吊","垂":"举","举":"垂","降":"升","升":"降","落":"起","起":"落","沉":"浮","浮":"沉",
     "坠":"升","升":"坠","跌":"起","起":"跌","扑":"仰","仰":"扑","伏":"起","起":"伏","趴":"站","站":"趴",
     "跪":"立","立":"跪","坐":"立","立":"坐","卧":"起","起":"卧","躺":"坐","坐":"躺","睡":"醒","醒":"睡",
@@ -75,57 +75,68 @@
     "涨":"缩","缩":"涨","膨":"缩","缩":"膨","胀":"缩","缩":"胀","伸":"缩","缩":"伸","张":"缩","缩":"张"
   };
 
-  const cache = new Map(); // 存储 原始文本节点 -> 原文本
-  let isApplied = false;
+  const cache = new Map(); // 记录 文本节点DOM -> 原始内容
+  let timer = null;
 
-  // 🔧 应用反义替换
-  function apply() {
-    if (isApplied) return; // 已应用则跳过
-    isApplied = true;
+  // 核心替换
+  const replaceTxt = str => str.replace(/[\u4e00-\u9fa5]/g, c => DICT[c] || c);
 
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-      acceptNode(node) {
-        const p = node.parentElement;
-        if (!p) return NodeFilter.FILTER_REJECT;
-        const tag = p.tagName;
-        // 跳过代码/表单/样式/不可见元素
-        if (/^(SCRIPT|STYLE|TEXTAREA|INPUT|SELECT|CODE|PRE|NOSCRIPT|IFRAME|SVG|CANVAS)$/.test(tag)) 
-          return NodeFilter.FILTER_REJECT;
-        if (cache.has(node)) return NodeFilter.FILTER_REJECT; // 已处理过
-        return NodeFilter.FILTER_ACCEPT;
-      }
-    });
+  // Vue 环境安全过滤
+  const SKIP_TAGS = /^(SCRIPT|STYLE|TEXTAREA|INPUT|SELECT|OPTION|CODE|PRE|NOSCRIPT|IFRAME|SVG|CANVAS|TEMPLATE|META|LINK|BR|IMG)$/i;
 
+  function processNode(node) {
+    const p = node.parentElement;
+    if (!p) return;
+    // 跳过 Vue 关键组件/表格/代码块
+    if (SKIP_TAGS.test(p.tagName)) return;
+    if (p.closest('[data-antonym-skip], .el-table, .vxe-table, [v-cloak]')) return;
+
+    const curr = node.textContent;
+    if (!curr) return;
+
+    const orig = cache.get(node);
+    if (orig === undefined) {
+      // 首次遇到：缓存原文并替换
+      cache.set(node, curr);
+      node.textContent = replaceTxt(curr);
+    } else if (curr === orig) {
+      // Vue 恢复原文或新节点：重新替换
+      node.textContent = replaceTxt(curr);
+    } else if (curr !== replaceTxt(orig)) {
+      // 网站/Ajax/Vue 动态修改了内容：更新缓存并替换
+      cache.set(node, curr);
+      node.textContent = replaceTxt(curr);
+    }
+    // 其他情况：已是替换状态，跳过
+  }
+
+  // 1秒扫描主逻辑
+  function scan() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
     let node;
-    while ((node = walker.nextNode())) {
-      const orig = node.textContent;
-      if (!orig || !orig.trim()) continue;
-      
-      cache.set(node, orig);
-      node.textContent = orig.replace(/[\u4e00-\u9fa5]/g, char => DICT[char] || char);
+    while ((node = walker.nextNode())) processNode(node);
+
+    // 🧹 防内存泄漏：Vue SPA 路由切换会销毁旧节点，定期清理无效引用
+    if (cache.size > 600) {
+      for (const [n] of cache) {
+        if (!document.body.contains(n)) cache.delete(n);
+      }
     }
   }
 
-  // 🔄 复原原始内容
-  function restore() {
-    if (!isApplied) return;
+  // 清理旧定时器（防云控重复注入堆积）
+  if (timer) clearInterval(timer);
+  scan(); // 立即执行一次
+  timer = setInterval(scan, 1000);
+
+  // 🌐 暴露复原接口（云控需要恢复时直接执行此字符串）
+  window.反义字复原 = function() {
+    clearInterval(timer);
+    timer = null;
     for (const [node, orig] of cache) {
-      if (document.body.contains(node)) {
-        node.textContent = orig;
-      }
+      if (document.body.contains(node)) node.textContent = orig;
     }
     cache.clear();
-    isApplied = false;
-  }
-
-  // 🌐 暴露全局接口供云控调用
-  window.antonymEffect = {
-    apply,
-    restore,
-    isActive: () => isApplied
   };
-
-  // 可选：如果云控直接执行脚本而非调用函数，取消下面注释即可自动触发
-  restore(); 
 })();
 </script>
