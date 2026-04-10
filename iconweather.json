@@ -38,8 +38,8 @@
         },
         {
             "time": "2026-04-15",
-            "temperature_2m_max": 32,
-            "temperature_2m_min": 25,
+            "temperature_2m_max": 31,
+            "temperature_2m_min": 24,
             "weather_desc": "多云",
             "weather_icon": "01.png",
             "warning_text": "",
@@ -48,7 +48,7 @@
         {
             "time": "2026-04-16",
             "temperature_2m_max": 30,
-            "temperature_2m_min": 24,
+            "temperature_2m_min": 23,
             "weather_desc": "下午有阵雨",
             "weather_icon": "19.png",
             "warning_text": "",
