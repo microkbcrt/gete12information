@@ -2,55 +2,50 @@ import requests
 import json
 
 def fetch_and_save_zhihu_rank():
-    # 目标API地址
-    url = "https://api.pearktrue.cn/api/dailyhot/?title=%E7%9F%A5%E4%B9%8E"
-    
-    # 保存的文件名
+    """
+    从新 API 获取知乎热榜数据，提取标题并保存到 zhihurank.txt 文件中。
+    """
+    # 更新为新的 API 地址
+    api_url = "https://uapis.cn/api/v1/misc/hotboard?type=zhihu"
     file_path = "zhihurank.txt"
-    
-    # 设置请求头，伪装成浏览器（虽然这个API通常不严格校验，但加上更保险）
+
+    # 设置请求头，伪装成浏览器（可选，部分接口可能需要）
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
     try:
-        print(f"正在请求: {url} ...")
-        # 1. 发送请求
-        response = requests.get(url, headers=headers, timeout=15)
-        response.raise_for_status() # 检查HTTP状态码是否为200
+        print(f"正在请求: {api_url} ...")
+        # 1. 发送 HTTP GET 请求
+        response = requests.get(api_url, headers=headers, timeout=15)
+        response.raise_for_status()
 
-        # 2. 解析JSON
+        # 2. 解析 JSON 数据
         result = response.json()
-        
-        # 检查API返回状态码
-        if result.get("code") != 200:
-            print(f"API返回错误信息: {result.get('msg')}")
-            return
 
-        # 3. 提取 data 列表
-        hot_list = result.get("data", [])
-        
+        # 3. 获取包含热榜列表的 'list' 字段（新 API 结构）
+        hot_list = result.get("list", [])
+
         if not hot_list:
-            print("未获取到热搜数据列表。")
+            print("未能获取到数据列表，可能是 API 返回为空或结构变更。")
             return
 
-        # 4. 写入文件
+        # 4. 提取标题并写入 TXT 文件
         with open(file_path, "w", encoding="utf-8") as f:
             count = 0
             for item in hot_list:
-                # 提取 title 字段
+                # 提取 'title' 字段
                 title = item.get("title")
-                # 确保标题存在且不为空
                 if title:
                     f.write(title + "\n")
                     count += 1
-        
+
         print(f"成功获取 {count} 条知乎热榜标题，已保存至 {file_path}")
 
     except requests.exceptions.RequestException as e:
         print(f"网络请求出错: {e}")
     except json.JSONDecodeError:
-        print("JSON解析失败，API可能返回了非JSON格式的数据。")
+        print("JSON 解析失败，API 可能返回了非 JSON 格式的数据。")
     except Exception as e:
         print(f"发生未知错误: {e}")
 
