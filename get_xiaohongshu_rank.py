@@ -1,52 +1,54 @@
 import requests
 import json
-import sys
 
-def fetch_rebang_xiaohongshu():
-    # API 端点（基于链接内容提供的URL）
-    api_url = "https://60s.viki.moe/v2/rednote"
+def fetch_and_save_netease_music_rank():
+    """
+    从新 API 获取网易云音乐热榜数据，提取标题并保存到 xiaohongshurank.txt 文件中。
+    """
+    # 新 API 地址（type=netease-music）
+    api_url = "https://uapis.cn/api/v1/misc/hotboard?type=netease-music"
+    # 按用户要求保存为指定文件名
     file_path = "xiaohongshurank.txt"
 
-    try:
-        print("正在请求API数据...")
-        # 发送GET请求，设置超时时间
-        response = requests.get(api_url, timeout=15)
-        response.raise_for_status()  # 如果HTTP状态码不是200，抛出异常
+    # 设置请求头，伪装成浏览器
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
 
-        # 解析JSON响应
+    try:
+        print(f"正在请求: {api_url} ...")
+        # 1. 发送 HTTP GET 请求
+        response = requests.get(api_url, headers=headers, timeout=15)
+        response.raise_for_status()
+
+        # 2. 解析 JSON 数据
         result = response.json()
-        
-        # 检查API返回状态
-        if result.get("code") != 200:
-            error_msg = result.get("message", "API返回未知错误")
-            print(f"❌ API请求失败: {error_msg}")
-            sys.exit(1)
-        
-        # 提取data数组
-        data_list = result.get("data", [])
-        if not data_list:
-            print("❌ 未找到热搜数据")
+
+        # 3. 获取包含热榜列表的 'list' 字段（新 API 统一结构）
+        hot_list = result.get("list", [])
+
+        if not hot_list:
+            print("未能获取到数据列表，可能是 API 返回为空或结构变更。")
             return
 
-        # 写入文件
+        # 4. 提取标题并写入 TXT 文件
         with open(file_path, "w", encoding="utf-8") as f:
             count = 0
-            for item in data_list:
+            for item in hot_list:
+                # 提取 'title' 字段（歌曲/榜单名称）
                 title = item.get("title")
                 if title:
                     f.write(title + "\n")
                     count += 1
-            print(f"✅ 成功获取 {count} 条小红书热搜，已保存至 {file_path}")
+
+        print(f"成功获取 {count} 条网易云音乐热榜标题，已保存至 {file_path}")
 
     except requests.exceptions.RequestException as e:
-        print(f"❌ 网络请求错误: {e}")
-        sys.exit(1)
-    except json.JSONDecodeError as e:
-        print(f"❌ JSON解析错误: {e}")
-        sys.exit(1)
+        print(f"网络请求出错: {e}")
+    except json.JSONDecodeError:
+        print("JSON 解析失败，API 可能返回了非 JSON 格式的数据。")
     except Exception as e:
-        print(f"❌ 发生未知错误: {e}")
-        sys.exit(1)
+        print(f"发生未知错误: {e}")
 
 if __name__ == "__main__":
-    fetch_rebang_xiaohongshu()
+    fetch_and_save_netease_music_rank()
