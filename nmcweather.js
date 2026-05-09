@@ -4,14 +4,14 @@ var weatherData = [
     "daytime": {
       "weather": "多云，有小雨",
       "icon": "07.png",
-      "temperature": "26℃",
+      "temperature": "23℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
       "weather": "阴",
       "icon": "02n.png",
-      "temperature": "22℃",
+      "temperature": "20℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
@@ -60,8 +60,8 @@ var weatherData = [
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云，有雷阵雨局部大雨",
-      "icon": "11.png",
+      "weather": "多云",
+      "icon": "01n.png",
       "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -70,15 +70,15 @@ var weatherData = [
   {
     "date": "05/13周三",
     "daytime": {
-      "weather": "多云，有雷阵雨局部大雨",
-      "icon": "11.png",
+      "weather": "多云，有小雨",
+      "icon": "07.png",
       "temperature": "30℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云，有中雷雨",
-      "icon": "08.png",
+      "weather": "多云，有小雨",
+      "icon": "07n.png",
       "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -94,8 +94,8 @@ var weatherData = [
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云，有雷阵雨局部大雨",
-      "icon": "11.png",
+      "weather": "多云，有小雨",
+      "icon": "07n.png",
       "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
@@ -104,15 +104,15 @@ var weatherData = [
   {
     "date": "05/15周五",
     "daytime": {
-      "weather": "多云到阴天，有大雨局部暴雨",
-      "icon": "09.png",
-      "temperature": "31℃",
+      "weather": "多云，有小雨",
+      "icon": "07.png",
+      "temperature": "29℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "多云到阴天，有大雨局部暴雨",
-      "icon": "09.png",
+      "weather": "多云，有小雨",
+      "icon": "07n.png",
       "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
