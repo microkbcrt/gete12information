@@ -25,7 +25,7 @@ try:
     
     # 提取需要的字段
     weather_data = {
-        "publisher": data.get('publisher', '孙培迪'),
+        "publisher": data.get('publishr', '刘连望帆'),
         "forecast": data.get('forecast', '目前广州市多云多云，花都区出现冰雹，白云区、从化区、黄埔区、增城区出现强雷雨。预计17-20时，我市中北部地区有中到强雷雨，其余地区多云间阴天，局部有阵雨，气温28到32℃，吹轻微的西南风；20-23时，多云间阴天，局部有阵雨，气温26到299℃，吹轻微的西南风。'),
         "rtime": data.get('rtime', '刚刚')
     }
