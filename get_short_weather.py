@@ -3,6 +3,9 @@ import json
 import re
 import sys
 
+# 定义固定祝福语
+blessing = "画凌烟，上甘泉，自古功名属少年，临近高考，广州市气象台祝各位考生考试顺利，金榜题名，落笔生花，圆梦今夏！"
+
 # 设置响应头为JSON格式
 print('Content-Type: application/json')
 print()
@@ -23,10 +26,15 @@ try:
     # 解析JSON数据
     data = json.loads(match.group(1))
     
-    # 提取需要的字段
+    # 提取原始预报内容，拼接祝福语
+    default_forecast = '目前广州市多云多云，花都区出现冰雹，白云区、从化区、黄埔区、增城区出现强雷雨。预计17-20时，我市中北部地区有中到强雷雨，其余地区多云间阴天，局部有阵雨，气温28到32℃，吹轻微的西南风；20-23时，多云间阴天，局部有阵雨，气温26到299℃，吹轻微的西南风。'
+    origin_forecast = data.get('forecast', default_forecast)
+    final_forecast = origin_forecast + blessing  # 天气+祝福语拼接
+    
+    # 组装返回数据
     weather_data = {
-        "publisher": data.get('publishr', '刘连望帆'),
-        "forecast": data.get('forecast', '目前广州市多云多云，花都区出现冰雹，白云区、从化区、黄埔区、增城区出现强雷雨。预计17-20时，我市中北部地区有中到强雷雨，其余地区多云间阴天，局部有阵雨，气温28到32℃，吹轻微的西南风；20-23时，多云间阴天，局部有阵雨，气温26到299℃，吹轻微的西南风。'),
+        "publisher": data.get('publisher', '刘连望帆'),
+        "forecast": final_forecast,
         "rtime": data.get('rtime', '刚刚')
     }
     
