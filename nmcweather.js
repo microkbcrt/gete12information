@@ -104,16 +104,16 @@ var weatherData = [
   {
     "date": "06/13周六",
     "daytime": {
-      "weather": "阴天，有暴雨局部大暴雨",
-      "icon": "23.png",
-      "temperature": "29℃",
+      "weather": "多云，有中雷雨",
+      "icon": "08.png",
+      "temperature": "30℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     },
     "night": {
-      "weather": "阴",
-      "icon": "02n.png",
-      "temperature": "25℃",
+      "weather": "多云，有中雷雨",
+      "icon": "08.png",
+      "temperature": "24℃",
       "wind_direction": "无持续风向",
       "wind_strength": "微风"
     }
