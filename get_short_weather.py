@@ -4,7 +4,7 @@ import re
 import sys
 
 # 定义固定祝福语
-blessing = "画凌烟，上甘泉，自古功名属少年，临近高考，广州市气象台祝各位考生考试顺利，金榜题名，落笔生花，圆梦今夏！"
+blessing = "画凌烟，上甘泉，自古功名属少年，正值高考，广州市气象台祝各位考生考试顺利，金榜题名，落笔生花，圆梦今夏！"
 
 # 设置响应头为JSON格式
 print('Content-Type: application/json')
