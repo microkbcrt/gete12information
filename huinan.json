@@ -1,10 +1,10 @@
 {
-    "huinan": 0.0,
-    "update_time": "2026-06-17 08:07:04",
-    "color": "#ffff00",
-    "description": "有出现回南天的可能",
+    "huinan": -1.0,
+    "update_time": "2026-06-17 08:11:56",
+    "color": "#00ff00",
+    "description": "不会出现回南天",
     "last_values": {
-        "露温": 26.4,
-        "地温": 26.4
+        "露温": 25.6,
+        "地温": 26.6
     }
 }
